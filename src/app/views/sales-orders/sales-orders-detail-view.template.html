@@ -1,0 +1,164 @@
+<div class="row wrapper border-bottom white-bg page-heading" xmlns="http://www.w3.org/1999/html">
+    <div class="col-lg-12">
+        <h2>Order Detail</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a [routerLink]="['../']" >Home</a>
+            </li>
+            <li class="active" *ngIf="order">
+                <strong>Order {{order.DocNum}}</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight" *ngIf="order">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <span class="pull-right">(<strong>{{order.DocumentLines.length}}</strong>) items</span>
+                    <h5>Items ordered</h5>
+                </div>
+
+                <div class="ibox-content" *ngFor="let item of order.DocumentLines">
+                    <div class="table-responsive">
+                        <table class="table shoping-cart-table">
+                            <tbody>
+                            <tr>
+                                <!-- Item Image here?
+                                <td width="90">
+                                    <div class="cart-product-imitation">
+                                    </div>
+                                </td>
+                                -->
+                                <td class="desc">
+                                    <h3>
+                                        <a href="#" class="text-navy">
+                                            {{item.ItemCode}}
+                                        </a>
+                                    </h3>
+                                    <p class="small">
+                                        {{item.ItemDescription}}
+                                    </p>
+                                    <dl class="small m-b-none">
+                                        <dt>Description lists</dt>
+                                        <dd>A description list is perfect for defining terms.</dd>
+                                    </dl>
+                                    <div class="m-t-sm">
+                                        <i class="fa fa-gift text-muted">Add gift package</i>
+                                        <i class="fa fa-trash text-muted">Remove item</i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <s class="small text-muted" *ngIf="item.Price!=item.UnitPrice">
+                                        {{item.UnitPrice | currency:USD:true}}
+                                    </s>
+                                        {{item.Price | currency:USD:true}}
+                                </td>
+                                <td width="65">
+                                    <input type="text" [disabled]="true" class="form-control" placeholder="{{item.Quantity}}">
+                                </td>
+                                <td>
+                                    <h4>
+                                        {{item.LineTotal | currency:USD:true}}
+                                    </h4>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--
+                <div class="ibox-content">
+                    <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
+                    <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
+                </div>
+                -->
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Document Summary</h5>
+                </div>
+                <div class="ibox-content" >
+                    <span>
+                        Total
+                    </span>
+                    <h2 class="font-bold">
+                        {{order.DocTotal | currency:USD:true}}
+                    </h2>
+                    <hr/>
+                    <span class="text-muted small">
+                        *For United States, France and Germany applicable sales tax will be applied
+                    </span>
+                    <!--
+                    <div class="m-t-sm">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Checkout</a>
+                            <a href="#" class="btn btn-white btn-sm"> Cancel</a>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Support</h5>
+                </div>
+                <div class="ibox-content text-left" *ngIf="order">
+                    <div class="contact-box-footer">
+                        <div class="m-t-xs btn-group">
+                            <a href="tel:{{order.EmployeeInfo.OfficePhone}}" *ngIf="order.EmployeeInfo" class="btn btn-xs btn-white" data-toggle="tooltip" data-placement="bottom" title="{{order.EmployeeInfo.OfficePhone}}">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
+                            <a href="tel:17862060035" *ngIf="!order.EmployeeInfo" class="btn btn-xs btn-white" data-toggle="tooltip" data-placement="bottom" title="17862060035">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
+                            <a href="mailto:{{order.EmployeeInfo.eMail}}" *ngIf="order.EmployeeInfo" class="btn btn-xs btn-white" data-toggle="tooltip" data-placement="bottom" title="{{order.EmployeeInfo.eMail}}">
+                                <i class="fa fa-envelope"></i> Email
+                            </a>
+                            <a href="mailto:support@consensusintl.com" *ngIf="!order.EmployeeInfo" class="btn btn-xs btn-white" data-toggle="tooltip" data-placement="bottom" title="support@consensusintl.com">
+                                <i class="fa fa-envelope"></i> Email
+                            </a>
+                        </div>
+                    </div>
+                    <div></div>
+                    <span class="small">
+                        Please contact with us if you have any questions
+                    </span>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-content">
+                    <p class="font-bold">
+                        Other products you may be interested
+                    </p>
+                    <hr/>
+                    <div>
+                        <a href="#" class="product-name"> Product 1</a>
+                        <div class="small m-t-xs">
+                            Many desktop publishing packages and web page editors now.
+                        </div>
+                        <div class="m-t text-righ">
+                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info
+                                <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <a href="#" class="product-name"> Product 2</a>
+                        <div class="small m-t-xs">
+                            Many desktop publishing packages and web page editors now.
+                        </div>
+                        <div class="m-t text-righ">
+                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info
+                                <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

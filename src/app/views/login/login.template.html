@@ -1,0 +1,62 @@
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">CNS</h1>
+        </div>
+        <h3>Welcome to this SAP WebApp</h3>
+
+        <form class="m-t" (ngSubmit)="Login()" #loginForm="ngForm" role="form">
+            <div class="form-group">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="UserName"
+                    placeholder="username"
+                    required
+                    [(ngModel)]="_loginInfo.UserName"
+                    name="UserName"
+                    #UserName="ngModel">
+            </div>
+            <div class="form-group">
+                <input
+                    type="password"
+                    class="form-control"
+                    id="Password"
+                    placeholder="password"
+                    required
+                    [(ngModel)]="_loginInfo.Password"
+                    name="Password"
+                    #Password="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="CompanyDB">Company</label>
+                <select
+                    class="form-control"
+                    id="CompanyDB"
+                    required
+                    [(ngModel)]="_loginInfo.CompanyDB"
+                    name="CompanyDB"
+                    #CompanyDB="ngModel">
+                    <option *ngFor="let cmp of _companies" [value]="cmp">
+                        {{cmp}}
+                    </option>
+                </select>
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary block full-width m-b ladda-button"
+                [disabled]="!loginForm.form.valid">
+                    Login
+            </button>
+            <a href="#"><small>Forgot password?</small></a>
+            <p class="text-muted text-center"><small>Do not have an account?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="#">Create an account here!</a>
+        </form>
+        <hr />
+        <div *ngIf="loginFailure" class="alert alert-danger alert-dismissable">
+            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                Login Failure, please check credentials
+        </div>
+        <p class="m-t"> <small>Consensus SAP Customer Portal &copy; 2017</small> </p>
+    </div>
+</div>

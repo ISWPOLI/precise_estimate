@@ -1,0 +1,75 @@
+{
+  "project": {
+    "version": "2.7.0",
+    "name": "inspinia"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "assets/styles/styles.css",
+        "../src/vendor/toastr/toastr.min.css",
+        "../src/vendor/ladda/ladda-themeless.min.css",
+        "../src/vendor/sweet/sweetalert2.min.css",
+        "../src/vendor/daterange/daterangepicker.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/metismenu/dist/metisMenu.js",
+        "../src/vendor/pace/pace.min.js",
+        "../src/vendor/toastr/toastr.min.js",
+        "../src/vendor/sweet/sweetalert2.min.js",
+        "../src/vendor/ladda/spin.min.js",
+        "../src/vendor/ladda/ladda.min.js",
+        "../src/vendor/daterange/moment.min.js",
+        "../src/vendor/daterange/daterangepicker.js"
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
+  }
+}
