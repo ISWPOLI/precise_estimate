@@ -8,6 +8,7 @@ import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
 import { SessionStorageService } from 'ng2-webstorage';
 import { B1SLSessionService } from './services/B1SLSessionService';
+import { LoginService } from './services/login.service';
 
 // App views
 import {MainViewModule} from './views/main-view/main-view.module';
@@ -47,7 +48,7 @@ import {FooterModule} from '../app/components/common/footer/footer.module';
 
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, SessionStorageService, B1SLSessionService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, SessionStorageService, B1SLSessionService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

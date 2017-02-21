@@ -11,9 +11,6 @@ export const ROUTES: Routes = [
   // Main redirect
   { path: '', redirectTo: 'mainView', pathMatch: 'full'},
   { path: 'mainView', component: mainViewComponent },
-  { path: 'minorView', component: minorViewComponent },
-  { path: 'SalesOrders', component: salesOrdersViewComponent },
-  { path: 'SalesOrders/:id', component: salesOrdersDetailViewComponent },
   { path: 'login', component: loginComponent },
   { path: 'register', component: registerComponent },
 
