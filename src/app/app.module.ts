@@ -11,15 +11,13 @@ import { AppComponent } from './app.component';
 import { SessionStorageService } from 'ng2-webstorage';
 import { B1SLSessionService } from './services/B1SLSessionService';
 import { LoginService } from './services/login.service';
-<<<<<<< HEAD
 import { UserService } from './services/user.service';
-=======
->>>>>>> 63f79dad82d52cd194aee077a944fa85e15392f8
 
 // App views
 import { MainViewModule } from './views/main-view/main-view.module';
 import { MinorViewModule } from './views/minor-view/minor-view.module';
 import { LoginModule } from './views/login/login.module';
+import { ProjectModule } from './views/projects/project.module';
 import { RegisterModule } from './views/register/register.module';
 import { SalesOrdersViewModule } from './views/sales-orders/sales-orders-view.module';
 
@@ -46,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     LoginModule,
     RegisterModule,
     SalesOrdersViewModule,
+    ProjectModule,
 
     // App modules
     NavigationModule,
