@@ -3,13 +3,52 @@
         <div class="col-lg-12">
             <div class="text-center m-t-lg">
                 <h1>
-                    Welcome in Inspinia Angular 2 Starter Project
+                    Precise Estimate
                 </h1>
                 <small>
-                    It is an application skeleton for a typical web app. You can use it to quickly bootstrap your webapp projects and dev environment.
+                    Aplicación para la estimación de costos de proyectos de software
                 </small>
+                <div style="margin: 10px">
+                    <img style="max-width: 200px" src="assets/img/calculator.svg" />
+                    <form [formGroup]="userForm" (ngSubmit)="submit()">
+                        <div>
+                            <label>Nombre</label><br>
+                            <input type="text" formControlName="name">
+                            <div>
+                                <small *ngIf="!userForm.controls.name.valid">Requerido.</small>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" formControlName="email">
+                            <div>
+                                <small *ngIf="!userForm.controls.email.valid">Requerido y con formato de correo.</small>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Contraseña</label><br>
+                            <input type="password" formControlName="password1">
+                            <div>
+                                <small *ngIf="!userForm.controls.password1.valid">Requerido.</small>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Confirmación de contraseña</label><br>
+                            <input type="password" formControlName="password2">
+                            <div>
+                                <small *ngIf="!userForm.controls.password2.valid">Requerido.</small>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" [disabled]="!userForm.valid">Crear Usuario</button>
 
-                <button (click)="showAlert()">Show alert</button>
+                    </form>
+                </div>
+                <p>Value: {{ userForm.value | json }}</p>
+                <p>Validation status: {{ userForm.status }}</p>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-
-import {SessionStorageService, SessionStorage} from 'ng2-webstorage';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+import { SessionStorageService, SessionStorage } from 'ng2-webstorage';
 import { B1SLSessionService } from '../../services/B1SLSessionService';
 import { SAPB1 } from '../../services/B1SLReference';
 declare var jQuery: any;
@@ -10,10 +10,16 @@ declare var Ladda: any;
 
 @Component({
     selector: 'login',
-    templateUrl: './login.template.html'
+    templateUrl: './login.template.html',
+    providers: [LoginService]
 })
 export class loginComponent implements OnInit {
-    _loginInfo: SAPB1.LoginInfo;
+
+    _loginInfo: any = {
+        user: "",
+        password: ""
+    };
+
     _companies = ['SBODEMOANDRES', 'APATLANTIC', 'SBODEMOUS_NEW'];
     loginFailure: boolean;
     $: any = jQuery;
@@ -32,31 +38,29 @@ export class loginComponent implements OnInit {
     constructor(
         private sessionSt: SessionStorageService,
         private router: Router,
-        private b1SLService: B1SLSessionService) {
+        private b1SLService: B1SLSessionService,
+        private _loginService: LoginService) {
     }
 
-    Login() {
-        this.loginFailure = false;
-        let l = Ladda.create(document.querySelector('.ladda-button'));
-        l.start();
-
-        this.b1SLService.doLogin(this._loginInfo)
+    public login() {
+        this._loginService.login(this._loginInfo.user, this._loginInfo.password)
             .subscribe(
-                data => {
-                    this.B1Session = data;
-                    toastr.success(this._loginInfo.UserName + ' logged in', 'Welcome' );
+            data => {
+                console.log(data);
+                if (data.st == "ok") {
+                    toastr.success(this._loginInfo.user + ' inició sesión', 'Bienvenido');
                     this.sessionSt.store('loggedIn', 'true');
                     this.sessionSt.store('LoggedInUser', this._loginInfo.UserName);
                     this.sessionSt.store('B1Session', this.B1Session);
-                    l.stop();
                     this.router.navigate(['mainView']);
+                } else {
+                    toastr.error(data.data, 'Error');
                 }
-                , error => {
-                    this.loginFailure = true;
-                    console.log('Login Failure: ' + error);
-                    l.stop();
-                    toastr.error('Incorrect Credentials', 'Logon Failed');
-                }
-            );
+            },
+            error => {
+                console.log('Login Failure: ' + error);
+                toastr.error('Incorrect Credentials', 'Logon Failed');
+            });
     }
+
 }

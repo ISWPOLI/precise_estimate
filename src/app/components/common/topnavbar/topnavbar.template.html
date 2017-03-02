@@ -11,20 +11,20 @@
         <ul class="nav navbar-top-links navbar-right">
             <li *ngIf="!loggedIn">
                 <a [routerLink]="['/login']">
-                        Log in
+                        Iniciar sesión
                         </a>
             </li>
             <li *ngIf="!loggedIn">
                 <a [routerLink]="['/register']">
-                            Register
+                            Registrarse
                         </a>
             </li>
             <li *ngIf="loggedIn">
-                Signed in as: {{LoggedInUser}}
+                {{LoggedInUser}}
             </li>
             <li *ngIf="loggedIn" (click)="Logout()">
                 <a href="#">
-                    <i class="fa fa-sign-out"></i> Log out
+                    <i class="fa fa-sign-out"></i> Cerrar sesión
                 </a>
             </li>
         </ul>
