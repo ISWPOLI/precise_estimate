@@ -3,6 +3,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { UserService } from '../../services/user.service';
 
 declare var swal: any;
+declare var jQuery: any;
+declare var toastr: any;
+declare var Ladda: any;
 
 @Component({
     selector: 'mianView',
@@ -12,16 +15,44 @@ declare var swal: any;
 export class mainViewComponent {
     Title: string = "ahey";
     public userForm: FormGroup;
+    public users: any;
+    public showForm: boolean = false;
 
     constructor(
         @Inject(FormBuilder) fb: FormBuilder,
         private _userService: UserService) {
         this.userForm = fb.group({
-            name: ['pepe1', Validators.required],
-            email: ['pepe1@appsglobals.com', Validators.compose([Validators.required, this.isValidMailFormat])],
-            password1: ['123', Validators.required],
-            password2: ['123', Validators.required]
+            name: ['', Validators.required],
+            email: ['', Validators.compose([Validators.required, this.isValidMailFormat])],
+            password1: ['', Validators.required],
+            password2: ['', Validators.required]
         });
+        this.users = [];
+        this.updateUserList();
+    }
+
+    updateUserList() {
+        this._userService.listUsers().subscribe(
+            data => {
+                this.users = data;
+            },
+            error => {
+                toastr.error(error, 'Error');
+            });
+    }
+
+    showUserForm() {
+        this.showForm = true;
+    }
+
+    editUser(id){
+         this._userService.getUser(id).subscribe(
+            data => {
+                console.log(data);
+            },
+            error => {
+                toastr.error(error, 'Error');
+            });
     }
 
     submit() {
@@ -32,9 +63,12 @@ export class mainViewComponent {
         this._userService.createUser(user).subscribe(
             data => {
                 console.log(data);
+                this.showForm = false;
+                this.updateUserList();
+                this.userForm.reset();
             },
             error => {
-                console.log('Login Failure: ' + error);
+                console.log('Error creando : ' + error);
             });
     }
 
