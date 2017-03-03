@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { smoothlyMenu } from '../../../app.helpers';
-import {SessionStorageService, SessionStorage} from 'ng2-webstorage';
-import {Router} from '@angular/router';
+import { SessionStorageService, SessionStorage } from 'ng2-webstorage';
+import { Router } from '@angular/router';
 
 import { B1SLSessionService } from '../../../services/B1SLSessionService';
 import { SAPB1 } from '../../../services/B1SLReference';
@@ -12,7 +12,7 @@ declare var toastr: any;
     selector: 'topnavbar',
     templateUrl: './topnavbar.template.html'
 })
-export class TopnavbarComponent implements OnInit{
+export class TopnavbarComponent implements OnInit {
 
     _router: Router;
     @SessionStorage()
@@ -37,15 +37,10 @@ export class TopnavbarComponent implements OnInit{
 
     Logout() {
         console.log('Attempting to log out from session: ');
-        this._b1SLService.doLogout('')
-            .subscribe(data => {
-                toastr.info(this.LoggedInUser + ' logged out', 'Goodbye');
-                this.sessionSt.store('loggedIn', false);
-                this.sessionSt.store('LoggedInUser', null);
-                this.sessionSt.clear('B1Session');
-                this._router.navigate(['mainView']);
-            }, error => {
-                toastr.error(error, 'Error');
-            });
+        toastr.info(this.LoggedInUser + ' logged out', 'Goodbye');
+        this.sessionSt.store('loggedIn', false);
+        this.sessionSt.store('LoggedInUser', null);
+        this.sessionSt.clear('B1Session');
+        this._router.navigate(['login']);
     }
 }

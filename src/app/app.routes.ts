@@ -10,7 +10,7 @@ import {salesOrdersDetailViewComponent} from './views/sales-orders/sales-orders-
 
 export const ROUTES: Routes = [
   // Main redirect
-  { path: '', redirectTo: 'mainView', pathMatch: 'full'},
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'mainView', component: mainViewComponent },
   { path: 'login', component: loginComponent },
   { path: 'register', component: registerComponent },
