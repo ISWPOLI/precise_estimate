@@ -12,6 +12,7 @@ import { SessionStorageService } from 'ng2-webstorage';
 import { B1SLSessionService } from './services/B1SLSessionService';
 import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
+import { ProjectService } from './services/project.service';
 
 // App views
 import { MainViewModule } from './views/main-view/main-view.module';
@@ -62,7 +63,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     SessionStorageService,
     B1SLSessionService,
     LoginService,
-    UserService
+    UserService,
+    ProjectService
   ],
   bootstrap: [AppComponent]
 })
