@@ -9,7 +9,7 @@ export class UserService {
   private endpoint_url: string;
 
   constructor(public http: Http) {
-    this.endpoint_url = "http://localhost:8080/precise_estimate_server/api/user";
+    this.endpoint_url = "http://localhost:3000/api/user";
     this.http = http;
   }
 
