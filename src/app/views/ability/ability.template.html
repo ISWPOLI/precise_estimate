@@ -1,0 +1,22 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center m-t-lg">
+                <h1>
+                    Administración de Habilidades
+                </h1>
+                <select [(ngModel)]="user">
+                    <option *ngFor="let u of users" value="{{u.id_user}}">
+                        {{u.name}}
+                    </option>
+                </select>
+                <select [(ngModel)]="ability">
+                    <option *ngFor="let a of abilities" value="{{a.id_ability}}">
+                        {{a.name_ability}}
+                    </option>
+                </select>
+                <button (click)="assignAbility()">Asignar</button>
+            </div>
+        </div>
+    </div>
+</div>

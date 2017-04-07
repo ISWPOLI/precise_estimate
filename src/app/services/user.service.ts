@@ -37,4 +37,12 @@ export class UserService {
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  public assignAbility(idUser: number, idAbility: number) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get(this.endpoint_url + "/assingAbility?idUser=" + idUser + "&idAbility=" + idAbility, options)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
 }

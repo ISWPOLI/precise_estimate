@@ -16,10 +16,13 @@
                 </div>
             </li>
             <li *ngIf="_loggedIn" [ngClass]="{active: activeRoute('mainView')}">
-                <a [routerLink]="['/mainView']"><i class="fa fa-id-card-o"></i> <span class="nav-label">Usuarios</span></a>
+                <a [routerLink]="['/user']"><i class="fa fa-id-card-o"></i> <span class="nav-label">Usuarios</span></a>
             </li>
             <li  *ngIf="_loggedIn" [ngClass]="{active: activeRoute('projects')}">
                 <a [routerLink]="['/projects']"><i class="fa fa-sitemap"></i> <span class="nav-label">Proyectos</span></a>
+            </li>
+            <li  *ngIf="_loggedIn" [ngClass]="{active: activeRoute('ability')}">
+                <a [routerLink]="['/ability']"><i class="fa fa-star-half-o"></i> <span class="nav-label">Habilidades</span></a>
             </li>
             <li *ngIf="!_loggedIn">
                 <a [routerLink]="['/login']"><i class="fa fa-sign-in"></i> <span class="nav-label">Iniciar sesión</span> </a>
