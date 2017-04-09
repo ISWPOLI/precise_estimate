@@ -1,0 +1,36 @@
+<div>
+    <div *ngIf="action=='Listar'" class="panel panel-default">
+        <div class="panel-heading">
+            {{title}}
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
+                <thead>
+                    <tr>
+                        <th *ngFor="let s of schema.properties | keyValues">{{s.value.description}}</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let d of data">
+                        <td *ngFor="let s of schema.properties | keyValues">{{d[s.key]}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" (click)="editItem(d[key])"><i class="fa fa-edit"></i> editar</button>
+                            <button class="btn btn-sm btn-primary" (click)="removeItem(d[key])"><i class="fa fa-trash"></i> eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-sm btn-primary" (click)="newItem()"><i class="fa fa-plus-square-o"></i> nuevo</button>
+        </div>
+    </div>
+    <div *ngIf="action=='Crear' || action=='Editar'" class="panel panel-primary">
+        <div class="panel-heading">
+            {{action}} {{title}}
+        </div>
+        <div class="panel-body">
+            <sf-form [schema]="schema" [model]="dataForm" [actions]="actions" (onChange)="model=$event.value"></sf-form>
+            <button class="btn btn-sm btn-primary" (click)="saveItem()"><i class="fa fa-save"></i> guardar</button>
+        </div>
+    </div>
+</div>

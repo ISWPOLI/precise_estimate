@@ -5,6 +5,17 @@
                 <h1>
                     Administración de Dominios
                 </h1>
+                <label>Seleccione un dominio: </label>
+                <select [(ngModel)]="selected" (change)="onChangeDomain()">
+                    <option *ngFor="let o of options" value="{{o}}">
+                        {{o}}
+                    </option>
+                </select>
+                <br>
+                <br>
+                <crud *ngIf="selected" [key]="key" [data]="dataDomain" [schema]="schema" [title]="selected"  [model]="domain" 
+                (save)="saveDomain($event)" (remove)="removeDomain($event)" 
+                (find)="findDomain($event)" (reload)="reloadDomain()"></crud>
             </div>
         </div>
     </div>

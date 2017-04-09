@@ -77,7 +77,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
     // Vendor stuff
 
-
     RouterModule.forRoot(ROUTES)
   ],
 
