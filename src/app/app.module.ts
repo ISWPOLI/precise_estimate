@@ -17,13 +17,21 @@ import { AbilityService } from './services/ability.service';
 
 // App views
 import { MainViewModule } from './views/main-view/main-view.module';
-import { MinorViewModule } from './views/minor-view/minor-view.module';
-import { LoginModule } from './views/login/login.module';
 import { ProjectModule } from './views/projects/project.module';
-import { RegisterModule } from './views/register/register.module';
-import { SalesOrdersViewModule } from './views/sales-orders/sales-orders-view.module';
+import { TrackingModule } from './views/tracking/tracking.module';
 import { AbilityModule } from './views/ability/ability.module';
-import { UserModule } from './views/users/users.module';
+import { RoleassignmentModule } from './views/roleassignment/roleassignment.module';
+import { CostreportModule } from './views/costreport/costreport.module';
+import { ProgressreportModule } from './views/progressreport/progressreport.module';
+import { ResourcereportModule } from './views/resourcereport/resourcereport.module';
+import { UserModule } from './views/user/user.module';
+import { ProfilesModule } from './views/profiles/profiles.module';
+import { PermissionsModule } from './views/permissions/permissions.module';
+import { HabilitiesModule } from './views/habilities/habilities.module';
+import { RolesModule } from './views/roles/roles.module';
+import { DomainsModule } from './views/domains/domains.module';
+import { LoginModule } from './views/login/login.module';
+import { RegisterModule } from './views/register/register.module';
 
 // App modules/components
 import { NavigationModule } from '../app/components/common/navigation/navigation.module';
@@ -36,7 +44,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AppComponent
   ],
   imports: [
-    
+
     // Angular modules
     BrowserModule,
     FormsModule,
@@ -45,13 +53,22 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
     // Views
     MainViewModule,
-    MinorViewModule,
+    ProjectModule,
+    TrackingModule,
+    AbilityModule,
+    RoleassignmentModule,
+    CostreportModule,
+    ProgressreportModule,
+    ResourcereportModule,
+    UserModule,
+    ProfilesModule,
+    PermissionsModule,
+    HabilitiesModule,
+    RolesModule,
+    DomainsModule,
     LoginModule,
     RegisterModule,
-    SalesOrdersViewModule,
-    ProjectModule,
-    AbilityModule,
-    UserModule,
+
 
     // App modules
     NavigationModule,

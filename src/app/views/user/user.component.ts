@@ -9,7 +9,7 @@ declare var Ladda: any;
 
 @Component({
     selector: 'userView',
-    templateUrl: './users.template.html',
+    templateUrl: './user.template.html',
     providers: [UserService]
 })
 export class UserComponent {
