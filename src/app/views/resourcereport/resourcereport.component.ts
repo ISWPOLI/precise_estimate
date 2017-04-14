@@ -7,16 +7,23 @@ declare var toastr: any;
 declare var Ladda: any;
 
 @Component({
-    selector: 'resourcereportView',
-    templateUrl: './resourcereport.template.html',
-    providers: []
+    selector: 'resourcereport',
+     styles: [`
+      chart {
+        display: block;
+      }
+    `],
+    template: '<chart [options]="options"></chart>'
 })
-export class ResourcereportComponent {
-    
-    public form: FormGroup;
-    
-    constructor(@Inject(FormBuilder) fb: FormBuilder) {
-        this.form = fb.group({ });
-    }
 
+export class ResourcereportComponent {
+    constructor() {
+        this.options = {
+            title : { text : 'Reporte de Recursos' },
+            series: [{
+                data: [29.9, 71.5, 106.4, 129.2],
+            }]
+        };
+    }
+     options: Object;
 }
