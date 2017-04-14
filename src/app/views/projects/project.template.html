@@ -25,7 +25,7 @@
                                         <td>{{u.idProject}}</td>
                                         <td>{{u.name}}</td>
                                         <td>{{u.status}}</td>
-                                        <td><button (click)="editProject(u.idProject)">Editar</button></td>
+                                        <td><button (click)="editProject(u.id_project)">Editar</button></td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -36,29 +36,110 @@
                             </table>
                         </div>
                         <div [hidden]="!showForm" style="margin: 10px">
-                            <form [formGroup]="projectForm" (ngSubmit)="submit()">
-                                <div>
-                                    <label>Nombre</label><br>
-                                    <input type="text" formControlName="name">
-                                    <div>
-                                        <small *ngIf="!projectForm.controls.name.valid">Requerido.</small>
-                                    </div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Proyecto
                                 </div>
-                                <br>
-                                <div>
-                                    <label>Estado</label><br>
-                                    <input type="text" formControlName="status">
-                                    <div>
-                                        <small *ngIf="!projectForm.controls.status.valid">Requerido.</small>
-                                    </div>
+                                <div class="panel-body">
+                                    <form [formGroup]="projectForm" (ngSubmit)="submit()">
+                                        <div>
+                                            <label>Nombre</label><br>
+                                            <input type="text" formControlName="name">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.name.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Estado</label><br>
+                                            <input type="text" formControlName="status">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.status.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <button type="submit" [disabled]="!projectForm.valid">Guardar Proyecto</button>
+                                    </form>
                                 </div>
-                                <br>
-                                <button type="submit" [disabled]="!projectForm.valid">Guardar Proyecto</button>
-                            </form>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Story Mapping
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" class="bg-success p-xs b-r-xs">
+                                                    <div class="col-md-6 text-left">Epica</div>
+                                                    <div class="col-md-6 text-right">
+                                                        <a class="btn btn-primary btn-xs">
+                                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </th>
+                                                <th rowspan="2" class="bg-info p-xs b-r-xs">
+                                                    Característica
+                                                </th>
+                                                <th rowspan="2" class="bg-warning p-xs b-r-xs">
+                                                    Historias
+                                                </th>
+                                                <th *ngFor="let r of release | filterRelease" [attr.colspan]="r.value">
+                                                    {{r.key}}
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th *ngFor="let r of release | filterSprint">
+                                                    {{r.value.sprint}}
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let e of epics | filterEpic">
+                                                <td>
+                                                    <div class="col-md-6 text-left">{{e.key}}</div>
+                                                    <div class="col-md-6 text-right">
+                                                        <a class="btn btn-info btn-xs" (click)="onClick()">
+                                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="col-md-6 text-left">{{e.value.feature}}</div>
+                                                    <div class="col-md-6 text-right">
+                                                        <a class="btn btn-warning btn-xs" >
+                                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:0" class="col-xs-3 story-mini-card bg-warning text-center">
+                                                        <div class="">
+                                                            <h3 class="font-bold no-margins">
+                                                                {{s.key}}
+                                                            </h3>
+                                                            <small>power</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td *ngFor="let r of release | filterSprint">
+                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:r.value.id_sprint" class="col-xs-3 story-mini-card bg-warning text-center">
+                                                        <div class="">
+                                                            <h3 class="font-bold no-margins">
+                                                                {{s.key}}
+                                                            </h3>
+                                                            <small>power</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

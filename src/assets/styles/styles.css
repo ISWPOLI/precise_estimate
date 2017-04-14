@@ -3913,38 +3913,38 @@ table.table-mail tr td {
 /* BACKGROUNDS */
 .gray-bg,
 .bg-muted {
-  background-color: #f3f3f4;
+  background-color: #f3f3f4 !important;
 }
 .white-bg {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 .navy-bg,
 .bg-success {
-  background-color: #1ab394;
-  color: #ffffff;
+  background-color: #1ab394 !important;
+  color: #ffffff !important;
 }
 .blue-bg,
 .bg-primary {
-  background-color: #1c84c6;
-  color: #ffffff;
+  background-color: #1c84c6 !important;
+  color: #ffffff !important;
 }
 .lazur-bg,
 .bg-info {
-  background-color: #23c6c8;
-  color: #ffffff;
+  background-color: #23c6c8 !important;
+  color: #ffffff !important;
 }
 .yellow-bg,
 .bg-warning {
-  background-color: #f8ac59;
-  color: #ffffff;
+  background-color: #f8ac59 !important;
+  color: #ffffff !important;
 }
 .red-bg,
 .bg-danger {
-  background-color: #ed5565;
-  color: #ffffff;
+  background-color: #ed5565 !important;
+  color: #ffffff !important;
 }
 .black-bg {
-  background-color: #262626;
+  background-color: #262626 !important;
 }
 .panel-primary {
   border-color: #1ab394;
@@ -8388,4 +8388,11 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+
+
+.story-mini-card{
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }

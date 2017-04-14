@@ -24,6 +24,7 @@
     "angular2-daterangepicker": "0.0.5",
     "angular2-jwt": "^0.1.28",
     "angular2-ladda": "^1.0.6",
+    "angular2-modal": "^2.0.3",
     "angular2-schema-form": "^1.0.0-beta.5",
     "angular2-select": "1.0.0-alpha.12",
     "angular2-toaster": "^2.0.0",
