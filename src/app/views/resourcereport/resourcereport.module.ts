@@ -11,6 +11,9 @@ import {
     WidgetRegistry
 } from 'angular2-schema-form';
 
+/**
+ * Function to generate a Factory Method to use a highcharts library
+ */
 export function highchartsFactory() {
   return require('highcharts');
 }
