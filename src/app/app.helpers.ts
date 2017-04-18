@@ -7,33 +7,34 @@
  *
  */
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 export function correctHeight() {
-
-  var pageWrapper = jQuery('#page-wrapper');
-  var navbarHeigh = jQuery('nav.navbar-default').height();
-  var wrapperHeigh = pageWrapper.height();
-
-  if (navbarHeigh > wrapperHeigh) {
-    pageWrapper.css("min-height", navbarHeigh + "px");
-  }
-
-  if (navbarHeigh < wrapperHeigh) {
-    if (navbarHeigh < jQuery(window).height()) {
-      pageWrapper.css("min-height", jQuery(window).height() + "px");
-    } else {
-      pageWrapper.css("min-height", navbarHeigh + "px");
-    }
-  }
-
-  if (jQuery('body').hasClass('fixed-nav')) {
+  /*
+    var pageWrapper = jQuery('#page-wrapper');
+    var navbarHeigh = jQuery('nav.navbar-default').height();
+    var wrapperHeigh = pageWrapper.height();
+  
     if (navbarHeigh > wrapperHeigh) {
       pageWrapper.css("min-height", navbarHeigh + "px");
-    } else {
-      pageWrapper.css("min-height", jQuery(window).height() - 60 + "px");
     }
-  }
+  
+    if (navbarHeigh < wrapperHeigh) {
+      if (navbarHeigh < jQuery(window).height()) {
+        pageWrapper.css("min-height", jQuery(window).height() + "px");
+      } else {
+        pageWrapper.css("min-height", navbarHeigh + "px");
+      }
+    }
+  
+    if (jQuery('body').hasClass('fixed-nav')) {
+      if (navbarHeigh > wrapperHeigh) {
+        pageWrapper.css("min-height", navbarHeigh + "px");
+      } else {
+        pageWrapper.css("min-height", jQuery(window).height() - 60 + "px");
+      }
+    }
+    */
 }
 
 export function detectBody() {

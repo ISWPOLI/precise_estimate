@@ -430,7 +430,7 @@ body.fixed-sidebar .navbar-static-side,
 body.canvas-menu .navbar-static-side {
   position: fixed;
   width: 220px;
-  z-index: 2001;
+  z-index: 1000;
   height: 100%;
 }
 body.fixed-sidebar.mini-navbar .navbar-static-side {
@@ -494,7 +494,7 @@ body.canvas-menu.mini-navbar .navbar-default .nav li .profile-element a span {
   left: 0;
 }
 body.canvas-menu nav.navbar-static-side {
-  z-index: 2001;
+  z-index: 1000;
   background: #2f4050;
   height: 100%;
   position: fixed;
@@ -7460,7 +7460,7 @@ body.rtls.top-navigation .footer.fixed {
   }
   .body-small.rtls .navbar-static-side {
     display: none;
-    z-index: 2001;
+    z-index: 1000;
     position: absolute;
     width: 70px;
   }
@@ -7469,7 +7469,7 @@ body.rtls.top-navigation .footer.fixed {
   }
   .rtls.fixed-sidebar.body-small .navbar-static-side {
     display: none;
-    z-index: 2001;
+    z-index: 1000;
     position: fixed;
     width: 220px;
   }
@@ -8256,7 +8256,7 @@ body.md-skin {
   background-color: #ffffff;
 }
 .md-skin.canvas-menu nav.navbar-static-side {
-  z-index: 2001;
+  z-index: 1000;
   background: #ffffff;
   height: 100%;
   position: fixed;
@@ -8269,7 +8269,7 @@ body.md-skin {
     min-height: 1200px;
   }
   .navbar-static-side {
-    z-index: 2001;
+    z-index: 1000;
     position: absolute;
     width: 220px;
   }
@@ -8287,7 +8287,7 @@ body.md-skin {
   }
   .body-small .navbar-static-side {
     display: none;
-    z-index: 2001;
+    z-index: 1000;
     position: absolute;
     width: 70px;
   }
@@ -8316,7 +8316,7 @@ body.md-skin {
   }
   .fixed-sidebar.body-small .navbar-static-side {
     display: none;
-    z-index: 2001;
+    z-index: 1000;
     position: fixed;
     width: 220px;
   }
@@ -8390,9 +8390,47 @@ body.md-skin {
   }
 }
 
-
+/*PRECISE*/
 .story-mini-card{
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

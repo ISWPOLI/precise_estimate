@@ -12,7 +12,7 @@ import {
 
 @NgModule({
     declarations: [ResourcereportComponent],
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, SchemaFormModule, ChartModule.forRoot(require('highcharts'))],
+    imports: [BrowserModule, FormsModule, ReactiveFormsModule, SchemaFormModule, ChartModule],
     providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],
 })
 
