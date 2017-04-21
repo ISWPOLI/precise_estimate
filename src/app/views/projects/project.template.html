@@ -10,6 +10,7 @@
                         <h1>
                             Administración de Proyectos
                         </h1>
+                        {{epic|json}}
                         <div [hidden]="showForm">
                             <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
                                 <thead>
@@ -99,7 +100,7 @@
                                                 <td>
                                                     <div class="col-md-6 text-left">{{e.key}}</div>
                                                     <div class="col-md-6 text-right">
-                                                        <a class="btn btn-info btn-xs" (click)="onClick()">
+                                                        <a class="btn btn-info btn-xs" (click)="editEpic(1)">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -107,7 +108,7 @@
                                                 <td>
                                                     <div class="col-md-6 text-left">{{e.value.feature}}</div>
                                                     <div class="col-md-6 text-right">
-                                                        <a class="btn btn-warning btn-xs" >
+                                                        <a class="btn btn-warning btn-xs">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -142,5 +143,20 @@
                 </div>
             </div>
         </div>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
+
+        <!-- The Modal -->
+        <div #mmodal id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+        </div>
+
     </div>
 </div>

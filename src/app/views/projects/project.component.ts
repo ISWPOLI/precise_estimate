@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewContainerRef } from '@angular/core';
+import { Component, ViewChild, OnInit, Inject, ViewContainerRef, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 import { SessionStorageService, SessionStorage } from 'ng2-webstorage';
@@ -18,9 +18,11 @@ declare var Ladda: any;
     providers: [ProjectService]
 })
 export class ProjectComponent {
+    @ViewChild('mmodal') mmodal: ElementRef;
     public projectForm: FormGroup;
     public projects: any;
     public showForm: boolean = false;
+    public epic: any = {};
     public epics: any = {};
     public release: any =
 
@@ -126,23 +128,12 @@ export class ProjectComponent {
             });
     }
 
-    onClick() {
-        this.modal.alert()
-            .size('lg')
-            .showClose(true)
-            .title('A simple Alert style modal window')
-            .body(`
-            <h4>Alert is a classic (title/body/footer) 1 button modal window that 
-            does not block.</h4>
-            <b>Configuration:</b>
-            <ul>
-                <li>Non blocking (click anywhere outside to dismiss)</li>
-                <li>Size large</li>
-                <li>Dismissed with default keyboard key (ESC)</li>
-                <li>Close wth button click</li>
-                <li>HTML content</li>
-            </ul>`)
-            .open();
+    editEpic(id) {
+        this.showFormEpic({});
+    }
+
+    showFormEpic(data) {
+        this.mmodal.nativeElement.style.display = "block";
     }
 
 }
