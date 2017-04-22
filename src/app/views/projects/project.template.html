@@ -31,7 +31,7 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="4"><button (click)="showProjectForm()">Crear Proyecto</button></td>
+                                        <td colspan="4"><button (click)="createProject()">Crear Proyecto</button></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -97,7 +97,7 @@
                                         <div>
                                             <label>Estado</label><br>
                                             <select formControlName="status">
-                                                    <option *ngFor="let t of status" [value]="t.id_status">{{t.status}}</option>
+                                                    <option *ngFor="let st of status" [value]="st.id_status">{{st.status}}</option>
                                                 </select>
                                             <div>
                                                 <small *ngIf="!projectForm.controls.status.valid">Requerido.</small>

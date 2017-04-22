@@ -39,9 +39,9 @@ export class ProjectComponent {
     ];
     public status: any = [
         { id_status: 1, status: "Iniciado" },
-        { id_status: 1, status: "Finalizado" },
-        { id_status: 1, status: "Activo" },
-        { id_status: 1, status: "En Desarrollo" }
+        { id_status: 2, status: "Finalizado" },
+        { id_status: 3, status: "Activo" },
+        { id_status: 4, status: "En Desarrollo" }
     ];
     public epic: any = {};
     public epics: any = {};
@@ -121,13 +121,13 @@ export class ProjectComponent {
         this._projectService.getProject(id_project).subscribe(
             data => {
                 this.projectForm.patchValue({
-                    name: data.name,
-                    typep: data.type,
-                    date_start: data.date_start,
-                    date_end: data.date_end,
-                    value_estimate_total: data.value_estimate_total,
-                    time_estimate_total: data.time_estimate_total,
-                    status: data.status
+                    name: data[0].name,
+                    typep: data[0].type,
+                    date_start: data[0].date_start,
+                    date_end: data[0].date_end,
+                    value_estimate_total: parseInt(data[0].value_estimate_total),
+                    time_estimate_total: parseInt(data[0].time_estimate_total),
+                    status: parseInt(data[0].id_status)
                 });
             },
             error => {
@@ -145,7 +145,8 @@ export class ProjectComponent {
             });
     }
 
-    showProjectForm() {
+    createProject() {
+        this.idProject = 0;
         this.showForm = true;
     }
 
@@ -155,19 +156,30 @@ export class ProjectComponent {
         p["type"] = this.projectForm.value.typep;
         p["dateStart"] = this.projectForm.value.date_start;
         p["dateEnd"] = this.projectForm.value.date_end;
-        p["valueEstimate"] = this.projectForm.value.value_estimate_total;
-        p["timeEstimate"] = this.projectForm.value.time_estimate_total;
+        p["value"] = this.projectForm.value.value_estimate_total;
+        p["time"] = this.projectForm.value.time_estimate_total;
         p["idStatus"] = this.projectForm.value.status;
-        this._projectService.createProject(p).subscribe(
-            data => {
-                console.log(data);
-                this.showForm = false;
-                this.updateProjectList();
-                this.projectForm.reset();
-            },
-            error => {
-                console.log('Error creando : ' + error);
-            });
+        if (this.idProject == 0) {
+            this._projectService.createProject(p).subscribe(
+                data => {
+                    console.log(data);
+                    this.showForm = false;
+                    this.updateProjectList();
+                    this.projectForm.reset();
+                },
+                error => {
+                    console.log('Error creando : ' + error);
+                });
+        } else {
+            p["idProject"] = this.idProject;
+            this._projectService.updateProject(p).subscribe(
+                data => {
+                    toastr.success('Actualizado correctamente!', '');
+                },
+                error => {
+                    console.log('Error creando : ' + error);
+                });
+        }
     }
 
     saveEpic() {

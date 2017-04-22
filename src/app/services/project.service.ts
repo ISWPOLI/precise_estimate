@@ -9,6 +9,7 @@ export class ProjectService {
   private endpoint_url: string;
 
   constructor(public http: Http) {
+    //this.endpoint_url = "http://server.preciseestimate.co/api/";
     this.endpoint_url = "http://localhost:3000/api/";
     this.http = http;
   }
@@ -17,6 +18,14 @@ export class ProjectService {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     return this.http.post(this.endpoint_url + "project/createProject", ProjectForm, options)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  public updateProject(ProjectForm: any) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.endpoint_url + "project/editProject", ProjectForm, options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
@@ -48,7 +57,7 @@ export class ProjectService {
   public getProject(id: number) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get(this.endpoint_url + "project" + "/" + id, options)
+    return this.http.get(this.endpoint_url + "project" + "/findProject?idProject=" + id, options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
