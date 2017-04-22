@@ -17,15 +17,15 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Nombre</th>
-                                        <th>Status</th>
+                                        <th>Tipo</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let u of projects">
-                                        <td>{{u.idProject}}</td>
+                                        <td>{{u.id_project}}</td>
                                         <td>{{u.name}}</td>
-                                        <td>{{u.status}}</td>
+                                        <td>{{u.type}}</td>
                                         <td><button (click)="editProject(u.id_project)">Editar</button></td>
                                     </tr>
                                 </tbody>
@@ -52,8 +52,53 @@
                                         </div>
                                         <br>
                                         <div>
+                                            <label>Tipo</label><br>
+                                            <select formControlName="typep">
+                                                    <option *ngFor="let t of types" [value]="t">{{t}}</option>
+                                                </select>
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.typep.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Fecha de inicio</label><br>
+                                            <input type="date" formControlName="date_start">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.date_start.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Fecha de finalización</label><br>
+                                            <input type="date" formControlName="date_end">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.date_end.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Costo Total Estimado</label><br>
+                                            <input type="text" formControlName="value_estimate_total">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.value_estimate_total.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Tiempo Total Estimado (Horas)</label><br>
+                                            <input type="text" formControlName="time_estimate_total">
+                                            <div>
+                                                <small *ngIf="!projectForm.controls.time_estimate_total.valid">Requerido.</small>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div>
                                             <label>Estado</label><br>
-                                            <input type="text" formControlName="status">
+                                            <select formControlName="status">
+                                                    <option *ngFor="let t of status" [value]="t.id_status">{{t.status}}</option>
+                                                </select>
                                             <div>
                                                 <small *ngIf="!projectForm.controls.status.valid">Requerido.</small>
                                             </div>

@@ -31,10 +31,21 @@ export class ProjectComponent {
     public projectForm: FormGroup;
     public projects: any;
     public showForm: boolean = false;
+    public types: any = [
+        "Basados en Web",
+        "Dispositivos Móviles",
+        "Escritorio",
+        "Mixto"
+    ];
+    public status: any = [
+        { id_status: 1, status: "Iniciado" },
+        { id_status: 1, status: "Finalizado" },
+        { id_status: 1, status: "Activo" },
+        { id_status: 1, status: "En Desarrollo" }
+    ];
     public epic: any = {};
     public epics: any = {};
     public release: any =
-
     [
         {
             id_release: 1,
@@ -82,6 +93,11 @@ export class ProjectComponent {
         overlay.defaultViewContainer = vcRef;
         this.projectForm = fb.group({
             name: ['', Validators.required],
+            typep: ['', Validators.required],
+            date_start: ['', Validators.required],
+            date_end: ['', Validators.required],
+            value_estimate_total: ['', Validators.required],
+            time_estimate_total: ['', Validators.required],
             status: ['', Validators.required],
         });
         this.projects = [];
@@ -121,11 +137,11 @@ export class ProjectComponent {
     submit() {
         let p = {};
         p["name"] = this.projectForm.value.name;
-        p["type"] = "Software";
-        p["dateStart"] = "hoy";
-        p["dateEnd"] = "hoy";
-        p["valueEstimate"] = 1000000;
-        p["timeEstimate"] = 50;
+        p["type"] = this.projectForm.value.typep;
+        p["dateStart"] = this.projectForm.value.date_start;
+        p["dateEnd"] =this.projectForm.value.date_end;
+        p["valueEstimate"] = this.projectForm.value.value_estimate_total;
+        p["timeEstimate"] = this.projectForm.value.time_estimate_total;
         p["idStatus"] = this.projectForm.value.status;
         this._projectService.createProject(p).subscribe(
             data => {
