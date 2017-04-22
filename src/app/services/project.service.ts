@@ -9,14 +9,30 @@ export class ProjectService {
   private endpoint_url: string;
 
   constructor(public http: Http) {
-    this.endpoint_url = "http://localhost:3000/api/project";
+    this.endpoint_url = "http://localhost:3000/api/";
     this.http = http;
   }
 
   public createProject(ProjectForm: any) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post(this.endpoint_url, ProjectForm, options)
+    return this.http.post(this.endpoint_url + "project", ProjectForm, options)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  public createEpic(id_project: number, nameEpic: string) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.endpoint_url + "epic", { idProject: id_project, name: nameEpic }, options)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  public createFeature(id_epic: number, nameFeature: string) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.endpoint_url + "feature", { idEpic: id_epic, name: nameFeature }, options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
@@ -24,7 +40,7 @@ export class ProjectService {
   public listProjects() {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get(this.endpoint_url, options)
+    return this.http.get(this.endpoint_url + "project", options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
@@ -32,7 +48,7 @@ export class ProjectService {
   public getProject(id: number) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get(this.endpoint_url + "/" + id, options)
+    return this.http.get(this.endpoint_url + "project" + "/" + id, options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
@@ -40,7 +56,7 @@ export class ProjectService {
   public getCompleteProject(id: number) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.get(this.endpoint_url + "/getCompleteProject?idProject=" + id, options)
+    return this.http.get(this.endpoint_url + "project" + "/getCompleteProject?idProject=" + id, options)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }

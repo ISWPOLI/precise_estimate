@@ -74,7 +74,7 @@
                                                 <th rowspan="2" class="bg-success p-xs b-r-xs">
                                                     <div class="col-md-6 text-left">Epica</div>
                                                     <div class="col-md-6 text-right">
-                                                        <a class="btn btn-primary btn-xs">
+                                                        <a class="btn btn-primary btn-xs" (click)="showModal('epic')">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -100,7 +100,7 @@
                                                 <td>
                                                     <div class="col-md-6 text-left">{{e.key}}</div>
                                                     <div class="col-md-6 text-right">
-                                                        <a class="btn btn-info btn-xs" (click)="editEpic(1)">
+                                                        <a class="btn btn-info btn-xs" (click)="showModal('feature', e.value.id_epic)">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -144,19 +144,59 @@
             </div>
         </div>
 
-        <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
-
-        <!-- The Modal -->
-        <div #mmodal id="myModal" class="modal">
-
+        <!-- The Modal Epic-->
+        <div #epicmodal id="epicmodal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
-            </div>
+                <span class="close" (click)="hideModal('epic');">&times;</span>
+                <h5>Crear Épica</h5>
 
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" [(ngModel)]="epicName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-footer">
+                        <span class="pull-right">
+                            <button type="button" (click)="hideModal('epic')" class="btn btn-w-m btn-danger">Cancelar</button>
+                            <button type="button" (click)="saveEpic()" class="btn btn-w-m btn-info">Guardar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
+        <!-- The Modal Featue-->
+        <div #featuremodal id="featuremodal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" (click)="hideModal('feature')">&times;</span>
+                <h3>Crear Característica</h3>
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="form-group">
+                            <label class="control-label">Nombre</label>
+                            <div class="">
+                                <input type="text" class="form-control" [(ngModel)]="featureName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-footer">
+                        <span class="pull-right">
+                            <button type="button" (click)="hideModal('feature')" class="btn btn-w-m btn-danger">Cancelar</button>
+                            <button type="button" (click)="saveFeature()" class="btn btn-w-m btn-info">Guardar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 </div>

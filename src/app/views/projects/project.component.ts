@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, Inject, ViewContainerRef, ElementRef } from '@angular/core';
+import { Component, ViewChild, Input, OnInit, Inject, ViewContainerRef, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 import { SessionStorageService, SessionStorage } from 'ng2-webstorage';
@@ -18,7 +18,16 @@ declare var Ladda: any;
     providers: [ProjectService]
 })
 export class ProjectComponent {
-    @ViewChild('mmodal') mmodal: ElementRef;
+
+    @ViewChild('epicmodal') epicmodal: ElementRef;
+    @ViewChild('featuremodal') featuremodal: ElementRef;
+
+    private idProject: number;
+    private idEpic: number;
+    private idFeature: number;
+    public featureName: string;
+    public epicName: string;
+
     public projectForm: FormGroup;
     public projects: any;
     public showForm: boolean = false;
@@ -65,6 +74,7 @@ export class ProjectComponent {
         }
     ];
 
+
     constructor(
         @Inject(FormBuilder) fb: FormBuilder,
         private _projectService: ProjectService,
@@ -91,6 +101,7 @@ export class ProjectComponent {
     editProject(id_project) {
         this.loadCompleteProject(id_project);
         this.showForm = true;
+        this.idProject = id_project;
     }
 
     loadCompleteProject(id_project) {
@@ -128,12 +139,57 @@ export class ProjectComponent {
             });
     }
 
-    editEpic(id) {
-        this.showFormEpic({});
+    saveEpic() {
+        this._projectService.createEpic(this.idProject, this.epicName).subscribe(
+            data => {
+                this.hideModal('epic');
+            },
+            error => {
+                console.log('Error creando : ' + error);
+            }
+        );
     }
 
-    showFormEpic(data) {
-        this.mmodal.nativeElement.style.display = "block";
+    editEpic(id) {
+        //this.showFormEpic({});
     }
+
+    saveFeature() {
+        this._projectService.createFeature(this.idEpic, this.featureName).subscribe(
+            data => {
+                this.hideModal('feature');
+            },
+            error => {
+                console.log('Error creando : ' + error);
+            }
+        );
+    }
+
+    showModal(mtype, id) {
+        switch (mtype) {
+            case "epic":
+                this.idEpic = id;
+                this.epicmodal.nativeElement.style.display = "block";
+                break;
+            case "feature":
+                this.idFeature = id;
+                this.featuremodal.nativeElement.style.display = "block";
+                break;
+        }
+    }
+
+    hideModal(mtype) {
+        switch (mtype) {
+            case "epic":
+                this.idEpic = 0;
+                this.epicmodal.nativeElement.style.display = "none";
+                break;
+            case "feature":
+                this.idFeature = 0;
+                this.featuremodal.nativeElement.style.display = "none";
+                break;
+        }
+    }
+
 
 }
