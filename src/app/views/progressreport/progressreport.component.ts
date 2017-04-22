@@ -23,9 +23,7 @@ export class ProgressreportComponent {
             title : { text : 'Reporte de Avances' },
             subtitle : { text : 'Proyecto: Precise Estimate'},
             yAxis: { min: 0,
-                    title: {
-                        text: 'Actividades Cerradas'
-                    }
+                    title: { text: 'Actividades Cerradas'}
                 },
 
             series: [{
