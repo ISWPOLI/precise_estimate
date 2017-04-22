@@ -118,6 +118,21 @@ export class ProjectComponent {
         this.loadCompleteProject(id_project);
         this.showForm = true;
         this.idProject = id_project;
+        this._projectService.getProject(id_project).subscribe(
+            data => {
+                this.projectForm.patchValue({
+                    name: data.name,
+                    typep: data.type,
+                    date_start: data.date_start,
+                    date_end: data.date_end,
+                    value_estimate_total: data.value_estimate_total,
+                    time_estimate_total: data.time_estimate_total,
+                    status: data.status
+                });
+            },
+            error => {
+                toastr.error(error, 'Error');
+            });
     }
 
     loadCompleteProject(id_project) {
@@ -139,7 +154,7 @@ export class ProjectComponent {
         p["name"] = this.projectForm.value.name;
         p["type"] = this.projectForm.value.typep;
         p["dateStart"] = this.projectForm.value.date_start;
-        p["dateEnd"] =this.projectForm.value.date_end;
+        p["dateEnd"] = this.projectForm.value.date_end;
         p["valueEstimate"] = this.projectForm.value.value_estimate_total;
         p["timeEstimate"] = this.projectForm.value.time_estimate_total;
         p["idStatus"] = this.projectForm.value.status;
