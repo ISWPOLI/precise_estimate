@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="addf1b7a-9834-4e92-815c-949999c22c12"
+  name="DiagramadeConectores" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="ee65cb55-464a-4627-85f4-ec9f0e0e7ef4">
+      <body>Llamadas GET y POST de la BD</body>
+    </comment>
+    <comment
+      Id="ca770c10-3b35-42d8-aef5-51642a5828c1">
+      <body>Las interfaces son modeladas en el diagrama usando los elementos de interfaz Expuestas</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="62bc4330-a712-4b8d-a907-bb82b0865e78"
+        name="COM + Ambiente Node JS 6.0"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <part
+            Id="d928f69d-40c6-4008-a8ef-d795c9a549c8"
+            name="Logica del Negoci"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="75125e57-68a3-4c03-8992-7b8145a48651"
+                LastKnownName="Component1"
+                LastKnownLocation="DiagramadeConectores.uml" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface
+            Id="87b2822e-a926-467d-a0f5-dbba1df00029"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="a4c3a82b-1c06-4202-afbc-281acd9b3902">
+                <providedInterfaceMoniker
+                  Id="4119fd58-cf4a-4a80-af6d-3f3b7ec98240"
+                  LastKnownName="Port1"
+                  LastKnownLocation="DiagramadeConectores.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="4b07f376-598a-4993-8f3c-acc686c0dd55"
+                LastKnownName="Interface2"
+                LastKnownLocation="DiagramadeConectores.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface
+            Id="40ba0a6f-9a6b-4cb3-a2d3-2dac195cd5cb"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a019bbe7-6f80-4761-94e8-36cdf7bc20a9"
+                LastKnownName="Interface1"
+                LastKnownLocation="DiagramadeConectores.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="75125e57-68a3-4c03-8992-7b8145a48651"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="9edda9c3-c3c2-4395-b121-5c5d76940363"
+        name="WebServer Angular"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="4119fd58-cf4a-4a80-af6d-3f3b7ec98240"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a079df6f-ee12-46e6-80f1-35aea91301f5"
+                LastKnownName="HTTPS"
+                LastKnownLocation="DiagramadeConectores.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="38997f19-9096-4168-8efd-7bd32a55c1ad"
+        name="Base de Datos MySQL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e67b5b8e-2730-4c2e-92cd-d4bd3573bfd5">
+            <componentMoniker
+              Id="62bc4330-a712-4b8d-a907-bb82b0865e78"
+              LastKnownName="COM + Ambiente Node JS 6.0"
+              LastKnownLocation="DiagramadeConectores.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="a3a41e5d-876a-43cc-85e0-e3580cf18c4b"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="de7bd816-8090-4e57-b1dd-1c4a1545ecb4"
+                LastKnownName="Process SQL Request"
+                LastKnownLocation="DiagramadeConectores.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="de7bd816-8090-4e57-b1dd-1c4a1545ecb4"
+        name="Process SQL Request"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a079df6f-ee12-46e6-80f1-35aea91301f5"
+        name="HTTPS"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4b07f376-598a-4993-8f3c-acc686c0dd55"
+        name="Interface2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="fd9be863-5096-43b6-a5b1-443c130b0b5d"
+        name="Controlador"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="5f97e7a8-f6c9-44c5-9ce5-4d53fa0f6cf0">
+            <componentMoniker
+              Id="2b365e4a-d6af-4418-9689-3ed4dcf4476b"
+              LastKnownName="Express"
+              LastKnownLocation="DiagramadeConectores.uml" />
+          </dependency>
+          <dependency
+            Id="88eaf7eb-c74f-4d26-a663-cde5c4d21ae8">
+            <providedInterfaceMoniker
+              Id="a3a41e5d-876a-43cc-85e0-e3580cf18c4b"
+              LastKnownName="Port1"
+              LastKnownLocation="DiagramadeConectores.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2b365e4a-d6af-4418-9689-3ed4dcf4476b"
+        name="Express"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a019bbe7-6f80-4761-94e8-36cdf7bc20a9"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

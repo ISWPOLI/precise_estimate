@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="0c5be16b-d24a-4c47-ba9b-7ca10ca7c222" name="UMLConectores" linkedPackageId="6392da85-5826-40f4-942e-2945483dcd56" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="3030b1e3-0a7c-46e6-9281-db678cff38d8">
+      <elementDefinition Id="ee65cb55-464a-4627-85f4-ec9f0e0e7ef4" />
+      <body>Llamadas GET y POST de la BD</body>
+    </comment>
+    <comment Id="877f89a1-b362-4016-a89d-a5689a89ef6e">
+      <elementDefinition Id="ca770c10-3b35-42d8-aef5-51642a5828c1" />
+      <body>Las interfaces son modeladas en el diagrama usando los elementos de interfaz Expuestas</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0c2fe325-5a80-44af-9d19-0b8ca2c9b1ba">
+      <profileInstance Id="9026aa90-3706-4b4f-a2eb-d2621b6f644f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="09cf5e95-5073-4294-971c-d8972c072460">
+      <profileInstance Id="9d7f1767-03f8-4a7f-b70f-c0765990e617" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="43dd5b0f-9448-48f5-845b-40183184f367" name="COM + Ambiente Node JS 6.0" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="62bc4330-a712-4b8d-a907-bb82b0865e78" />
+        <ownedAttributesInternal>
+          <part Id="6e5682e4-4b20-451d-96d5-a4df4e380497" name="Logica del Negoci" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="d928f69d-40c6-4008-a8ef-d795c9a549c8" />
+            <type_NamedElement>
+              <componentMoniker Id="fce328c7-3b2e-4455-95d5-0e93610c7802" LastKnownName="Component1" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface Id="707ef23a-2afd-42ae-87d8-1c5f99e10267" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="87b2822e-a926-467d-a0f5-dbba1df00029" />
+            <suppliersInternal>
+              <dependency Id="be16b18d-ebef-4226-b3d7-021b5f7aec6b">
+                <providedInterfaceMoniker Id="6618ac61-c68f-40e6-a8c3-1352a6d40ba5" LastKnownName="Port1" />
+                <elementDefinition Id="a4c3a82b-1c06-4202-afbc-281acd9b3902" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="34378ab2-b1b6-413b-a314-9006a22e2a53" LastKnownName="Interface2" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="c853470b-02e9-4044-88b3-193446cbfb7b" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="40ba0a6f-9a6b-4cb3-a2d3-2dac195cd5cb" />
+            <type_NamedElement>
+              <interfaceMoniker Id="466562d6-f25d-4ea9-af52-ff0f30c9bb8e" LastKnownName="Interface1" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="fce328c7-3b2e-4455-95d5-0e93610c7802" name="Component1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="75125e57-68a3-4c03-8992-7b8145a48651" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="9a972ec3-8a0a-410e-bb2f-ce9f52e543c2" name="WebServer Angular" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9edda9c3-c3c2-4395-b121-5c5d76940363" />
+        <ownedAttributesInternal>
+          <providedInterface Id="6618ac61-c68f-40e6-a8c3-1352a6d40ba5" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="4119fd58-cf4a-4a80-af6d-3f3b7ec98240" />
+            <type_NamedElement>
+              <interfaceMoniker Id="3e04fb95-fc52-40df-bc07-ff3f3e7377d3" LastKnownName="HTTPS" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b3a3bb9c-acb0-4e20-a4ff-a3061fdbc95b" name="Base de Datos MySQL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="38997f19-9096-4168-8efd-7bd32a55c1ad" />
+        <suppliersInternal>
+          <dependency Id="2348c3c9-9a4d-4dff-a736-1a00fce14231">
+            <componentMoniker Id="43dd5b0f-9448-48f5-845b-40183184f367" LastKnownName="COM + Ambiente Node JS 6.0" />
+            <elementDefinition Id="e67b5b8e-2730-4c2e-92cd-d4bd3573bfd5" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="4e2672d1-8b16-4364-9dc4-26c46e93b12e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="a3a41e5d-876a-43cc-85e0-e3580cf18c4b" />
+            <type_NamedElement>
+              <interfaceMoniker Id="b469f9f1-782f-4319-b2d4-4d07854bd0d4" LastKnownName="Process SQL Request" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="b469f9f1-782f-4319-b2d4-4d07854bd0d4" name="Process SQL Request" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de7bd816-8090-4e57-b1dd-1c4a1545ecb4" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="3e04fb95-fc52-40df-bc07-ff3f3e7377d3" name="HTTPS" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a079df6f-ee12-46e6-80f1-35aea91301f5" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="34378ab2-b1b6-413b-a314-9006a22e2a53" name="Interface2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4b07f376-598a-4993-8f3c-acc686c0dd55" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="60cd5c8f-8378-4222-8281-e228fe162b06" name="Controlador" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fd9be863-5096-43b6-a5b1-443c130b0b5d" />
+        <suppliersInternal>
+          <dependency Id="6c043ec2-0428-41c5-a970-ef27b821135f">
+            <componentMoniker Id="8d26687e-87e7-4d9b-ba3e-2d26704145c4" LastKnownName="Express" />
+            <elementDefinition Id="5f97e7a8-f6c9-44c5-9ce5-4d53fa0f6cf0" />
+          </dependency>
+          <dependency Id="cc9e6145-0a8e-4069-a1f8-33485a2d6144">
+            <providedInterfaceMoniker Id="4e2672d1-8b16-4364-9dc4-26c46e93b12e" LastKnownName="Port1" />
+            <elementDefinition Id="88eaf7eb-c74f-4d26-a663-cde5c4d21ae8" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="8d26687e-87e7-4d9b-ba3e-2d26704145c4" name="Express" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2b365e4a-d6af-4418-9689-3ed4dcf4476b" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="466562d6-f25d-4ea9-af52-ff0f30c9bb8e" name="Interface1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a019bbe7-6f80-4761-94e8-36cdf7bc20a9" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="6392da85-5826-40f4-942e-2945483dcd56" name="DiagramadeConectores">
+    <elementDefinition Id="addf1b7a-9834-4e92-815c-949999c22c12" />
+  </package>
+</componentModel>
