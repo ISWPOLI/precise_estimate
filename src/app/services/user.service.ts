@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import { ConfigModule } from './config';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -9,7 +10,7 @@ export class UserService {
   private endpoint_url: string;
 
   constructor(public http: Http) {
-    this.endpoint_url = "http://localhost:3000/api/user";
+    this.endpoint_url = ConfigModule.APIURL + "/user";
     this.http = http;
   }
 

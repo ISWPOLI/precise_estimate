@@ -8,9 +8,8 @@
                 <div class="animated fadeInDown">
                     <div>
                         <h1>
-                            Administración de Proyectos
+                            Administración de Proyectos - {{user.name}}
                         </h1>
-                        {{epic|json}}
                         <div [hidden]="showForm">
                             <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
                                 <thead>
@@ -36,22 +35,23 @@
                                 </tfoot>
                             </table>
                         </div>
+
+                        <!-- Project Form -->
                         <div [hidden]="!showForm" style="margin: 10px">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     Proyecto
                                 </div>
                                 <div class="panel-body">
-                                    <form [formGroup]="projectForm" (ngSubmit)="submit()">
-                                        <div>
+                                    <form [formGroup]="projectForm" (ngSubmit)="saveProject()">
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Nombre</label><br>
                                             <input type="text" formControlName="name">
                                             <div>
                                                 <small *ngIf="!projectForm.controls.name.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Tipo</label><br>
                                             <select formControlName="typep">
                                                     <option *ngFor="let t of types" [value]="t">{{t}}</option>
@@ -60,41 +60,35 @@
                                                 <small *ngIf="!projectForm.controls.typep.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Fecha de inicio</label><br>
                                             <input type="date" formControlName="date_start">
                                             <div>
                                                 <small *ngIf="!projectForm.controls.date_start.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Fecha de finalización</label><br>
                                             <input type="date" formControlName="date_end">
                                             <div>
                                                 <small *ngIf="!projectForm.controls.date_end.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Costo Total Estimado</label><br>
                                             <input type="text" formControlName="value_estimate_total">
                                             <div>
                                                 <small *ngIf="!projectForm.controls.value_estimate_total.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Tiempo Total Estimado (Horas)</label><br>
                                             <input type="text" formControlName="time_estimate_total">
                                             <div>
                                                 <small *ngIf="!projectForm.controls.time_estimate_total.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-
-                                        <div>
+                                        <div class="col-sm-12 col-md-4 margin-10">
                                             <label>Estado</label><br>
                                             <select formControlName="status">
                                                     <option *ngFor="let st of status" [value]="st.id_status">{{st.status}}</option>
@@ -103,22 +97,31 @@
                                                 <small *ngIf="!projectForm.controls.status.valid">Requerido.</small>
                                             </div>
                                         </div>
-                                        <br>
-                                        <button type="submit" [disabled]="!projectForm.valid">Guardar Proyecto</button>
+                                        <div class="col-sm-12 col-md-12 margin-10 text-center">
+                                            <button type="submit" [disabled]="!projectForm.valid">Guardar Proyecto</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
-                            <div class="panel panel-primary">
+                            <!-- End Project Form -->
+
+                            <!-- Release Planning Form -->
+                            <div class="panel panel-primary story-mapping-container">
                                 <div class="panel-heading">
                                     Story Mapping
                                 </div>
-                                <div class="panel-body">
-                                    <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
+                                <div class="panel-body scroll-x">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                        <a class="btn btn-default btn-xs" (click)="showModal('release')">
+                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i> Agregar release
+                                        </a>
+                                    </div>
+                                    <table class="release-planning">
                                         <thead>
                                             <tr>
                                                 <th rowspan="2" class="bg-success p-xs b-r-xs">
-                                                    <div class="col-md-6 text-left">Epica</div>
-                                                    <div class="col-md-6 text-right">
+                                                    <div class="col-md-6 col-sm-12 text-left">Epica</div>
+                                                    <div class="col-md-6 col-sm-12 text-right">
                                                         <a class="btn btn-primary btn-xs" (click)="showModal('epic')">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
@@ -131,7 +134,12 @@
                                                     Historias
                                                 </th>
                                                 <th *ngFor="let r of release | filterRelease" [attr.colspan]="r.value">
-                                                    {{r.key}}
+                                                    <div class="col-md-8 col-sm-12 text-left">{{r.key}}</div>
+                                                    <div class="col-md-4 col-sm-12 text-right">
+                                                        <a class="btn btn-default btn-xs" (click)="showModal('sprint', r.id)">
+                                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
                                                 </th>
                                             </tr>
                                             <tr>
@@ -143,38 +151,95 @@
                                         <tbody>
                                             <tr *ngFor="let e of epics | filterEpic">
                                                 <td>
-                                                    <div class="col-md-6 text-left">{{e.key}}</div>
-                                                    <div class="col-md-6 text-right">
-                                                        <a class="btn btn-info btn-xs" (click)="showModal('feature', e.value.id_epic)">
+                                                    <div class="col-md-6 col-sm-12 text-left">{{e.key}}</div>
+                                                    <div class="col-md-6 col-sm-12 text-right">
+                                                        <a class="btn btn-info btn-xs" (click)="showModal('feature', e.id)">
                                                             <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="col-md-6 text-left">{{e.value.feature}}</div>
-                                                    <div class="col-md-6 text-right">
-                                                        <a class="btn btn-warning btn-xs">
-                                                            <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
-                                                        </a>
+                                                    <div *ngIf="e.value.feature">
+                                                        <div class="col-md-6 col-sm-12 text-left">{{e.value.feature}}</div>
+                                                        <div class="col-md-6 col-sm-12 text-right">
+                                                            <a class="btn btn-warning btn-xs" (click)="showModal('story', e.value.id_feature)">
+                                                                <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:0" class="col-xs-3 story-mini-card bg-warning text-center">
-                                                        <div class="">
-                                                            <h3 class="font-bold no-margins">
-                                                                {{s.key}}
-                                                            </h3>
-                                                            <small>power</small>
+                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:0" class="col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container">
+                                                        <div class="font-bold no-margins overflow-auto">
+                                                            <div class="col-md-8 col-sm-12 text-left">{{s.key}}</div>
+                                                            <div class="col-md-4 col-sm-12 text-right">
+                                                                <a class="btn bg-task btn-xs" (click)="showModal('task', s.value.id_story)">
+                                                                    <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <table class="white-bg-task">
+                                                            <thead class="bg-task">
+                                                                <tr>
+                                                                    <th>Tareas</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr *ngFor="let t of epics | filterTask:e.value.id_feature:0:s.value.id_story">
+                                                                    <td class="margin-10 text-left">{{t.key}}</td>
+                                                                    <td class="margin-10 text-left">
+                                                                        <button type="button" (click)="showModal('detail', t.value.id_task)" class="btn btn-link">ver</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="margin-10 text-left">
+                                                            <label>Sprint:</label>
+                                                            <select (change)="changeSprint($event, s.value.id_story)" style="max-width:110px;color:#333;">
+                                                                <option></option>
+                                                                <option [value]="r.value.id_sprint" *ngFor="let r of release | filterSprint">
+                                                                    {{r.value.sprint}}
+                                                                </option>           
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td *ngFor="let r of release | filterSprint">
-                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:r.value.id_sprint" class="col-xs-3 story-mini-card bg-warning text-center">
-                                                        <div class="">
-                                                            <h3 class="font-bold no-margins">
-                                                                {{s.key}}
-                                                            </h3>
-                                                            <small>power</small>
+                                                    <div *ngFor="let s of epics | filterStory:e.value.id_feature:r.value.id_sprint" class="col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container">
+
+                                                        <div class="font-bold no-margins overflow-auto">
+                                                            <div class="col-md-8 col-sm-12 text-left">{{s.key}}</div>
+                                                            <div class="col-md-4 col-sm-12 text-right">
+                                                                <a class="btn bg-task btn-xs" (click)="showModal('task', s.value.id_story)">
+                                                                    <i style="margin:5px 3px 0px 3px;" class="fa fa-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <table class="white-bg-task">
+                                                            <thead class="bg-task">
+                                                                <tr>
+                                                                    <th>Tareas</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr *ngFor="let t of epics | filterTask:e.value.id_feature:r.value.id_sprint:s.value.id_story">
+                                                                    <td class="margin-10 text-left">{{t.key}}</td>
+                                                                    <td class="margin-10 text-left">
+                                                                        <button type="button" (click)="showModal('detail', t.value.id_task)" class="btn btn-link">ver</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="margin-10 text-left">
+                                                            <label>Sprint:</label>
+                                                            <select (change)="changeSprint($event, s.value.id_story)" style="max-width:110px;color:#333;">
+                                                                <option></option>
+                                                                <option [value]="ss.value.id_sprint" [attr.selected]="r.value.id_sprint == ss.value.id_sprint ? true : null" *ngFor="let ss of release | filterSprint">
+                                                                    {{ss.value.sprint}}
+                                                                </option>           
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -183,6 +248,8 @@
                                     </table>
                                 </div>
                             </div>
+                            <!-- End Release Planning Form -->
+
                         </div>
                     </div>
                 </div>
@@ -194,28 +261,17 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close" (click)="hideModal('epic');">&times;</span>
-                <h5>Crear Épica</h5>
-
-                <div class="ibox float-e-margins">
-                    <div class="ibox-content">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Nombre</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" [(ngModel)]="epicName">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ibox-footer">
-                        <span class="pull-right">
-                            <button type="button" (click)="hideModal('epic')" class="btn btn-w-m btn-danger">Cancelar</button>
-                            <button type="button" (click)="saveEpic()" class="btn btn-w-m btn-info">Guardar</button>
-                        </span>
-                    </div>
+                <h2>Crear Épica</h2>
+                <div class="margin-10">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="epicName">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('epic')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveEpic()" class="btn btn-w-m btn-info">Guardar</button>
                 </div>
             </div>
         </div>
-
-
 
         <!-- The Modal Featue-->
         <div #featuremodal id="featuremodal" class="modal">
@@ -223,25 +279,104 @@
             <div class="modal-content">
                 <span class="close" (click)="hideModal('feature')">&times;</span>
                 <h3>Crear Característica</h3>
-                <div class="ibox float-e-margins">
-                    <div class="ibox-content">
-                        <div class="form-group">
-                            <label class="control-label">Nombre</label>
-                            <div class="">
-                                <input type="text" class="form-control" [(ngModel)]="featureName">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ibox-footer">
-                        <span class="pull-right">
-                            <button type="button" (click)="hideModal('feature')" class="btn btn-w-m btn-danger">Cancelar</button>
-                            <button type="button" (click)="saveFeature()" class="btn btn-w-m btn-info">Guardar</button>
-                        </span>
-                    </div>
+                <div class="margin-10">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="featureName">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('feature')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveFeature()" class="btn btn-w-m btn-info">Guardar</button>
                 </div>
             </div>
         </div>
 
+        <!-- The Modal Story-->
+        <div #storymodal id="storymodal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" (click)="hideModal('story')">&times;</span>
+                <h3>Crear Historia de Usuario</h3>
+                <div class="margin-10">
+                    <label class="control-label">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="storyName">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('story')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveStory()" class="btn btn-w-m btn-info">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal Sprint-->
+        <div #sprintmodal id="sprintmodal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" (click)="hideModal('sprint')">&times;</span>
+                <h3>Crear Sprint</h3>
+                <div class="margin-10">
+                    <label class="control-label">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="sprintName">
+                </div>
+                <div class="margin-10">
+                    <label class="control-label">inicio</label>
+                    <input type="date" class="form-control" [(ngModel)]="sprintStart">
+                </div>
+                <div class="margin-10">
+                    <label class="control-label">Fin</label>
+                    <input type="date" class="form-control" [(ngModel)]="sprintEnd">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('sprint')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveSprint()" class="btn btn-w-m btn-info">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal Release-->
+        <div #releasemodal id="releasemodal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" (click)="hideModal('release')">&times;</span>
+                <h3>Crear Release</h3>
+                <div class="margin-10">
+                    <label class="control-label">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="releaseName">
+                </div>
+                <div class="margin-10">
+                    <label class="control-label">Fecha</label>
+                    <input type="date" class="form-control" [(ngModel)]="releaseDue">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('release')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveRelease()" class="btn btn-w-m btn-info">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal Task-->
+        <div #taskmodal id="taskmodal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" (click)="hideModal('task')">&times;</span>
+                <h3>Crear Tarea</h3>
+                <div class="margin-10">
+                    <label class="control-label">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="taskName">
+                </div>
+                <div class="margin-10">
+                    <label class="control-label">Descripción</label>
+                    <textarea class="form-control" [(ngModel)]="taskDescription"></textarea>
+                </div>
+                <div class="margin-10">
+                    <label class="control-label">Tiempo estimado</label>
+                    <input type="text" class="form-control" [(ngModel)]="taskTime">
+                </div>
+                <div class="margin-10 text-center">
+                    <button type="button" (click)="hideModal('task')" class="btn btn-w-m btn-danger">Cancelar</button>
+                    <button type="button" (click)="saveTask()" class="btn btn-w-m btn-info">Guardar</button>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>

@@ -37,7 +37,7 @@ export class TopnavbarComponent implements OnInit {
 
     Logout() {
         console.log('Attempting to log out from session: ');
-        toastr.info(this.LoggedInUser + ' logged out', 'Goodbye');
+        toastr.info('logged out', 'Goodbye');
         this.sessionSt.store('loggedIn', false);
         this.sessionSt.store('LoggedInUser', null);
         this.sessionSt.clear('B1Session');

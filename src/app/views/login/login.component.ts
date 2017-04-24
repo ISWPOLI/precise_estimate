@@ -40,6 +40,9 @@ export class loginComponent implements OnInit {
         private router: Router,
         private b1SLService: B1SLSessionService,
         private _loginService: LoginService) {
+        if (this.sessionSt.retrieve('loggedIn')) {
+            this.router.navigate(['mainView']);
+        }
     }
 
     public login() {
@@ -50,7 +53,7 @@ export class loginComponent implements OnInit {
                 if (data.st == "ok") {
                     toastr.success(this._loginInfo.user + ' inició sesión', 'Bienvenido');
                     this.sessionSt.store('loggedIn', 'true');
-                    this.sessionSt.store('LoggedInUser', this._loginInfo.UserName);
+                    this.sessionSt.store('LoggedInUser', data.data);
                     this.sessionSt.store('B1Session', this.B1Session);
                     this.router.navigate(['mainView']);
                 } else {
