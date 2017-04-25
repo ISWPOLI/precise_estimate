@@ -27,7 +27,7 @@ export class CostreportComponent {
                     plotBorderWidth: null,
                     plotShadow: null
                  },
-            title : { text : 'Reporte de Avances' },
+            title : { text : 'Reporte de Costos' },
             subtitle : { text : 'Proyectos creados hasta la fecha'},
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -50,20 +50,20 @@ export class CostreportComponent {
                 name: 'Presice Estimate',
                 y: 56.33
             }, {
-                name: 'Test',
+                name: 'Poli Booking',
                 y: 24.03,
                 sliced: true,
                 selected: true
             }, {
-                name: 'Test1',
+                name: 'Bibliogame',
                 y: 10.38,
                 sliced: true,
             }, {
-                name: 'Poli Booking',
+                name: 'Test',
                 y: 4.77,
                 sliced: true,
             }, {
-                name: 'Bibliogame',
+                name: 'Test1',
                 y: 0.91,
                 sliced: true,
             }, {
