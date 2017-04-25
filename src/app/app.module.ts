@@ -14,6 +14,7 @@ import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
 import { ProjectService } from './services/project.service';
 import { AbilityService } from './services/ability.service';
+import { ReportService } from './services/report.service';
 
 // App views
 import { MainViewModule } from './views/main-view/main-view.module';
@@ -88,6 +89,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     UserService,
     ProjectService,
     AbilityService,
+    ReportService,
   ],
   bootstrap: [AppComponent]
 })
