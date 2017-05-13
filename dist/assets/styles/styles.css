@@ -3933,6 +3933,14 @@ table.table-mail tr td {
   background-color: #23c6c8 !important;
   color: #ffffff !important;
 }
+.bg-task {
+    background-color: #5771f3 !important;
+    color: #ffffff !important;
+}
+.white-bg-task {
+  background-color: #ffffff !important;
+  color: #676a6c !important;
+}
 .yellow-bg,
 .bg-warning {
   background-color: #f8ac59 !important;
@@ -8434,3 +8442,43 @@ body.md-skin {
     text-decoration: none;
     cursor: pointer;
 }
+
+.margin-10{
+    padding: 10px;
+}
+
+.scroll-x{
+    overflow-x: scroll;
+}
+
+.release-planning tbody tr td{
+  border: 1px solid #b3b3b3;
+  padding: 5px;
+}
+
+.release-planning thead tr th{
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+
+}
+
+.close {
+    color: #040404;
+}
+
+.overflow-auto{
+  overflow: auto;
+}
+
+.story-mini-card{
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.story-mapping-container{
+  padding-bottom: 40px;
+}
+
+.story-container{
+  min-width: 140px;
+}    
