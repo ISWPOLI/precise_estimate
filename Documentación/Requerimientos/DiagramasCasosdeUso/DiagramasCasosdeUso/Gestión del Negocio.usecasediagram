@@ -13,28 +13,18 @@
       <elementDefinition Id="d01eeeb0-1ec9-4188-8224-79da60179c84" />
       <body>GESTIÓN DEL SISTEMA</body>
     </comment>
+    <comment Id="7595debf-7b21-4aa2-891b-3bae65b619ea">
+      <elementDefinition Id="f19ac976-ce88-4ad1-9e68-c2845015a50a" />
+      <body>GESTION DIRECTORIO DE RECURSOS</body>
+    </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="f2aed86c-8c85-4ca3-9a43-4801359a0c2a">
-      <profileInstance Id="0ad955df-77d6-426a-a12c-fec709f93f31" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="cf646f0b-5739-4701-8cdb-a7b3c6784d6a">
-      <profileInstance Id="51ec13de-c4a9-4ee1-8eca-3c9b0b00db1b" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="849d900d-81fa-4045-b2a1-90da43f63a0c" name="Usuario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="63ea6f3c-5298-4107-a193-6ca5547a7b96" />
         <targetEnds>
           <association Id="38b9f638-f7db-4d51-ac02-f7c8bc7468f8" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Autenticación de Usuarios" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="f1115dcd-6467-4692-a9d8-3810a5095e54" LastKnownName="Edición del Proyecto" />
+            <useCaseMoniker Id="f1115dcd-6467-4692-a9d8-3810a5095e54" LastKnownName="Editar del Proyecto" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="11f8708a-4bfb-48b1-a8a0-d197b6a07bb4" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -50,7 +40,7 @@
             <elementDefinition Id="2d7865d6-d54d-487d-b13f-0284a8981efc" />
           </association>
           <association Id="9c0c3f1f-db41-4884-a9ff-0eb2ed6967da" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Administración de Usuarios" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="2ca26f6a-aef7-4584-ab4d-9dab20697efd" LastKnownName="Administración del Proyecto" />
+            <useCaseMoniker Id="2ca26f6a-aef7-4584-ab4d-9dab20697efd" LastKnownName="Administrar Proyecto" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="ad274376-f635-4450-ab07-e8968b48fa95" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -66,7 +56,7 @@
             <elementDefinition Id="9035c61e-24e4-4f43-9676-c253b57016a7" />
           </association>
           <association Id="bd603d6b-6c4c-477c-b53a-772ae87a5944" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Registro de Usuarios" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="cee6365f-ad8c-4930-9c1d-36f405ead572" LastKnownName="Registro del Proyecto" />
+            <useCaseMoniker Id="cee6365f-ad8c-4930-9c1d-36f405ead572" LastKnownName="Registrar  Proyecto" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="cd84f345-0d6a-4402-897c-6d36254b8726" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -82,7 +72,7 @@
             <elementDefinition Id="1112b824-e4bf-4da6-86c6-91c32a1d8142" />
           </association>
           <association Id="ac81b044-3a04-4d29-ba7c-432e8d05d898" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Editar Perfil de Usuarios" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="ee06ebd9-45d2-44ee-9ed0-1431d527684d" LastKnownName="Asignación de los recursos" />
+            <useCaseMoniker Id="ee06ebd9-45d2-44ee-9ed0-1431d527684d" LastKnownName="Asignar los recursos" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="36684838-d581-45e3-b47c-62783356f8d0" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -98,7 +88,7 @@
             <elementDefinition Id="995ef970-3efd-4144-bec7-3f1b8198c710" />
           </association>
           <association Id="5dc1f5f5-acf7-4a53-9824-7541a2d4ade3" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Asignación de Permisos" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="dde4d1e6-27b3-4974-bb46-a8767f0d0080" LastKnownName="Asignación costos de Rcurso por Rol" />
+            <useCaseMoniker Id="dde4d1e6-27b3-4974-bb46-a8767f0d0080" LastKnownName="Asignar costos de Recurso por Rol" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="20c1d73a-4d6a-40df-bf9a-399372cfb0df" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -133,7 +123,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="2ca26f6a-aef7-4584-ab4d-9dab20697efd" name="Administración del Proyecto" isAbstract="false" isLeaf="false">
+      <useCase Id="2ca26f6a-aef7-4584-ab4d-9dab20697efd" name="Administrar Proyecto" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8b832a20-3f67-4ae4-adff-a2d8c7301317" />
         <targetEnds>
           <association Id="cc478337-b226-43d0-81aa-8e4e036dd1cf" isDerived="false" sourceEndRoleName="Administración del Proyecto" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -155,14 +145,14 @@
         </targetEnds>
         <additions>
           <include Id="859c8008-a903-4c2a-aa16-3bcb91ecf995">
-            <useCaseMoniker Id="cee6365f-ad8c-4930-9c1d-36f405ead572" LastKnownName="Registro del Proyecto" />
+            <useCaseMoniker Id="cee6365f-ad8c-4930-9c1d-36f405ead572" LastKnownName="Registrar  Proyecto" />
             <elementDefinition Id="c4caff01-3bc2-4a48-940a-2f2fe2e34351" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="db2ae972-c339-4d7e-882d-d0964e020c4e" name="Administración de la Epica" isAbstract="false" isLeaf="false">
+      <useCase Id="db2ae972-c339-4d7e-882d-d0964e020c4e" name="Administrar la Epica" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e72653b0-0161-43d1-adca-f5cbd83ee958" />
         <targetEnds>
           <association Id="c522c852-040a-4534-8408-20c36635e7da" isDerived="false" sourceEndRoleName="Administración Habilidades" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -191,7 +181,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="f70df15a-babe-4a82-83db-fae5c99c6906" name="Edición de la Epica" isAbstract="false" isLeaf="false">
+      <useCase Id="f70df15a-babe-4a82-83db-fae5c99c6906" name="Editar la Epica" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f9ebb06d-69ba-47a7-a4ba-14f7c5659690" />
         <targetEnds>
           <association Id="8cbf099b-118f-4ab9-ac78-e08f74746a87" isDerived="false" sourceEndRoleName="Eliminación Habilidades por Usuario" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -237,7 +227,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="dde4d1e6-27b3-4974-bb46-a8767f0d0080" name="Asignación costos de Rcurso por Rol" isAbstract="false" isLeaf="false">
+      <useCase Id="dde4d1e6-27b3-4974-bb46-a8767f0d0080" name="Asignar costos de Recurso por Rol" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4d8dd286-d455-428e-bbad-44d991e682b7" />
         <targetEnds>
           <association Id="783bac6f-b43f-4641-ac23-1ac52a944bdd" isDerived="false" sourceEndRoleName="Asignación costos de Rcurso por Rol" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -260,7 +250,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="ee06ebd9-45d2-44ee-9ed0-1431d527684d" name="Asignación de los recursos" isAbstract="false" isLeaf="false">
+      <useCase Id="ee06ebd9-45d2-44ee-9ed0-1431d527684d" name="Asignar los recursos" isAbstract="false" isLeaf="false">
         <elementDefinition Id="403a9ac1-e5ad-4a06-a5e2-8a559254fc8b" />
         <targetEnds>
           <association Id="2278d2fd-73e2-4f39-b781-8605bbc48716" isDerived="false" sourceEndRoleName="Asignación de los recursos" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -283,7 +273,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="f1115dcd-6467-4692-a9d8-3810a5095e54" name="Edición del Proyecto" isAbstract="false" isLeaf="false">
+      <useCase Id="f1115dcd-6467-4692-a9d8-3810a5095e54" name="Editar del Proyecto" isAbstract="false" isLeaf="false">
         <elementDefinition Id="eacea8cb-57c5-4fdf-a06b-c501b809e65a" />
         <targetEnds>
           <association Id="13f3806f-5b36-47d9-8360-392485dedef3" isDerived="false" sourceEndRoleName="Edición del Proyecto" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -306,7 +296,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="cee6365f-ad8c-4930-9c1d-36f405ead572" name="Registro del Proyecto" isAbstract="false" isLeaf="false">
+      <useCase Id="cee6365f-ad8c-4930-9c1d-36f405ead572" name="Registrar  Proyecto" isAbstract="false" isLeaf="false">
         <elementDefinition Id="fa14b5bf-c7c3-4263-afbe-374b45aa9c12" />
         <targetEnds>
           <association Id="6c02d508-f24c-494c-bc79-4097d26ce7f0" isDerived="false" sourceEndRoleName="Registro del Proyecto" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -329,7 +319,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="825083b4-ba73-4074-a1e2-62b926c46bda" name="Asignación de la Epica" isAbstract="false" isLeaf="false">
+      <useCase Id="825083b4-ba73-4074-a1e2-62b926c46bda" name="Asignar la Epica" isAbstract="false" isLeaf="false">
         <elementDefinition Id="96e9b91e-e705-4b0c-8c9c-06b656f9b6dd" />
         <targetEnds>
           <association Id="4bb8ab0e-cbe1-43cf-a8e7-19ca0e168477" isDerived="false" sourceEndRoleName="Asignación de habilidades por ROL" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -352,7 +342,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="a0819f5f-2afb-414a-af5c-00aa3b175a17" name="Administración Caracteristicas" isAbstract="false" isLeaf="false">
+      <useCase Id="a0819f5f-2afb-414a-af5c-00aa3b175a17" name="Administrar Caracteristicas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="cb2e956a-d0bf-4416-b9b5-a1116cbdd499" />
         <targetEnds>
           <association Id="4dc23563-5b78-4863-95d2-f11ef1902098" isDerived="false" sourceEndRoleName="Administración Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -374,14 +364,14 @@
         </targetEnds>
         <additions>
           <include Id="5ad3e338-5414-4924-9e8b-609c3aee46e5">
-            <useCaseMoniker Id="1d68a500-6603-4afb-9b82-e80755ca23a9" LastKnownName="Registro de Caracteristica" />
+            <useCaseMoniker Id="1d68a500-6603-4afb-9b82-e80755ca23a9" LastKnownName="Registrar Caracteristica" />
             <elementDefinition Id="28f3c0dd-e174-44c1-83c3-82197c66d0db" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="30d4d784-3b3d-4b72-8bf9-3d9924ba9424" name="Edición de Caracteristicas" isAbstract="false" isLeaf="false">
+      <useCase Id="30d4d784-3b3d-4b72-8bf9-3d9924ba9424" name="Editar Caracteristicas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="cd598f84-e578-46b5-8943-bf71be533dff" />
         <targetEnds>
           <association Id="5e9525dc-a86e-4eee-bdfe-526e5c457f25" isDerived="false" sourceEndRoleName="Edición de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -404,7 +394,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="e3c9931e-8d3c-47bb-aae5-b9787107fc67" name="Asignación de Caracteristicas" isAbstract="false" isLeaf="false">
+      <useCase Id="e3c9931e-8d3c-47bb-aae5-b9787107fc67" name="Asignar Caracteristicas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="2b2168a6-de7c-45c3-a21f-6b7ef955850e" />
         <targetEnds>
           <association Id="15ad075c-b8ad-4803-a19b-f2e57f9f6136" isDerived="false" sourceEndRoleName="Asignación de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -427,7 +417,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="1d68a500-6603-4afb-9b82-e80755ca23a9" name="Registro de Caracteristica" isAbstract="false" isLeaf="false">
+      <useCase Id="1d68a500-6603-4afb-9b82-e80755ca23a9" name="Registrar Caracteristica" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f44381e5-a897-4185-9d89-bc9a7551b142" />
         <targetEnds>
           <association Id="a1f71ef7-bf24-4a3f-b2b4-8ea5144ee3be" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -454,7 +444,7 @@
         <elementDefinition Id="9fed623e-21a8-491d-8a96-f9b3c396b4cd" />
         <targetEnds>
           <association Id="560f2682-79ff-43f2-a5ff-363098755fc2" isDerived="false" sourceEndRoleName="Administrador Prouecto" targetEndRoleName="Administración Habilidades" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="db2ae972-c339-4d7e-882d-d0964e020c4e" LastKnownName="Administración de la Epica" />
+            <useCaseMoniker Id="db2ae972-c339-4d7e-882d-d0964e020c4e" LastKnownName="Administrar la Epica" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="f4964dd8-7239-49fb-bdd3-09faf4c162af" name="Administrador Prouecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -486,7 +476,7 @@
             <elementDefinition Id="cab80da7-93c9-4c7c-ad59-23f60beeec2d" />
           </association>
           <association Id="4847a32b-891b-467b-a004-1676f8db5978" isDerived="false" sourceEndRoleName="Administrador Prouecto" targetEndRoleName="Asignación de habilidades por ROL" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="825083b4-ba73-4074-a1e2-62b926c46bda" LastKnownName="Asignación de la Epica" />
+            <useCaseMoniker Id="825083b4-ba73-4074-a1e2-62b926c46bda" LastKnownName="Asignar la Epica" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="f720aff1-a31b-497b-b8ee-33ae63877c2a" name="Administrador Prouecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -502,7 +492,7 @@
             <elementDefinition Id="4a6aa73a-b48d-44b2-b9fc-cfa396fae074" />
           </association>
           <association Id="e1298822-773f-4c2c-aeb0-9d50d2319976" isDerived="false" sourceEndRoleName="Administrador Prouecto" targetEndRoleName="Eliminación Habilidades por Usuario" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="f70df15a-babe-4a82-83db-fae5c99c6906" LastKnownName="Edición de la Epica" />
+            <useCaseMoniker Id="f70df15a-babe-4a82-83db-fae5c99c6906" LastKnownName="Editar la Epica" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="c24c509f-5219-4f40-8763-1e0001b0b54d" name="Administrador Prouecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -530,7 +520,7 @@
         <elementDefinition Id="44c4b7d4-b6f9-4fb3-9aaf-9ad79eb3791e" />
         <targetEnds>
           <association Id="4bde9b3b-8538-4953-af4b-a81a4a327418" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="a0819f5f-2afb-414a-af5c-00aa3b175a17" LastKnownName="Administración Caracteristicas" />
+            <useCaseMoniker Id="a0819f5f-2afb-414a-af5c-00aa3b175a17" LastKnownName="Administrar Caracteristicas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="66820d1a-e4fa-4d95-a159-bfff1b6b0029" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -546,7 +536,7 @@
             <elementDefinition Id="a4633cf9-a1ec-498c-a5e7-88f798852537" />
           </association>
           <association Id="6d31464e-cf90-4f7e-8b15-daad1262bf3a" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="1d68a500-6603-4afb-9b82-e80755ca23a9" LastKnownName="Registro de Caracteristica" />
+            <useCaseMoniker Id="1d68a500-6603-4afb-9b82-e80755ca23a9" LastKnownName="Registrar Caracteristica" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="1944aea1-1e7c-4de8-ba6d-24abab22a4b2" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -562,7 +552,7 @@
             <elementDefinition Id="e47f149f-96b1-4504-b587-44aac1431b5a" />
           </association>
           <association Id="a62f7039-f9ae-4cc8-bda1-445b13969ca4" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Asignación de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="e3c9931e-8d3c-47bb-aae5-b9787107fc67" LastKnownName="Asignación de Caracteristicas" />
+            <useCaseMoniker Id="e3c9931e-8d3c-47bb-aae5-b9787107fc67" LastKnownName="Asignar Caracteristicas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="4a04e426-7425-4263-ae15-e89255bcb834" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -578,7 +568,7 @@
             <elementDefinition Id="5a188187-80aa-489a-b537-dd9e289b5add" />
           </association>
           <association Id="f41b7cbd-e91c-4bd8-b169-1fb33c66ec07" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Edición de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="30d4d784-3b3d-4b72-8bf9-3d9924ba9424" LastKnownName="Edición de Caracteristicas" />
+            <useCaseMoniker Id="30d4d784-3b3d-4b72-8bf9-3d9924ba9424" LastKnownName="Editar Caracteristicas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="e139e149-059a-49e8-ada3-99dbb626a95f" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -602,7 +592,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="1a6301fd-0f4d-408e-abf3-ac1db5500d5f" name="Administración de Hsitorias" isAbstract="false" isLeaf="false">
+      <useCase Id="1a6301fd-0f4d-408e-abf3-ac1db5500d5f" name="Administrar Historias" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4f39f898-3c8b-40ba-8fa6-7b3d111ec4fb" />
         <targetEnds>
           <association Id="c9ed63ff-4f98-4aa2-a024-3a128463dc3f" isDerived="false" sourceEndRoleName="Administración Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -624,14 +614,14 @@
         </targetEnds>
         <additions>
           <include Id="094fd5e3-c98e-466b-832e-78458ab0f250">
-            <useCaseMoniker Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" LastKnownName="Registro de Historia" />
+            <useCaseMoniker Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" LastKnownName="Registrar de Historia" />
             <elementDefinition Id="c98ef203-1983-4a0e-922f-71fdcea7874e" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="4a72cf6f-a1c7-489f-89e4-1b94099ef5b1" name="Edición de Historia" isAbstract="false" isLeaf="false">
+      <useCase Id="4a72cf6f-a1c7-489f-89e4-1b94099ef5b1" name="Editar  Historia" isAbstract="false" isLeaf="false">
         <elementDefinition Id="5e6779cf-3914-4a74-95eb-e5b17752b6ec" />
         <targetEnds>
           <association Id="9e2d4a60-ca15-4beb-a130-6dec0005be2f" isDerived="false" sourceEndRoleName="Edición de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -654,7 +644,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="b64d77eb-0ca3-4d81-8fdf-c055180a90f9" name="Asignación de Caracteristicas" isAbstract="false" isLeaf="false">
+      <useCase Id="b64d77eb-0ca3-4d81-8fdf-c055180a90f9" name="Asignar Caracteristicas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="711ca05f-da42-4f98-b84a-f8c6a62b5db7" />
         <targetEnds>
           <association Id="bd1d8e9a-e90d-407b-b304-4a22e42cdf8b" isDerived="false" sourceEndRoleName="Asignación de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -677,7 +667,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" name="Registro de Historia" isAbstract="false" isLeaf="false">
+      <useCase Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" name="Registrar de Historia" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ec1888fb-93cb-4ba7-8538-a420a38da071" />
         <targetEnds>
           <association Id="81435c64-dca9-4a76-b81e-9a8df0b032e5" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -704,7 +694,7 @@
         <elementDefinition Id="f87bf291-b0b0-4453-9985-fcc16062cbdc" />
         <targetEnds>
           <association Id="bcc7bc84-f0f6-459f-9a83-eb33c942247e" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="1a6301fd-0f4d-408e-abf3-ac1db5500d5f" LastKnownName="Administración de Hsitorias" />
+            <useCaseMoniker Id="1a6301fd-0f4d-408e-abf3-ac1db5500d5f" LastKnownName="Administrar Historias" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="aadaf2a7-411e-48bd-bc73-6ce037c82128" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -720,7 +710,7 @@
             <elementDefinition Id="d81a3688-0eac-4909-9309-a705efa3c646" />
           </association>
           <association Id="f8461445-46d6-40d8-b937-e425c34d7b57" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" LastKnownName="Registro de Historia" />
+            <useCaseMoniker Id="7ddb81f6-df2b-411d-a3b0-fe4bcc4f2aba" LastKnownName="Registrar de Historia" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="e84a0061-812e-4793-98d9-2a870e811794" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -736,7 +726,7 @@
             <elementDefinition Id="024631fc-f7ed-458b-96fb-ee1f040e3e4f" />
           </association>
           <association Id="d9c2d676-7333-4ccf-9ca5-714326ed16c0" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Asignación de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="b64d77eb-0ca3-4d81-8fdf-c055180a90f9" LastKnownName="Asignación de Caracteristicas" />
+            <useCaseMoniker Id="b64d77eb-0ca3-4d81-8fdf-c055180a90f9" LastKnownName="Asignar Caracteristicas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="00f538b9-fbde-4823-956f-ccfe046eb05d" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -752,7 +742,7 @@
             <elementDefinition Id="9891c636-825b-4ba3-befc-dbb951ced39b" />
           </association>
           <association Id="3bd0c711-0f14-4f98-a213-843dc7c44c85" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Edición de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="4a72cf6f-a1c7-489f-89e4-1b94099ef5b1" LastKnownName="Edición de Historia" />
+            <useCaseMoniker Id="4a72cf6f-a1c7-489f-89e4-1b94099ef5b1" LastKnownName="Editar  Historia" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="d0b33070-b4e5-4275-b97c-fe78bdc5f3d0" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -776,7 +766,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="3fcc2926-3fef-4dd6-91bc-9f2dd56230c4" name="Administración de Tareas" isAbstract="false" isLeaf="false">
+      <useCase Id="3fcc2926-3fef-4dd6-91bc-9f2dd56230c4" name="Administrar Tareas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ad6e4f8a-467a-411d-9ea7-ab3635af31f1" />
         <targetEnds>
           <association Id="44089283-3325-4302-b5ed-327899e3cc66" isDerived="false" sourceEndRoleName="Administración Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -798,14 +788,14 @@
         </targetEnds>
         <additions>
           <include Id="6f909a25-7db2-43bd-b23e-24042c4161a1">
-            <useCaseMoniker Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" LastKnownName="Creación de Tareas" />
+            <useCaseMoniker Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" LastKnownName="Crear Tareas" />
             <elementDefinition Id="db03475c-b912-4de7-a81a-a6db8812311c" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="6a1749b7-8246-4127-8bde-b40db64f31e5" name="Edición de Tareas" isAbstract="false" isLeaf="false">
+      <useCase Id="6a1749b7-8246-4127-8bde-b40db64f31e5" name="Editar Tareas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ece8f1d8-a4e3-497f-b1c6-e80617b4fc5d" />
         <targetEnds>
           <association Id="4d5ca0f1-a03f-473e-8444-9efdc8b11f7e" isDerived="false" sourceEndRoleName="Edición de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -828,7 +818,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="1c3786a1-7aeb-4485-aa5e-3eb5c42c540c" name="Asignación de Responsable" isAbstract="false" isLeaf="false">
+      <useCase Id="1c3786a1-7aeb-4485-aa5e-3eb5c42c540c" name="Asignar Responsable" isAbstract="false" isLeaf="false">
         <elementDefinition Id="5d2c8bea-6f97-4203-8e0e-747816e5de54" />
         <targetEnds>
           <association Id="3553ab39-fd9a-4fe3-a05b-6ecf8e823d39" isDerived="false" sourceEndRoleName="Asignación de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -851,7 +841,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" name="Creación de Tareas" isAbstract="false" isLeaf="false">
+      <useCase Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" name="Crear Tareas" isAbstract="false" isLeaf="false">
         <elementDefinition Id="adab77b8-6b86-4436-9bb6-baf55d2e64b8" />
         <targetEnds>
           <association Id="f3328a3a-9c69-4e65-a15c-733da455f90c" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -878,7 +868,7 @@
         <elementDefinition Id="1b24e606-cce7-471e-9ee4-3d0682ce3064" />
         <targetEnds>
           <association Id="0c513e3f-cc09-4c1f-87f0-746323b0ae15" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="3fcc2926-3fef-4dd6-91bc-9f2dd56230c4" LastKnownName="Administración de Tareas" />
+            <useCaseMoniker Id="3fcc2926-3fef-4dd6-91bc-9f2dd56230c4" LastKnownName="Administrar Tareas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="69131dc2-a895-4ab2-a33f-261cac7f2186" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -894,7 +884,7 @@
             <elementDefinition Id="aef7e28f-8aae-4f04-93b4-73bc8aa1a46c" />
           </association>
           <association Id="ce488424-460a-44b4-8140-db73bdb251d4" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" LastKnownName="Creación de Tareas" />
+            <useCaseMoniker Id="1c3f86e1-f915-4a30-a56b-3c94c86e56e9" LastKnownName="Crear Tareas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="fac98186-4c15-402b-967e-373d5be96f4e" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -910,7 +900,7 @@
             <elementDefinition Id="1151bd6a-6d27-41f4-8174-3b2de724c358" />
           </association>
           <association Id="f35aa884-7803-425d-b71f-b00c73866d05" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Asignación de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="1c3786a1-7aeb-4485-aa5e-3eb5c42c540c" LastKnownName="Asignación de Responsable" />
+            <useCaseMoniker Id="1c3786a1-7aeb-4485-aa5e-3eb5c42c540c" LastKnownName="Asignar Responsable" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="2afc643f-8bf0-4b97-b5bc-e4c77a4bb6c0" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -926,7 +916,7 @@
             <elementDefinition Id="9b536f8e-c96f-4d37-9781-16317fea11b6" />
           </association>
           <association Id="b984dab2-8497-42da-b8a3-7553af5cc52f" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Edición de Caracteristicas" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="6a1749b7-8246-4127-8bde-b40db64f31e5" LastKnownName="Edición de Tareas" />
+            <useCaseMoniker Id="6a1749b7-8246-4127-8bde-b40db64f31e5" LastKnownName="Editar Tareas" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="2c169946-2115-46ae-a62a-e1f3f5f1d6c7" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -977,14 +967,14 @@
         </targetEnds>
         <additions>
           <include Id="9dbc9a76-ccfb-45f7-8f54-2cacb19359da">
-            <useCaseMoniker Id="475e297b-f22a-4560-8fee-4fd90b003143" LastKnownName="Costo por Tiempo" />
+            <useCaseMoniker Id="475e297b-f22a-4560-8fee-4fd90b003143" LastKnownName="Costear por Tiempo" />
             <elementDefinition Id="93ca1c8b-62f2-428d-b792-0c3fb1320a38" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="475e297b-f22a-4560-8fee-4fd90b003143" name="Costo por Tiempo" isAbstract="false" isLeaf="false">
+      <useCase Id="475e297b-f22a-4560-8fee-4fd90b003143" name="Costear por Tiempo" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8c426818-09fb-4234-9326-8a6e82951d01" />
         <targetEnds>
           <association Id="8bb010fd-e4ce-418c-8385-23e32301fca6" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
@@ -1032,7 +1022,7 @@
             <elementDefinition Id="9e63a0e1-e079-44e9-9822-e6d972bbae8d" />
           </association>
           <association Id="6918ed7d-04c6-455c-be1e-873db1640bf0" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="475e297b-f22a-4560-8fee-4fd90b003143" LastKnownName="Costo por Tiempo" />
+            <useCaseMoniker Id="475e297b-f22a-4560-8fee-4fd90b003143" LastKnownName="Costear por Tiempo" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="f140e749-c2be-424a-9390-634a152f359f" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -1048,7 +1038,7 @@
             <elementDefinition Id="1da6336b-24cd-44ad-b3bf-7f54437bdd32" />
           </association>
           <association Id="a8f5e411-e367-4b3b-841d-7aea0883b76c" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Costo por Tiempo1" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="76152ad6-0956-4ba2-a91b-06435ee8858b" LastKnownName="Costo por Tiempo1" />
+            <useCaseMoniker Id="76152ad6-0956-4ba2-a91b-06435ee8858b" LastKnownName="Costear por Tiempo1" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="c01b0a52-97b4-4cf4-9c89-fe3a3151b747" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -1103,14 +1093,14 @@
         <elementDefinition Id="d233e716-1dc9-4ec3-9645-5b5b13560d17" />
         <additions>
           <include Id="18443c41-389f-4426-8de5-ef8f573cfe91">
-            <useCaseMoniker Id="76152ad6-0956-4ba2-a91b-06435ee8858b" LastKnownName="Costo por Tiempo1" />
+            <useCaseMoniker Id="76152ad6-0956-4ba2-a91b-06435ee8858b" LastKnownName="Costear por Tiempo1" />
             <elementDefinition Id="ced022f9-8ece-4d37-8f8c-af82dad42bd1" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="76152ad6-0956-4ba2-a91b-06435ee8858b" name="Costo por Tiempo1" isAbstract="false" isLeaf="false">
+      <useCase Id="76152ad6-0956-4ba2-a91b-06435ee8858b" name="Costear por Tiempo1" isAbstract="false" isLeaf="false">
         <elementDefinition Id="eb2e20ab-7470-4337-911c-cde1e65444b7" />
         <targetEnds>
           <association Id="97de0404-1152-4886-b464-4ad19adc971a" isDerived="false" sourceEndRoleName="Costo por Tiempo1" targetEndRoleName="Sistema" isLeaf="false" isAbstract="false">
@@ -1475,8 +1465,596 @@
         <elementDefinition Id="797bb1ac-91ce-4fa7-851d-0dadc3fa617b" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="05d17d3e-452d-46b4-b34e-75ce898f00ac" name="Ingresar  Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e2d3f895-b9e4-4354-b7e9-a18227354a59" />
+        <extendedCases>
+          <extend Id="3b8e4b7c-6b1e-412e-bdbe-fb53a378194f">
+            <useCaseMoniker Id="1c04a5f8-76af-41b2-b3aa-d7efc1e1d2d3" LastKnownName="Login" />
+            <elementDefinition Id="2be7e9b0-4f85-4de5-a48d-6a678d9a8046" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c04a5f8-76af-41b2-b3aa-d7efc1e1d2d3" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dc0cf015-4391-4fe2-9684-b58a4e5c5b06" />
+        <targetEnds>
+          <association Id="6111e95d-6c2a-4b98-bab8-620955682ab7" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="d2d954ba-c250-4d1a-85ae-c477a5301151" LastKnownName="Sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46ad837b-0f25-45e1-bc81-0929a7ac7914" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="02ea8320-4904-4041-8451-91040d40df32" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1beb290d-ffc2-4b8d-ad92-49f970626f97" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67a2469c-a1c9-4982-a456-8544397735ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3953d44d-760c-448e-a774-24b1480a99af" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a25e4b43-9b67-4db6-bc9e-fc6ade2404a7" name="Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a8fb7001-c130-4703-84d4-6ace7711834a" />
+        <targetEnds>
+          <association Id="6add4886-1bfa-4c8f-ac75-ce49b908f65f" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="05d17d3e-452d-46b4-b34e-75ce898f00ac" LastKnownName="Ingresar  Usuario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9f4cffd1-1cd1-4dab-ae2d-9b59462b6438" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2c1dc198-3157-44a9-9919-4339d8975b84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ee42673-244b-4e8f-9b8c-d787879a89c4" name="Administración Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb0d47ad-a722-41a6-bc06-16868f3d2671" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44e4b80d-957e-4784-8bfb-5577faff063f" />
+          </association>
+          <association Id="5ebad7e6-8c65-4be3-83f1-665a663152f8" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c04a5f8-76af-41b2-b3aa-d7efc1e1d2d3" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="472aa097-ab11-4bb7-b11b-81e278553f60" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ce28b57-6484-4624-82c3-f2f1c7de6cdd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0f0b404-34e7-4c00-a14e-556754420491" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9dd4a5f0-dc01-497f-bad1-4181c6e4e495" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07c86992-ee07-482d-a6a4-2f8c8709406e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d2d954ba-c250-4d1a-85ae-c477a5301151" name="Sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="251e6378-846f-46a8-9954-570a11af4802" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38dfa9eb-c282-44ce-8fe4-f26ef9ec151e" name="Ingresar  Usuario Administrador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3bac03c1-a1cb-4aef-a747-745f82bb97e3" />
+        <extendedCases>
+          <extend Id="51268ce7-97c7-4204-9a2f-8ab0c3146bf2">
+            <useCaseMoniker Id="ad12676b-3c77-483f-8185-638ae6035843" LastKnownName="Login" />
+            <elementDefinition Id="a2bee500-69d0-4cd2-9489-3eb0f1dd9d49" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ad12676b-3c77-483f-8185-638ae6035843" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="21f6e078-cd69-4c5c-aea7-4aa3ba07dcfb" />
+        <targetEnds>
+          <association Id="d45ebd70-432e-4da8-8984-c6b7f5db75ff" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="5e692db1-5b5a-493f-aea9-9f1c2d0f574a" LastKnownName="Sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70fae856-db2d-4a4e-9e8b-228476bd81e8" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6daded53-cc55-46d6-b19b-eba619b115ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0d2431f-0856-47c6-88e8-16b6b2eebac2" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0a87725b-37c8-46ca-a704-1d78e3a39749" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="58ff9d6d-d58b-4ef1-85e9-e8d19fe9601b" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="eee499a9-8755-4b2f-8758-f9c898552358" name="Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="63487191-7d2b-42f1-96cc-ea409d199f6f" />
+        <targetEnds>
+          <association Id="f6f827a5-6441-49e3-9abd-39c9641f42c6" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="38dfa9eb-c282-44ce-8fe4-f26ef9ec151e" LastKnownName="Ingresar  Usuario Administrador" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04e03fd9-aeba-4f60-91af-75e03c39c08a" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03b84fee-f421-411a-bdf1-2e70a42b45c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89ab0691-551c-46c0-bfb4-aea6f9315f1d" name="Administración Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f11be58f-b003-4dd3-b7aa-9457fdba33e8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="792635ee-4005-4987-81dd-c21b8fc9b614" />
+          </association>
+          <association Id="d10d748a-02a6-4c15-a573-9bbd047953dc" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ad12676b-3c77-483f-8185-638ae6035843" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5fb0163-ffd9-4d18-a7c4-37375a655028" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bd8b3e32-e12b-4532-85e1-a8eef8e0990e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61ba89ca-6580-41b9-bac0-64242ca506c5" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d25b1d99-8e11-40dc-9978-7e7dd5d6c376" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d515aafc-3590-4535-9844-377aa9d1f44e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="5e692db1-5b5a-493f-aea9-9f1c2d0f574a" name="Sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f247190b-68a9-4e52-9763-bf4b5d315f9b" />
+        <targetEnds>
+          <association Id="2f84edb5-142e-42e6-bd70-a67f01f85e3e" isDerived="false" sourceEndRoleName="Sistema" targetEndRoleName="Administración Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="858f873b-f886-4c61-93d9-9b8a16e662a4" LastKnownName="Administración Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="245a6afc-c47b-4c0b-bfba-2baf63689604" name="Sistema" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="20ddf8e0-4349-4c19-99ae-4f4a5898a06a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78f57dc0-4c51-4d32-b7f9-c52ea18dbd98" name="Administración Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a1be3e65-956d-47e7-bec7-6affa0e281ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9477fb83-9c7a-43c9-bd19-2a768ad8ce9e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="858f873b-f886-4c61-93d9-9b8a16e662a4" name="Administración Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="17af54cc-5d03-450a-afab-db6c08f7eff7" />
+        <suppliersInternal>
+          <dependency Id="47b8dea8-3810-49bf-bdc8-578521090b57">
+            <useCaseMoniker Id="c8ca8d93-2d78-42d7-9b41-de59858762b4" LastKnownName="Consultar Usuarios" />
+            <elementDefinition Id="621c508a-cadb-4685-8bef-64682668188c" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c8ca8d93-2d78-42d7-9b41-de59858762b4" name="Consultar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="feb6a086-5a4f-49a3-8a32-75b87db13ff4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="ce8227a5-8c41-456f-896a-6953703a3545" name="Administrador del Proyecto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30621dbe-caef-4bd6-bcfc-7a28d08d61bd" />
+        <targetEnds>
+          <association Id="48043aab-a3dc-4c4b-9261-6d9f819df734" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Autenticación de Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4bb30a64-b0b4-42cb-acb6-4ecc7ef1bce2" LastKnownName="Autenticar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1998e33-503f-4eef-9f66-da740ebeceb0" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1ee731a7-09af-4ca8-bea4-03b9c56e8777" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32ed5ad3-d864-449f-91bf-4a279a25e77d" name="Autenticación de Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ec6cc19-bc01-4d7a-8758-620af2cc7f71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0da4ad1f-a376-4b80-ac7e-3c7427c7a735" />
+          </association>
+          <association Id="9ef4ac91-1642-4d24-956e-22203f487b47" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Administración de Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e65732eb-985d-4560-88fb-8662779d0042" LastKnownName="Administrar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3f57fbb-ae28-42c8-a90d-eabb788c9f16" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="876ffe02-b56d-4a64-a4fc-8350d7715e81" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb4c4ca9-28c1-49ac-b27c-4b797ad29940" name="Administración de Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="73f1b483-3cbf-4a1b-985b-68a98a9f11d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6e2b145d-291a-4b78-bf38-ebbe94a9ea82" />
+          </association>
+          <association Id="bd82e5d6-ee95-4b9c-8b4c-5eae8264378f" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Registro de Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e6cf1124-79a0-4fa7-9f03-3343149909f9" LastKnownName="Registrar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7afbb45-df29-49c0-9c10-b0893c18da0c" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6158ac1e-75ce-498e-8915-27593001c7cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="379eb702-eb6c-4721-be60-b0bffb9094bc" name="Registro de Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d18fe28-4958-4e77-bf85-b9d64ac1f1f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bd880d3e-733b-49b6-aca3-930eb542be3c" />
+          </association>
+          <association Id="0c6d93ab-a375-41a4-b14e-59f053025cd0" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Editar Perfil de Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="301d4cff-0d3f-42fe-ab69-113e965f32a6" LastKnownName="Editar Perfil" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f71511c1-6804-43e4-a390-1efcb2a37455" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ed2034a5-d968-4ffc-b474-74bb06f96102" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03ed1583-7af9-461d-89df-5d02aae4baa4" name="Editar Perfil de Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ea5eda56-a387-4307-aa10-632d6b9679c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f304d55a-ee52-4beb-bc37-a36aabb87bd7" />
+          </association>
+          <association Id="a5bef40c-0976-48f3-a54e-172b077070d8" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Asignación de Permisos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a19932d6-8d68-42d1-b728-7ba705610541" LastKnownName="Asignar Permisos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4468ee05-87ae-4b8d-8cd3-48db2407feca" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c4465aa0-b2d2-472d-902f-5752616f0849" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf71553a-1d72-474e-b24f-5ed6b29eef65" name="Asignación de Permisos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5a155514-2442-43ba-9771-ec6f2677d098" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f3ba94e8-e059-4aa2-92b1-7a73299696cc" />
+          </association>
+          <association Id="3e1fbc05-a3bf-4570-ab3a-0576353d1366" isDerived="false" sourceEndRoleName="Administrador Proyecto" targetEndRoleName="Administrador Proyecto" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="ce8227a5-8c41-456f-896a-6953703a3545" LastKnownName="Administrador del Proyecto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4bf5fecf-3766-4530-97a0-b4be5982c908" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8b8cc74f-64bd-4962-82c0-75502bcf8c82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a07b0434-e8fd-4cf7-b8ec-77fa9a0e2f37" name="Administrador Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="52462da1-ce69-4d17-923e-84b09fb978dc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f59a18ed-fd28-4eb8-9b55-6ebe2acb2412" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e65732eb-985d-4560-88fb-8662779d0042" name="Administrar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="16ca1acc-22e8-45d3-8894-cce65ec4a824" />
+        <additions>
+          <include Id="78de3eaa-7160-4205-b636-fa7af31a1765">
+            <useCaseMoniker Id="e6cf1124-79a0-4fa7-9f03-3343149909f9" LastKnownName="Registrar Usuarios" />
+            <elementDefinition Id="0c45d8d3-fb6a-45a6-8bba-5bc4525cf726" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a19932d6-8d68-42d1-b728-7ba705610541" name="Asignar Permisos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="56f13a9a-db61-4311-a4e9-fcb54f34542b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="301d4cff-0d3f-42fe-ab69-113e965f32a6" name="Editar Perfil" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ae75edf-c270-460c-bfeb-8095ec6b4e68" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4bb30a64-b0b4-42cb-acb6-4ecc7ef1bce2" name="Autenticar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6eabb86-aa96-49c7-8804-add8bc67b0a5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e6cf1124-79a0-4fa7-9f03-3343149909f9" name="Registrar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb49adcb-dc0b-409e-8fe6-0958e324e24d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="cd9fd579-2268-4522-a788-7a8ed5cbc305" name="Administrador Usuario Proyecto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4b09fcdb-b2b4-43bd-8465-804b8f607291" />
+        <targetEnds>
+          <association Id="6a27645f-34cd-40e1-bef5-76f36f727298" isDerived="false" sourceEndRoleName="Administrador Usuario Proyecto" targetEndRoleName="Administrar Habilidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="96ca105f-29bb-4280-a1c5-195d53f5edec" LastKnownName="Administrar Habilidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="80479811-15ee-4094-b269-411d4ce27590" name="Administrador Usuario Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="137c2dc4-6bd1-4932-84e0-efc8888e3244" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a9477a1-1f61-48e6-b499-639673f20f4e" name="Administrar Habilidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca36b8d7-4cd7-4cdc-975a-673910c6921a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f7266b17-76ac-4e5e-9b33-4dda84d20a13" />
+          </association>
+          <association Id="ae590e15-ffa6-4b59-8825-5f2a327ab4b5" isDerived="false" sourceEndRoleName="Administrador Usuario Proyecto" targetEndRoleName="Asignar Habilidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5b84b1ac-e222-4169-aeb2-a05b8f9d0b3e" LastKnownName="Asignar Habilidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="87f94a41-7f93-4a58-822a-c4ba7fe37661" name="Administrador Usuario Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="32705bda-a26c-4dee-9025-ff935f9627f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="74af3c20-d9ab-429b-a908-4863bb33b9ac" name="Asignar Habilidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9cad36a0-5e0f-4b99-9756-28dde5e18f2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5706617-36c5-4acf-ac99-fd0017a85b5d" />
+          </association>
+          <association Id="ab8b01c2-6e9b-43dc-9bb5-be56f4553946" isDerived="false" sourceEndRoleName="Administrador Usuario Proyecto" targetEndRoleName="Eliminar Habilidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f80e615e-19eb-4e93-9e42-3acfbd8fc71d" LastKnownName="Eliminar Habilidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="74135b9d-55ae-4cd9-9aa0-9277caaeea4e" name="Administrador Usuario Proyecto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="819f9ccb-46e4-4b19-9392-9be1b93266fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fb160c2-6f91-43e3-bfbd-4d8960d1c41c" name="Eliminar Habilidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3ef44b39-2499-4eec-ac4c-871ea97e2890" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="667a7ffe-6d13-4230-bf03-e4ba3c0872dc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="96ca105f-29bb-4280-a1c5-195d53f5edec" name="Administrar Habilidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8794ddb3-e9ca-46ae-a758-8372406a278f" />
+        <additions>
+          <include Id="7fdc5604-8b7e-4f84-99a5-08103ba8334a">
+            <useCaseMoniker Id="5b84b1ac-e222-4169-aeb2-a05b8f9d0b3e" LastKnownName="Asignar Habilidades" />
+            <elementDefinition Id="7607792d-3386-4f79-95a5-4181a7983090" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5b84b1ac-e222-4169-aeb2-a05b8f9d0b3e" name="Asignar Habilidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6e69ce9-a3fa-4d7a-ab17-e08b20ee2881" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f80e615e-19eb-4e93-9e42-3acfbd8fc71d" name="Eliminar Habilidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="849f5d77-2f0e-492c-b361-4a1bc59bfbef" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9cc7eb76-938d-4cb2-94a5-0ab307cacac9" name="Gestionar Sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6eceb385-1fbf-44e9-91c0-523a6331755b" />
+        <targetEnds>
+          <association Id="e434a8d9-4c63-49c0-8c7a-8d0e5c2e2525" isDerived="false" sourceEndRoleName="Administración Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eba46162-1cf2-4ba1-a0ac-026ba144bfd9" LastKnownName="Sistem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6abf71e0-2bd9-4353-9e1d-76f403cc11a2" name="Administración Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="81972371-b4b9-4ba4-b581-103d18f59a56" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c5981f3-5fb1-4c6c-81f3-335f2078e930" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a5db58b7-89ba-443d-b47b-ba3bc370d6a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f830698-3e3b-425f-8ca1-07ffa912b94e" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="f152dfc8-a1d3-49ec-8a1e-51573a18576f">
+            <useCaseMoniker Id="1c219cce-0519-4795-bba1-063bd03f88a7" LastKnownName="Administrar Dominios" />
+            <elementDefinition Id="d2012e97-ebda-45c6-bbda-99306495d550" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="67ced31e-2b43-413c-bb3b-faed5388575c" name="Editar  Historia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a2b7936a-1a0d-4a01-bcbf-a6980b658116" />
+        <targetEnds>
+          <association Id="df2fa771-501d-4b4d-8b79-d8520971687e" isDerived="false" sourceEndRoleName="Edición de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eba46162-1cf2-4ba1-a0ac-026ba144bfd9" LastKnownName="Sistem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88bda9f2-d70e-4b83-817a-9eef71e6d2d1" name="Edición de Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3ab586b2-036d-49eb-8366-54c74540557c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a5be6f5-94d5-4727-b6e0-929fbbc63034" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b053b638-2f1a-401e-9720-e8cd3e936a84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="32271818-c9e6-4910-837e-b09abd923705" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b3b9099e-3c56-4270-a5b5-ce94871dc42b" name="Administrar Perfiles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2eadc12-737c-45d3-9d5f-f9de4ad29a4e" />
+        <targetEnds>
+          <association Id="e2dbde08-6dcd-47db-b7a4-86fc9b891cb8" isDerived="false" sourceEndRoleName="Asignación de Caracteristicas" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eba46162-1cf2-4ba1-a0ac-026ba144bfd9" LastKnownName="Sistem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="015a76b2-58d1-4e64-bfe2-52942523bd34" name="Asignación de Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0125436e-fbbc-4e41-b562-3990cb1df5c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0032fa57-f4ff-41f0-b6d3-9444a8e91f70" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f54e492c-78a8-42b9-85a4-56de9d78c0a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d5c0399-3aef-4c64-aa1e-1bf9b2e8388d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c219cce-0519-4795-bba1-063bd03f88a7" name="Administrar Dominios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb9d4f0b-6e10-4914-8c16-f7e5f069dc9a" />
+        <targetEnds>
+          <association Id="b49566db-0369-4dfe-bef0-8344e4eaa646" isDerived="false" sourceEndRoleName="Registro de Caracteristica" targetEndRoleName="Sistema21" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eba46162-1cf2-4ba1-a0ac-026ba144bfd9" LastKnownName="Sistem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0e66e19-7d24-484b-ae59-cb67f8088469" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d4e870c1-886e-4e81-944b-ac18fea09e4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b25f3f41-0d63-4e76-a1ee-76a361ac4381" name="Sistema21" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d20970fd-7669-400e-978c-560f0f7ec6bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c8649170-171d-4f20-8d27-96237f5e61a0" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="30f95449-3ec4-42bf-8b09-658128067019" name="Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af212595-8d21-4d75-9801-957b4339cfb3" />
+        <targetEnds>
+          <association Id="61c62396-27c4-4c01-9910-7d3218923c89" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Administración Caracteristicas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9cc7eb76-938d-4cb2-94a5-0ab307cacac9" LastKnownName="Gestionar Sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f829192-de0e-4088-b5e5-8c0484d13afe" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8fac2145-d3de-4435-b3b7-867724b944a2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4d83202-6a60-42e9-a274-658344ef19ea" name="Administración Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="85889dc6-fe82-4ac9-85e3-4e8948f5cad5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3e80ac05-2d5e-4ec2-bb62-b536fed8c2c4" />
+          </association>
+          <association Id="930b19d4-0ba9-4946-b04c-650801495936" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Registro de Caracteristica" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c219cce-0519-4795-bba1-063bd03f88a7" LastKnownName="Administrar Dominios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6bc9c802-ebd3-466f-a979-dd5f555db200" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="856d59a7-e857-4c2f-aa16-8ba6c0b7210c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91ec815d-f612-41a8-b11c-c57b20cd4231" name="Registro de Caracteristica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d671905-c305-4928-bb33-4bbd3332a8e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b084cd0b-bfdf-467a-96e0-506674f7fdc6" />
+          </association>
+          <association Id="7df06207-4264-4c58-b447-1eaaacdeb69f" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Asignación de Caracteristicas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b3b9099e-3c56-4270-a5b5-ce94871dc42b" LastKnownName="Administrar Perfiles" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59c3d934-d2d9-47b8-94ca-55cfdcb3e86f" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="401dc0ea-30e1-4b3a-b4f8-077bf437e1c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="862a24ee-af21-4f10-a203-56ce90146f5a" name="Asignación de Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad5c76c0-fa2b-4f57-af45-b869d2b1ff72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff1700d5-e6ad-4943-9ada-2bc655f912f4" />
+          </association>
+          <association Id="e89871ff-98dc-4dcd-9680-6bd575beeb9b" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Edición de Caracteristicas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="67ced31e-2b43-413c-bb3b-faed5388575c" LastKnownName="Editar  Historia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="409fb842-a173-4256-8282-437a2d812528" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="925b505f-940c-4e6c-9ce6-bd82e3eefe28" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2870f2d2-980e-47e5-81fd-f83a7e919e83" name="Edición de Caracteristicas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4fea43f1-aad8-4331-bd77-a99433ca33a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5145041-f80b-4b2c-91ca-4dfc2a197281" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="eba46162-1cf2-4ba1-a0ac-026ba144bfd9" name="Sistem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d84923e0-e2bd-47d7-bb00-79a4379928c5" />
+      </actor>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="c0b4d186-9e75-4481-a418-3d03c3b48cd2" name="DiagramasCasosdeUso">
     <elementDefinition Id="d204a57c-6a75-42a1-9b88-c7bc4ab6f35c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f2aed86c-8c85-4ca3-9a43-4801359a0c2a">
+        <profileInstance Id="0ad955df-77d6-426a-a12c-fec709f93f31" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cf646f0b-5739-4701-8cdb-a7b3c6784d6a">
+        <profileInstance Id="51ec13de-c4a9-4ee1-8eca-3c9b0b00db1b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
