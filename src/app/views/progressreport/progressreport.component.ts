@@ -24,9 +24,9 @@ export class ProgressreportComponent {
     )
      {
         this.showAssigmentTaskByUser();
-        
     }
      options: Object;
+
 
       showAssigmentTaskByUser() {
         this._progresReportService.assigmentTaskByUser(1).subscribe(
@@ -34,7 +34,7 @@ export class ProgressreportComponent {
                 for (var d in data){
                     data[d].data = [data [d].data];
                 }
-                console.log(data);
+
                 this.options = {
                     chart : { type : 'column'},
                     title : { text : 'Reporte de Avances' },
@@ -45,7 +45,7 @@ export class ProgressreportComponent {
 
                     series: data
                 };
-            },
+            },  
             error => {
                 console.log('Error creando : ' + error);
             }
