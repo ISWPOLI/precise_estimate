@@ -1,4 +1,4 @@
-PROYECTO: PRECISE_ESTIMATE v2
+PROYECTO: PRECISE_ESTIMATE v3
 
 INTEGRANTES:
 Sebastian Aguirre
@@ -7,12 +7,8 @@ Jaime Wilchez
 Jhon Isaza
 A continuación encontra en la capeta la siguiente  información:
 
-1. Documentacíon del Proyecto:
-	a.Diseño: Contiene Diagrama de Infraestructura, de Componentes, de clases, de Secuencia, de protocolos. Patrones de Diseño.
-	b.Planeación: BurnDown,Estimación por puntos de función, HistoryMap,Perfilado del Equipo de Trabajo,Release Planning,Selección de la Metodologia de Trabajo. 
-	c.Pruebas: Pruebas de Servicios Unitarias.
-	d.Requerimientos:Canvas, Diagramas de Clases y de Secuencias, de navegación Mockups, Documento de levantamiento de requerimientos, 
-	Modelado de casos de uso + fichas,Objetivos SMART.
+1. Documentacíon del Proyecto: Para este corte se entregan las pruebas del proyecto de acuerdo al cuadrante relacionado
+en clase: Pruebas Funcionales, NO funcionales,de servicio, Alpha@Beta, de nevegación, CRUD de pruebas.
 
 2. Proyecto en GitHub:
 	a. https://github.com/ISWPOLI/precise_estimate_server: Front-End
