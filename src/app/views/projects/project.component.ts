@@ -26,6 +26,8 @@ export class ProjectComponent {
     @ViewChild('releasemodal') releasemodal: ElementRef;
     @ViewChild('taskmodal') taskmodal: ElementRef;
 
+    public planning: boolean = false;
+
     public user: any = { name: '' };
 
     private idProject: number;
@@ -272,6 +274,18 @@ export class ProjectComponent {
             data => {
                 this.hideModal('task');
                 this.loadCompleteProject(this.idProject);
+            },
+            error => {
+                console.log('Error creando : ' + error);
+            }
+        );
+    }
+
+    showTask(idTask) {
+        this._projectService.getTask(idTask).subscribe(
+            data => {
+                this.showModal('task', idTask);
+                console.log(data);
             },
             error => {
                 console.log('Error creando : ' + error);

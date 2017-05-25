@@ -49,13 +49,13 @@ export class loginComponent implements OnInit {
         this._loginService.login(this._loginInfo.user, this._loginInfo.password)
             .subscribe(
             data => {
-                console.log(data);
                 if (data.st == "ok") {
                     toastr.success(this._loginInfo.user + ' inició sesión', 'Bienvenido');
                     this.sessionSt.store('loggedIn', 'true');
                     this.sessionSt.store('LoggedInUser', data.data);
                     this.sessionSt.store('B1Session', this.B1Session);
-                    this.router.navigate(['mainView']);
+                    //this.router.navigate(['mainView']);
+                    document.location.reload();
                 } else {
                     toastr.error(data.data, 'Error');
                 }
@@ -64,6 +64,10 @@ export class loginComponent implements OnInit {
                 console.log('Login Failure: ' + error);
                 toastr.error('Incorrect Credentials', 'Logon Failed');
             });
+    }
+
+    register() {
+        this.router.navigate(['register']);
     }
 
 }
