@@ -28,12 +28,12 @@
                     </li>
                     <li [ngClass]="{active: activeRoute('tracking')}"><a [routerLink]="['/tracking']"><i class="fa fa-tasks"></i>Seguimiento de tareas</a></li>
                     <li [ngClass]="{active: activeRoute('ability')}"><a [routerLink]="['/ability']"><i class="fa fa-star-half-o"></i>Asignación de Habilidades</a></li>
-                    <li [ngClass]="{active: activeRoute('roleassignment')}"><a [routerLink]="['/roleassignment']"><i class="fa fa-drivers-license"></i>Asignación de roles</a></li>
+                    <!--li [ngClass]="{active: activeRoute('roleassignment')}"><a [routerLink]="['/roleassignment']"><i class="fa fa-drivers-license"></i>Asignación de roles</a></li-->
                     <li>
                         <a href="#"><i class="fa fa-pie-chart"></i><span class="nav-label">Reportes</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li [ngClass]="{active: activeRoute('costreport')}"><a [routerLink]="['/costreport']"><i class="fa fa-chevron-right"></i>Reporte de Costos</a></li>
-                            <li [ngClass]="{active: activeRoute('progressreport')}"><a [routerLink]="['/progressreport']"><i class="fa fa-chevron-right"></i>Reporte de avances</a></li>
+                            <li [ngClass]="{active: activeRoute('costreport')}"><a [routerLink]="['/costreport']"><i class="fa fa-chevron-right"></i>Reporte de estado de proyectos</a></li>
+                            <li [ngClass]="{active: activeRoute('progressreport')}"><a [routerLink]="['/progressreport']"><i class="fa fa-chevron-right"></i>Reporte de tareas por usuario</a></li>
                             <li [ngClass]="{active: activeRoute('resourcereport')}"><a [routerLink]="['/resourcereport']"><i class="fa fa-chevron-right"></i>Reporte de recursos</a></li>
                         </ul>
                     </li>
@@ -46,15 +46,15 @@
                         <a href="#"><i class="fa fa-gear"></i><span class="nav-label">Sistema</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li [ngClass]="{active: activeRoute('user')}"><a [routerLink]="['/user']"><i class="fa fa-id-card-o"></i> <span class="nav-label">Usuarios</span></a></li>
-                            <li [ngClass]="{active: activeRoute('profiles')}"><a [routerLink]="['/profiles']"><i class="fa fa-chevron-right"></i>Perfiles</a></li>
-                            <li [ngClass]="{active: activeRoute('permissions')}"><a [routerLink]="['/permissions']"><i class="fa fa-chevron-right"></i>Permisos</a></li>
+                            <!--li [ngClass]="{active: activeRoute('profiles')}"><a [routerLink]="['/profiles']"><i class="fa fa-chevron-right"></i>Perfiles</a></li>
+                            <li [ngClass]="{active: activeRoute('permissions')}"><a [routerLink]="['/permissions']"><i class="fa fa-chevron-right"></i>Permisos</a></li-->
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-list"></i><span class="nav-label">Dominios</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li [ngClass]="{active: activeRoute('habilities')}"><a [routerLink]="['/habilities']"><i class="fa fa-star"></i> <span class="nav-label">Habilidades</span></a></li>
-                            <li [ngClass]="{active: activeRoute('roles')}"><a [routerLink]="['/roles']"><i class="fa fa-drivers-license-o"></i>Roles</a></li>
+                            <!--li [ngClass]="{active: activeRoute('habilities')}"><a [routerLink]="['/habilities']"><i class="fa fa-star"></i> <span class="nav-label">Habilidades</span></a></li>
+                            <li [ngClass]="{active: activeRoute('roles')}"><a [routerLink]="['/roles']"><i class="fa fa-drivers-license-o"></i>Roles</a></li-->
                             <li [ngClass]="{active: activeRoute('domains')}"><a [routerLink]="['/domains']"><i class="fa fa-list-alt"></i>Varios</a></li>
                         </ul>
                     </li>

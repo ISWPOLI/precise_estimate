@@ -7,525 +7,77 @@
                 </h1>
             </div>
             <div class="container-fluid container-limited">
-                <div class="top-area">
-                    <ul class="nav-links issues-state-filters">
-                        <li class="active">
-                            <a title="Filter by issues that are currently opened." href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_desc&amp;state=opened"><span>Open</span> <span class="badge">6</span>
-</a></li>
-                        <li>
-                            <a title="Filter by issues that are currently closed." href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_desc&amp;state=closed"><span>Closed</span> <span class="badge">39</span>
-</a></li>
-                        <li>
-                            <a title="Show all issues." href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_desc&amp;state=all"><span>All</span> <span class="badge">45</span>
-</a></li>
-                    </ul>
 
-                    <div class="nav-controls">
-
-                        <form id="issue_search_form" class="issue-search-form" action="/appsglobals/sisomatic_server/issues" accept-charset="UTF-8"
-                            method="get"><input name="utf8" type="hidden" value="✓">
-                            <input type="search" name="issue_search" id="issue_search" placeholder="Filter by name ..." class="form-control issue_search search-text-input input-short"
-                                spellcheck="false" value="">
-                        </form>
-
-
-                    </div>
+                <div [hidden]="showForm">
+                    <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Inicio</th>
+                                <th>Fin</th>
+                                <th>Estado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let u of tasks" [ngClass]="{ 'bg-success' : u.id_status==1, 'bg-warning' : !u.id_status }">
+                                <td>{{u.id_task}}</td>
+                                <td>{{u.name}}</td>
+                                <td>{{u.description}}</td>
+                                <td>{{u.date_start}}</td>
+                                <td>{{u.date_end}}</td>
+                                <td>{{u.id_status}}</td>
+                                <td>
+                                    <button class="btn btn-info" (click)="checkTask(u)">Ver</button>
+                                    <button *ngIf="u.id_status!=2" class="btn btn-info" (click)="closeTask(u.id_task)">Cerrar</button>
+                                    <select style="color:black;" [(ngModel)]="u.id_user">
+                                        <option></option>
+                                        <option *ngFor="let d of users" [value]="d.id_user">{{d.name}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="issues-filters">
-                    <div class="issues-details-filters row-content-block second-block">
-                        <form class="filter-form js-filter-form" action="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_desc&amp;state=opened"
-                            accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-                            <div class="check-all-holder">
-
+                <div [hidden]="!showForm">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Tarea: {{task.name}}</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Nombre</label><br>
+                                <input type="text" [(ngModel)]="task.name">
                             </div>
-                            <div class="issues-other-filters">
-
-                                <div class="filter-item inline milestone-filter">
-                                    <div class="dropdown"><button class="dropdown-menu-toggle js-milestone-select js-filter-submit" type="button"
-                                            data-show-no="true" data-show-any="true" data-show-upcoming="true" data-field-name="milestone_title"
-                                            data-selected="null" data-project-id="13" data-milestones="/appsglobals/sisomatic_server/milestones.json"
-                                            data-default-label="Milestone" data-toggle="dropdown"><span class="dropdown-toggle-text">Milestone</span><i class="fa fa-chevron-down"></i></button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-selectable">
-                                            <div class="dropdown-title"><span>Filter by milestone</span><button class="dropdown-title-button dropdown-menu-close"
-                                                    aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                            <div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search milestones"
-                                                    value=""><i class="fa fa-search dropdown-input-search"></i>
-                                                <i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i>
-                                            </div>
-                                            <div class="dropdown-content"></div>
-                                            <div class="dropdown-footer">
-                                                <ul class="dropdown-footer-list">
-                                                    <li>
-                                                        <a title="New Milestone" href="/appsglobals/sisomatic_server/milestones/new">Create new
-</a></li>
-                                                    <li>
-                                                        <a href="/appsglobals/sisomatic_server/milestones">Manage milestones
-</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter-item inline labels-filter">
-                                    <div class="dropdown">
-                                        <button class="dropdown-menu-toggle js-extra-options js-filter-submit js-label-select js-multiselect" data-default-label="Label"
-                                            data-field-name="label_name[]" data-labels="/appsglobals/sisomatic_server/labels.json"
-                                            data-project-id="13" data-show-any="true" data-show-no="true" data-toggle="dropdown"
-                                            type="button">
-<span class="dropdown-toggle-text">
-Label
-</span>
-<i class="fa fa-chevron-down"></i>
-</button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-paging dropdown-menu-labels dropdown-menu-selectable">
-                                            <div class="dropdown-page-one">
-                                                <div class="dropdown-title"><span>Filter by label</span><button class="dropdown-title-button dropdown-menu-close"
-                                                        aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                                <div class="dropdown-input"><input type="search" name="label-name" id="label-name" class="dropdown-input-field"
-                                                        placeholder="Search labels" value=""><i class="fa fa-search dropdown-input-search"></i>
-                                                    <i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i>
-                                                </div>
-                                                <div class="dropdown-content"></div>
-                                                <div class="dropdown-footer">
-                                                    <ul class="dropdown-footer-list">
-                                                        <li>
-                                                            <a class="dropdown-toggle-page" href="#">
-Create new
-</a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-is-link="true" href="/appsglobals/sisomatic_server/labels">Manage labels
-</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                            </div>
-
-                                            <div class="dropdown-page-two dropdown-new-label">
-                                                <div class="dropdown-title"><button class="dropdown-title-button dropdown-menu-back" aria-label="Go back"
-                                                        type="button"><i class="fa fa-arrow-left"></i></button><span>Create new label</span>
-                                                    <button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button>
-                                                </div>
-                                                <div class="dropdown-content">
-                                                    <div class="dropdown-labels-error js-label-error" style="display: none;"></div>
-                                                    <input class="default-dropdown-input" id="new_label_name" placeholder="Name new label" type="text">
-                                                    <div class="suggest-colors suggest-colors-dropdown">
-                                                        <a style="background-color: #0033CC" data-color="#0033CC" href="#">&nbsp;
-</a><a style="background-color: #428BCA" data-color="#428BCA" href="#">&nbsp;
-</a><a style="background-color: #44AD8E" data-color="#44AD8E" href="#">&nbsp;
-</a><a style="background-color: #A8D695" data-color="#A8D695" href="#">&nbsp;
-</a><a style="background-color: #5CB85C" data-color="#5CB85C" href="#">&nbsp;
-</a><a style="background-color: #69D100" data-color="#69D100" href="#">&nbsp;
-</a><a style="background-color: #004E00" data-color="#004E00" href="#">&nbsp;
-</a><a style="background-color: #34495E" data-color="#34495E" href="#">&nbsp;
-</a><a style="background-color: #7F8C8D" data-color="#7F8C8D" href="#">&nbsp;
-</a><a style="background-color: #A295D6" data-color="#A295D6" href="#">&nbsp;
-</a><a style="background-color: #5843AD" data-color="#5843AD" href="#">&nbsp;
-</a><a style="background-color: #8E44AD" data-color="#8E44AD" href="#">&nbsp;
-</a><a style="background-color: #FFECDB" data-color="#FFECDB" href="#">&nbsp;
-</a><a style="background-color: #AD4363" data-color="#AD4363" href="#">&nbsp;
-</a><a style="background-color: #D10069" data-color="#D10069" href="#">&nbsp;
-</a><a style="background-color: #CC0033" data-color="#CC0033" href="#">&nbsp;
-</a><a style="background-color: #FF0000" data-color="#FF0000" href="#">&nbsp;
-</a><a style="background-color: #D9534F" data-color="#D9534F" href="#">&nbsp;
-</a><a style="background-color: #D1D100" data-color="#D1D100" href="#">&nbsp;
-</a><a style="background-color: #F0AD4E" data-color="#F0AD4E" href="#">&nbsp;
-</a><a style="background-color: #AD8D43" data-color="#AD8D43" href="#">&nbsp;
-</a></div>
-                                                    <div class="dropdown-label-color-input">
-                                                        <div class="dropdown-label-color-preview js-dropdown-label-color-preview"></div>
-                                                        <input class="default-dropdown-input" id="new_label_color" type="text">
-                                                    </div>
-                                                    <div class="clearfix">
-                                                        <button class="btn btn-primary pull-left js-new-label-btn disabled" type="button" disabled="disabled">
-Create
-</button>
-                                                        <button class="btn btn-default pull-right js-cancel-label-btn" type="button">
-Cancel
-</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="pull-right">
-                                    <div class="dropdown inline prepend-left-10">
-                                        <button class="dropdown-toggle btn" data-toggle="dropdown" type="button">
-<span class="light"></span>
-Last created
-<b class="caret"></b>
-</button>
-                                        <ul class="dropdown-menu dropdown-menu-align-right dropdown-menu-sort">
-                                            <li>
-                                                <a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=priority&amp;state=opened">Priority
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_desc&amp;state=opened">Last created
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=id_asc&amp;state=opened">Oldest created
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=updated_desc&amp;state=opened">Last updated
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=updated_asc&amp;state=opened">Oldest updated
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=milestone_due_asc&amp;state=opened">Milestone due soon
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=milestone_due_desc&amp;state=opened">Milestone due later
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=due_date_asc&amp;state=opened">Due soon
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=due_date_desc&amp;state=opened">Due later
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=upvotes_desc&amp;state=opened">Most popular
-</a><a href="/appsglobals/sisomatic_server/issues?scope=all&amp;sort=downvotes_desc&amp;state=opened">Least popular
-</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Descripción</label><br>
+                                <textarea type="text" [(ngModel)]="task.description"></textarea>
                             </div>
-                        </form>
-
-                        <div class="issues_bulk_update hide">
-                            <form class="bulk-update" action="/appsglobals/sisomatic_server/issues/bulk_update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="8JkV7//8PJYSliNW6v9u0IQEvWfrxhoQSJ7FDSqsviNEsn7wgm2EnS5RgNjllSuAyVFtHLi+WaCGX24qv2vyVw==">
-                                <div class="filter-item inline">
-                                    <div class="dropdown"><button class="dropdown-menu-toggle js-issue-status" type="button" data-field-name="update[state_event]"
-                                            data-toggle="dropdown"><span class="dropdown-toggle-text">Status</span><i class="fa fa-chevron-down"></i></button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-status dropdown-menu-selectable">
-                                            <div class="dropdown-title"><span>Change status</span><button class="dropdown-title-button dropdown-menu-close"
-                                                    aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                            <div class="dropdown-content">
-                                                <ul>
-                                                    <li>
-                                                        <a data-id="reopen" href="#">Open</a>
-                                                    </li>
-                                                    <li>
-                                                        <a data-id="close" href="#">Closed</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter-item inline">
-                                    <div class="dropdown"><button class="dropdown-menu-toggle js-user-search js-update-assignee js-filter-submit js-filter-bulk-update"
-                                            type="button" data-first-user="apps" data-null-user="true" data-current-user="true"
-                                            data-project-id="13" data-field-name="update[assignee_id]" data-toggle="dropdown"><span class="dropdown-toggle-text">Assignee</span><i class="fa fa-chevron-down"></i></button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-user dropdown-menu-selectable">
-                                            <div class="dropdown-title"><span>Assign to</span><button class="dropdown-title-button dropdown-menu-close"
-                                                    aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                            <div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search authors"
-                                                    value=""><i class="fa fa-search dropdown-input-search"></i>
-                                                <i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i>
-                                            </div>
-                                            <div class="dropdown-content"></div>
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter-item inline">
-                                    <div class="dropdown"><button class="dropdown-menu-toggle js-milestone-select js-extra-options js-filter-submit js-filter-bulk-update"
-                                            type="button" data-show-no="true" data-field-name="update[milestone_id]" data-project-id="13"
-                                            data-milestones="/appsglobals/sisomatic_server/milestones.json" data-use-id="true"
-                                            data-toggle="dropdown"><span class="dropdown-toggle-text">Milestone</span><i class="fa fa-chevron-down"></i></button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-selectable dropdown-menu-milestone">
-                                            <div class="dropdown-title"><span>Assign milestone</span><button class="dropdown-title-button dropdown-menu-close"
-                                                    aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                            <div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search milestones"
-                                                    value=""><i class="fa fa-search dropdown-input-search"></i>
-                                                <i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i>
-                                            </div>
-                                            <div class="dropdown-content"></div>
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter-item inline labels-filter">
-                                    <div class="dropdown">
-                                        <button class="dropdown-menu-toggle js-filter-bulk-update js-label-select js-multiselect" data-default-label="Label" data-field-name="update[label_ids][]"
-                                            data-labels="/appsglobals/sisomatic_server/labels.json" data-persist-when-hide="true"
-                                            data-project-id="13" data-toggle="dropdown" data-use-id="" type="button">
-<span class="dropdown-toggle-text">
-Label
-</span>
-<i class="fa fa-chevron-down"></i>
-</button>
-                                        <div class="dropdown-menu dropdown-select dropdown-menu-paging dropdown-menu-labels dropdown-menu-selectable">
-                                            <div class="dropdown-page-one">
-                                                <div class="dropdown-title"><span>Filter by label</span><button class="dropdown-title-button dropdown-menu-close"
-                                                        aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
-                                                <div class="dropdown-input"><input type="search" name="label-name" id="label-name" class="dropdown-input-field"
-                                                        placeholder="Search labels" value=""><i class="fa fa-search dropdown-input-search"></i>
-                                                    <i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i>
-                                                </div>
-                                                <div class="dropdown-content"></div>
-                                                <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                            </div>
-
-                                            <div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <input type="hidden" name="update[issues_ids]" id="update_issues_ids" value="">
-                                <input type="hidden" name="state_event" id="state_event">
-                                <div class="filter-item inline">
-                                    <button name="button" type="submit" class="btn update_selected_issues btn-save">Update issues</button>
-                                </div>
-                            </form>
-
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Fecha de inicio</label><br>
+                                <input type="date" [(ngModel)]="task.date_start">
+                            </div>
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Fecha de finalización</label><br>
+                                <input type="date" [(ngModel)]="task.date_end">
+                            </div>
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Tiempo Estimado (Horas)</label><br>
+                                <input type="text" [(ngModel)]="task.time">
+                            </div>
+                            <div class="col-sm-12 col-md-4 margin-10">
+                                <label>Estado</label><br>
+                                <select [(ngModel)]="task.id_status">
+                                    <option *ngFor="let st of status" [value]="st.id_status">{{st.status}}</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 margin-10 text-center">
+                                <button (click)="saveTask()">Guardar</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="filtered-labels hidden row-content-block second-block">
-                    </div>
-                </div>
-                <script>
-                    new UsersSelect();
-                    new LabelsSelect();
-                    new MilestoneSelect();
-                    new IssueStatusSelect();
-                    $('form.filter-form').on('submit', function (event) {
-                        event.preventDefault();
-                        Turbolinks.visit(this.action + '&' + $(this).serialize());
-                    });
-                </script>
-
-                <div class="issues-holder">
-                    <ul class="content-list issues-list">
-                        <li class="issue" data-id="128" data-labels="[2]" id="issue_128" url="/appsglobals/sisomatic_server/issues/44">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_128" id="selected_issue_128" data-id="128" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/44">Realizar un servicio RESTFUL que permita obtener las sugerencias de peligros basados en el inventario de la sucursal por filtro. US $3.75</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/44#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #44 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T23:17:09Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 9, 2016 6:17pm GMT-0500">7 months ago</time>
-                                <script>
-                                    //<![CDATA[
-                                    $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="Etiqueta para identificar al proyecto Sisomatic server" data-container="body">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-18T12:23:07Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 18, 2016 7:23am GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="issue" data-id="127" data-labels="[2]" id="issue_127" url="/appsglobals/sisomatic_server/issues/43">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_127" id="selected_issue_127" data-id="127" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/43">Realizar los servicios RESTFUL para la administración de consultores. US $ 5</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/43#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #43 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T22:46:27Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 9, 2016 5:46pm GMT-0500">7 months ago</time>
-                                <script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="" data-container="body" data-original-title="Etiqueta para identificar al proyecto Sisomatic server">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-11T03:10:58Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 10, 2016 10:10pm GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="issue" data-id="126" data-labels="[2]" id="issue_126" url="/appsglobals/sisomatic_server/issues/42">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_126" id="selected_issue_126" data-id="126" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/42">Realizar los servicios RESTFUL para la administración de tipos de peligro. US $ 3.75</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/42#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #42 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T22:25:52Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 9, 2016 5:25pm GMT-0500">7 months ago</time>
-                                <script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="Etiqueta para identificar al proyecto Sisomatic server" data-container="body">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-23T15:37:36Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 23, 2016 10:37am GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="issue" data-id="124" data-labels="[2]" id="issue_124" url="/appsglobals/sisomatic_server/issues/40">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_124" id="selected_issue_124" data-id="124" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/40">Realizar los servicios RESTFUL para la administración de niveles. US $5</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/40#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #40 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T20:20:06Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 9, 2016 3:20pm GMT-0500">7 months ago</time>
-                                <script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="Etiqueta para identificar al proyecto Sisomatic server" data-container="body">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-23T15:37:40Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 23, 2016 10:37am GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="issue" data-id="111" data-labels="[2]" id="issue_111" url="/appsglobals/sisomatic_server/issues/27">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_111" id="selected_issue_111" data-id="111" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/27">Realizar los servicios RESTFUL para la administración de códigos CIIU. US $ 3.75</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/27#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #27 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T02:19:07Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 8, 2016 9:19pm GMT-0500">7 months ago</time>
-                                <script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="Etiqueta para identificar al proyecto Sisomatic server" data-container="body">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-18T12:23:10Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 18, 2016 7:23am GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="issue" data-id="109" data-labels="[2]" id="issue_109" url="/appsglobals/sisomatic_server/issues/25">
-                            <div class="issue-check">
-                                <input type="checkbox" name="selected_issue_109" id="selected_issue_109" data-id="109" class="selected_issue">
-                            </div>
-                            <div class="issue-title title">
-                                <span class="issue-title-text">
-
-<a href="/appsglobals/sisomatic_server/issues/25">Realizar los servicios RESTFUL para la administración de tipos de empresa. US $3.75</a>
-</span>
-                                <ul class="controls">
-                                    <li>
-                                        <a class="issue-no-comments" href="/appsglobals/sisomatic_server/issues/25#notes"><i class="fa fa-comments"></i>
-0
-</a></li>
-                                </ul>
-                            </div>
-                            <div class="issue-info">
-                                #25 · opened
-                                <time class="time_ago js-timeago" datetime="2016-10-09T01:56:21Z" title="" data-toggle="tooltip" data-placement="bottom"
-                                    data-container="body" data-original-title="Oct 8, 2016 8:56pm GMT-0500">7 months ago</time>
-                                <script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                </script>
-                                by <a class="author_link  " href="/u/jrondon"><span class="author">Jhon Freddy Rondon</span></a>                                &nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?milestone_title=Sprint+5"><i class="fa fa-clock-o"></i>
-Sprint 5
-</a>&nbsp;
-                                <a href="/appsglobals/sisomatic_server/issues?label_name%5B%5D=SISOMATIC+SERVER"><span class="label color-label has-tooltip" style="background-color: #d1d100; color: #FFFFFF" title="Etiqueta para identificar al proyecto Sisomatic server" data-container="body">SISOMATIC SERVER</span></a>
-                                <div class="pull-right issue-updated-at">
-                                    <span>updated <time class="issue_update_ago js-timeago" datetime="2016-10-18T12:23:13Z" title="" data-toggle="tooltip" data-placement="bottom" data-container="body" data-original-title="Oct 18, 2016 7:23am GMT-0500">7 months ago</time><script>
-                                        //<![CDATA[
-                                        $('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
-//]]>
-                                    </script></span>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-
-
                 </div>
             </div>
         </div>
