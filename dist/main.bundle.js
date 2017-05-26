@@ -1,40 +1,15 @@
 webpackJsonp([0,4],{
 
-/***/ 1271:
-/***/ function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(550);
-
-
-/***/ },
-
-/***/ 137:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ConfigModule; });
-var ConfigModule;
-(function (ConfigModule) {
-    /**
-    * Constante que identifica la URL base para el consumo de servicios REST
-    */
-    //export const APIURL = 'http://localhost:3000/api';
-    ConfigModule.APIURL = 'http://server.preciseestimate.co/api';
-})(ConfigModule || (ConfigModule = {}));
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/config.js.map
-
-/***/ },
-
-/***/ 191:
+/***/ 106:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -100,6 +75,30 @@ var UserService = (function () {
     var _a;
 }());
 //# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/user.service.js.map
+
+/***/ },
+
+/***/ 1271:
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(550);
+
+
+/***/ },
+
+/***/ 138:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ConfigModule; });
+var ConfigModule;
+(function (ConfigModule) {
+    /**
+    * Constante que identifica la URL base para el consumo de servicios REST
+    */
+    ConfigModule.APIURL = 'http://localhost:3000/api';
+})(ConfigModule || (ConfigModule = {}));
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/config.js.map
 
 /***/ },
 
@@ -19019,8 +19018,8 @@ var SAPB1;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_webstorage__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__rxjs_operators__ = __webpack_require__(696);
@@ -19156,280 +19155,16 @@ var B1SLSessionService = (function () {
 
 /***/ },
 
-/***/ 407:
+/***/ 267:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_helpers__ = __webpack_require__(408);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var AppComponent = (function () {
-    function AppComponent() {
-    }
-    AppComponent.prototype.ngAfterViewInit = function () {
-        // Run correctHeight function on load and resize window event
-        jQuery(window).bind('load resize', function () {
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["a" /* correctHeight */])();
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["b" /* detectBody */])();
-        });
-        // Correct height of wrapper after metisMenu animation.
-        jQuery('.metismenu a').click(function () {
-            setTimeout(function () {
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["a" /* correctHeight */])();
-            }, 300);
-        });
-    };
-    AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__(933),
-            styles: [__webpack_require__(925)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
-}());
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/app.component.js.map
-
-/***/ },
-
-/***/ 408:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ exports["a"] = correctHeight;
-/* harmony export (immutable) */ exports["b"] = detectBody;
-/* harmony export (immutable) */ exports["c"] = smoothlyMenu;
-/*
- * Inspinia js helpers:
- *
- * correctHeight() - fix the height of main wrapper
- * detectBody() - detect windows size
- * smoothlyMenu() - add smooth fade in/out on navigation show/ide
- *
- */
-function correctHeight() {
-    /*
-      var pageWrapper = jQuery('#page-wrapper');
-      var navbarHeigh = jQuery('nav.navbar-default').height();
-      var wrapperHeigh = pageWrapper.height();
-    
-      if (navbarHeigh > wrapperHeigh) {
-        pageWrapper.css("min-height", navbarHeigh + "px");
-      }
-    
-      if (navbarHeigh < wrapperHeigh) {
-        if (navbarHeigh < jQuery(window).height()) {
-          pageWrapper.css("min-height", jQuery(window).height() + "px");
-        } else {
-          pageWrapper.css("min-height", navbarHeigh + "px");
-        }
-      }
-    
-      if (jQuery('body').hasClass('fixed-nav')) {
-        if (navbarHeigh > wrapperHeigh) {
-          pageWrapper.css("min-height", navbarHeigh + "px");
-        } else {
-          pageWrapper.css("min-height", jQuery(window).height() - 60 + "px");
-        }
-      }
-      */
-}
-function detectBody() {
-    if (jQuery(document).width() < 769) {
-        jQuery('body').addClass('body-small');
-    }
-    else {
-        jQuery('body').removeClass('body-small');
-    }
-}
-function smoothlyMenu() {
-    if (!jQuery('body').hasClass('mini-navbar') || jQuery('body').hasClass('body-small')) {
-        // Hide menu in order to smoothly turn on when maximize menu
-        jQuery('#side-menu').hide();
-        // For smoothly turn on menu
-        setTimeout(function () {
-            jQuery('#side-menu').fadeIn(400);
-        }, 200);
-    }
-    else if (jQuery('body').hasClass('fixed-sidebar')) {
-        jQuery('#side-menu').hide();
-        setTimeout(function () {
-            jQuery('#side-menu').fadeIn(400);
-        }, 100);
-    }
-    else {
-        // Remove all inline style from jquery fadeIn function to reset menu state
-        jQuery('#side-menu').removeAttr('style');
-    }
-}
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/app.helpers.js.map
-
-/***/ },
-
-/***/ 409:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__crud_component__ = __webpack_require__(682);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_keyValues__ = __webpack_require__(695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CrudModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var CrudModule = (function () {
-    function CrudModule() {
-    }
-    CrudModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_2__crud_component__["a" /* CrudComponent */], __WEBPACK_IMPORTED_MODULE_3__pipes_keyValues__["a" /* KeysPipe */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["a" /* SchemaFormModule */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_2__crud_component__["a" /* CrudComponent */]],
-            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["b" /* WidgetRegistry */], useClass: __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["c" /* DefaultWidgetRegistry */] }]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CrudModule);
-    return CrudModule;
-}());
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/crud.module.js.map
-
-/***/ },
-
-/***/ 410:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AbilityService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var AbilityService = (function () {
-    function AbilityService(http) {
-        this.http = http;
-        this.endpoint_url = __WEBPACK_IMPORTED_MODULE_3__config__["a" /* ConfigModule */].APIURL + "/ability";
-        this.http = http;
-    }
-    AbilityService.prototype.listAbility = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
-        return this.http.get(this.endpoint_url, options)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    AbilityService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
-    ], AbilityService);
-    return AbilityService;
-    var _a;
-}());
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/ability.service.js.map
-
-/***/ },
-
-/***/ 411:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var LoginService = (function () {
-    function LoginService(http) {
-        this.http = http;
-        this.endpoint_url = __WEBPACK_IMPORTED_MODULE_3__config__["a" /* ConfigModule */].APIURL + "/login";
-        this.http = http;
-    }
-    LoginService.prototype.login = function (email, password) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.endpoint_url, { email: email, password: password }, options)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    LoginService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
-    ], LoginService);
-    return LoginService;
-    var _a;
-}());
-//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/login.service.js.map
-
-/***/ },
-
-/***/ 412:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProjectService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -19515,6 +19250,13 @@ var ProjectService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
+    ProjectService.prototype.getTask = function (idTask) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.get(this.endpoint_url + "task/getTask?idTask=" + idTask, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
     ProjectService.prototype.listProjects = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
@@ -19543,6 +19285,27 @@ var ProjectService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
+    ProjectService.prototype.getTasx = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.get(this.endpoint_url + "project" + "/getReleasePlanning?idProject=" + id, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    ProjectService.prototype.setTaskStatus = function (id, status) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.endpoint_url + "task" + "/setTaskStatus", { idTask: id, idStatus: status }, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    ProjectService.prototype.getTaskbyUser = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.get(this.endpoint_url + "task" + "/getTaskbyUser?idUser=" + id, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
     ProjectService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
@@ -19554,16 +19317,280 @@ var ProjectService = (function () {
 
 /***/ },
 
+/***/ 408:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_helpers__ = __webpack_require__(409);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AppComponent = (function () {
+    function AppComponent() {
+    }
+    AppComponent.prototype.ngAfterViewInit = function () {
+        // Run correctHeight function on load and resize window event
+        jQuery(window).bind('load resize', function () {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["a" /* correctHeight */])();
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["b" /* detectBody */])();
+        });
+        // Correct height of wrapper after metisMenu animation.
+        jQuery('.metismenu a').click(function () {
+            setTimeout(function () {
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__app_helpers__["a" /* correctHeight */])();
+            }, 300);
+        });
+    };
+    AppComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__(933),
+            styles: [__webpack_require__(925)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
+    return AppComponent;
+}());
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/app.component.js.map
+
+/***/ },
+
+/***/ 409:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ exports["a"] = correctHeight;
+/* harmony export (immutable) */ exports["b"] = detectBody;
+/* harmony export (immutable) */ exports["c"] = smoothlyMenu;
+/*
+ * Inspinia js helpers:
+ *
+ * correctHeight() - fix the height of main wrapper
+ * detectBody() - detect windows size
+ * smoothlyMenu() - add smooth fade in/out on navigation show/ide
+ *
+ */
+function correctHeight() {
+    /*
+      var pageWrapper = jQuery('#page-wrapper');
+      var navbarHeigh = jQuery('nav.navbar-default').height();
+      var wrapperHeigh = pageWrapper.height();
+    
+      if (navbarHeigh > wrapperHeigh) {
+        pageWrapper.css("min-height", navbarHeigh + "px");
+      }
+    
+      if (navbarHeigh < wrapperHeigh) {
+        if (navbarHeigh < jQuery(window).height()) {
+          pageWrapper.css("min-height", jQuery(window).height() + "px");
+        } else {
+          pageWrapper.css("min-height", navbarHeigh + "px");
+        }
+      }
+    
+      if (jQuery('body').hasClass('fixed-nav')) {
+        if (navbarHeigh > wrapperHeigh) {
+          pageWrapper.css("min-height", navbarHeigh + "px");
+        } else {
+          pageWrapper.css("min-height", jQuery(window).height() - 60 + "px");
+        }
+      }
+      */
+}
+function detectBody() {
+    if (jQuery(document).width() < 769) {
+        jQuery('body').addClass('body-small');
+    }
+    else {
+        jQuery('body').removeClass('body-small');
+    }
+}
+function smoothlyMenu() {
+    if (!jQuery('body').hasClass('mini-navbar') || jQuery('body').hasClass('body-small')) {
+        // Hide menu in order to smoothly turn on when maximize menu
+        jQuery('#side-menu').hide();
+        // For smoothly turn on menu
+        setTimeout(function () {
+            jQuery('#side-menu').fadeIn(400);
+        }, 200);
+    }
+    else if (jQuery('body').hasClass('fixed-sidebar')) {
+        jQuery('#side-menu').hide();
+        setTimeout(function () {
+            jQuery('#side-menu').fadeIn(400);
+        }, 100);
+    }
+    else {
+        // Remove all inline style from jquery fadeIn function to reset menu state
+        jQuery('#side-menu').removeAttr('style');
+    }
+}
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/app.helpers.js.map
+
+/***/ },
+
+/***/ 410:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__crud_component__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_keyValues__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CrudModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CrudModule = (function () {
+    function CrudModule() {
+    }
+    CrudModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__crud_component__["a" /* CrudComponent */], __WEBPACK_IMPORTED_MODULE_3__pipes_keyValues__["a" /* KeysPipe */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["a" /* SchemaFormModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__crud_component__["a" /* CrudComponent */]],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["b" /* WidgetRegistry */], useClass: __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__["c" /* DefaultWidgetRegistry */] }]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CrudModule);
+    return CrudModule;
+}());
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/crud.module.js.map
+
+/***/ },
+
+/***/ 411:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AbilityService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AbilityService = (function () {
+    function AbilityService(http) {
+        this.http = http;
+        this.endpoint_url = __WEBPACK_IMPORTED_MODULE_3__config__["a" /* ConfigModule */].APIURL + "/ability";
+        this.http = http;
+    }
+    AbilityService.prototype.listAbility = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.get(this.endpoint_url, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    AbilityService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
+    ], AbilityService);
+    return AbilityService;
+    var _a;
+}());
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/ability.service.js.map
+
+/***/ },
+
+/***/ 412:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var LoginService = (function () {
+    function LoginService(http) {
+        this.http = http;
+        this.endpoint_url = __WEBPACK_IMPORTED_MODULE_3__config__["a" /* ConfigModule */].APIURL + "/login";
+        this.http = http;
+    }
+    LoginService.prototype.login = function (email, password) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.endpoint_url, { email: email, password: password }, options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    LoginService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
+    ], LoginService);
+    return LoginService;
+    var _a;
+}());
+//# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/login.service.js.map
+
+/***/ },
+
 /***/ 413:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ReportService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -19609,9 +19636,9 @@ var ReportService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_ability_service__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_ability_service__ = __webpack_require__(411);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AbilityComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -19878,7 +19905,7 @@ var DomainsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HabilitiesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -19919,8 +19946,8 @@ var HabilitiesComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_login_service__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_login_service__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_webstorage__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_B1SLSessionService__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_B1SLReference__ = __webpack_require__(265);
@@ -19963,13 +19990,13 @@ var loginComponent = (function () {
         var _this = this;
         this._loginService.login(this._loginInfo.user, this._loginInfo.password)
             .subscribe(function (data) {
-            console.log(data);
             if (data.st == "ok") {
                 toastr.success(_this._loginInfo.user + ' inició sesión', 'Bienvenido');
                 _this.sessionSt.store('loggedIn', 'true');
                 _this.sessionSt.store('LoggedInUser', data.data);
                 _this.sessionSt.store('B1Session', _this.B1Session);
-                _this.router.navigate(['mainView']);
+                //this.router.navigate(['mainView']);
+                document.location.reload();
             }
             else {
                 toastr.error(data.data, 'Error');
@@ -19978,6 +20005,9 @@ var loginComponent = (function () {
             console.log('Login Failure: ' + error);
             toastr.error('Incorrect Credentials', 'Logon Failed');
         });
+    };
+    loginComponent.prototype.register = function () {
+        this.router.navigate(['register']);
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_ng2_webstorage__["SessionStorage"])(), 
@@ -20011,7 +20041,7 @@ var loginComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(106);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return mainViewComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20078,7 +20108,7 @@ var mainViewComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PermissionsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20119,7 +20149,7 @@ var PermissionsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfilesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20184,7 +20214,6 @@ var ProgressreportComponent = (function () {
             for (var d in data) {
                 data[d].data = [data[d].data];
             }
-            console.log(data);
             _this.options = {
                 chart: { type: 'column' },
                 title: { text: 'Reporte de Avances' },
@@ -20218,10 +20247,10 @@ var ProgressreportComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_project_service__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_project_service__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_webstorage__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_modal__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_modal_plugins_bootstrap__ = __webpack_require__(440);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProjectComponent; });
@@ -20250,6 +20279,7 @@ var ProjectComponent = (function () {
         this.modal = modal;
         this.sessionSt = sessionSt;
         this.router = router;
+        this.planning = false;
         this.user = { name: '' };
         this.showForm = false;
         this.types = [
@@ -20432,6 +20462,15 @@ var ProjectComponent = (function () {
             console.log('Error creando : ' + error);
         });
     };
+    ProjectComponent.prototype.showTask = function (idTask) {
+        var _this = this;
+        this._projectService.getTask(idTask).subscribe(function (data) {
+            _this.showModal('task', idTask);
+            console.log(data);
+        }, function (error) {
+            console.log('Error creando : ' + error);
+        });
+    };
     /* TOOLS */
     ProjectComponent.prototype.showModal = function (mtype, id) {
         switch (mtype) {
@@ -20542,6 +20581,8 @@ var ProjectComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(106);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return registerComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20553,17 +20594,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var registerComponent = (function () {
-    function registerComponent() {
+    function registerComponent(_userService, router) {
+        this._userService = _userService;
+        this.router = router;
+        this._registerInfo = {};
     }
+    registerComponent.prototype.register = function () {
+        console.log(this._registerInfo);
+        var savePromise = this._userService.createUser(this._registerInfo).subscribe(function (data) {
+            console.log("Ok");
+        }, function (error) {
+            toastr.error(error, 'Error');
+        });
+    };
+    registerComponent.prototype.login = function () {
+        this.router.navigate(['login']);
+    };
     registerComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'register',
             template: __webpack_require__(946)
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object])
     ], registerComponent);
     return registerComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/register.component.js.map
 
@@ -20613,7 +20671,7 @@ var ResourcereportComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RoleassignmentComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20654,7 +20712,7 @@ var RoleassignmentComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RolesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20695,7 +20753,9 @@ var RolesComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_project_service__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TrackingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20711,21 +20771,94 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
+
+
 var TrackingComponent = (function () {
-    function TrackingComponent(fb) {
+    function TrackingComponent(fb, _projectService, _userService) {
+        this._projectService = _projectService;
+        this._userService = _userService;
+        this.showForm = false;
+        this.status = [
+            { id_status: 1, status: "Iniciado" },
+            { id_status: 2, status: "Finalizado" },
+            { id_status: 3, status: "En desarrollo" },
+            { id_status: 4, status: "Activo" },
+            { id_status: 5, status: "Inactivo" }
+        ];
+        this.users = [];
+        this.tasks = [
+            {
+                id_task: 1,
+                name: "tarea 1",
+                description: "algo",
+                time: 12,
+                fase: "Primera",
+                date_start: "2017-01-01 00:00:00",
+                date_end: "2017-01-01 00:00:00",
+                id_story: 1,
+                id_status: 1
+            },
+            {
+                id_task: 2,
+                name: "tarea 2",
+                description: "algo",
+                time: 12,
+                fase: "Primera",
+                date_start: "2017-01-01 00:00:00",
+                date_end: "2017-01-01 00:00:00",
+                id_story: 1,
+                id_status: 1
+            }
+        ];
+        this.task = {};
         this.form = fb.group({});
+        this.loadTasks();
+        this.loadUsers();
     }
+    TrackingComponent.prototype.loadTasks = function () {
+        var _this = this;
+        this._projectService.getTaskbyUser(1).subscribe(function (data) {
+            _this.tasks = data;
+        }, function (error) {
+            toastr.error(error, 'Error');
+        });
+    };
+    TrackingComponent.prototype.checkTask = function (t) {
+        this.task = t;
+        this.showForm = true;
+    };
+    TrackingComponent.prototype.saveTask = function () {
+        this.task = {};
+        this.loadTasks();
+        this.showForm = false;
+    };
+    TrackingComponent.prototype.closeTask = function (id) {
+        this._projectService.setTaskStatus(id, 2).subscribe(function (data) {
+            toastr.success('Tarea cerrada correctamente', '');
+        }, function (error) {
+            toastr.error(error, 'Error');
+        });
+        this.loadTasks();
+    };
+    TrackingComponent.prototype.loadUsers = function () {
+        var _this = this;
+        this._userService.listUsers().subscribe(function (data) {
+            _this.users = data;
+        }, function (error) {
+            toastr.error(error, 'Error');
+        });
+    };
     TrackingComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'trackingView',
             template: __webpack_require__(949),
             providers: []
         }),
-        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */])), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]) === 'function' && _a) || Object])
+        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */])), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormBuilder */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_project_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_project_service__["a" /* ProjectService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object])
     ], TrackingComponent);
     return TrackingComponent;
-    var _a;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=/home/felipe/Documents/Projects/Precise/codigo/precise_estimate/src/tracking.component.js.map
 
@@ -20736,7 +20869,7 @@ var TrackingComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(106);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20898,17 +21031,17 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routes__ = __webpack_require__(681);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_webstorage__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_B1SLSessionService__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_login_service__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_user_service__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_project_service__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_ability_service__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_login_service__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_user_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_project_service__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_ability_service__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_report_service__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__views_main_view_main_view_module__ = __webpack_require__(702);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__views_projects_project_module__ = __webpack_require__(706);
@@ -20929,7 +21062,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__app_components_common_navigation_navigation_module__ = __webpack_require__(686);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__app_components_common_topnavbar_topnavbar_module__ = __webpack_require__(688);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__app_components_common_footer_footer_module__ = __webpack_require__(684);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21273,7 +21406,7 @@ var FooterModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_webstorage__ = __webpack_require__(53);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavigationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -21331,7 +21464,7 @@ var NavigationComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_component__ = __webpack_require__(685);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavigationModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -21369,9 +21502,9 @@ var NavigationModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_helpers__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_helpers__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_webstorage__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_B1SLSessionService__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_B1SLReference__ = __webpack_require__(265);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TopnavbarComponent; });
@@ -21443,7 +21576,7 @@ var TopnavbarComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__topnavbar_component__ = __webpack_require__(687);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_webstorage__ = __webpack_require__(53);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TopnavbarModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -21483,7 +21616,7 @@ var TopnavbarModule = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(680);
 /* unused harmony namespace reexport */
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
@@ -21748,11 +21881,11 @@ var KeysPipe = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime__ = __webpack_require__(501);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap__ = __webpack_require__(503);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap__);
@@ -21778,7 +21911,7 @@ var KeysPipe = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ability_component__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AbilityModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -21818,12 +21951,12 @@ var AbilityModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__costreport_component__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_schema_form__ = __webpack_require__(35);
 /* unused harmony export highchartsFactory */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CostreportModule; });
@@ -21847,7 +21980,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Function to generate a Factory Method to use a highcharts library
  */
 function highchartsFactory() {
-    return __webpack_require__(297);
+    return __webpack_require__(298);
 }
 var CostreportModule = (function () {
     function CostreportModule() {
@@ -21877,8 +22010,8 @@ var CostreportModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domains_component__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_common_crud_crud_module__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_common_crud_crud_module__ = __webpack_require__(410);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return DomainsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21917,7 +22050,7 @@ var DomainsModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__habilities_component__ = __webpack_require__(417);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HabilitiesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -21957,7 +22090,7 @@ var HabilitiesModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_webstorage__ = __webpack_require__(53);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginModule; });
@@ -21998,7 +22131,7 @@ var LoginModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_view_component__ = __webpack_require__(419);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MainViewModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22039,7 +22172,7 @@ var MainViewModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__permissions_component__ = __webpack_require__(420);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PermissionsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22080,7 +22213,7 @@ var PermissionsModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profiles_component__ = __webpack_require__(421);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfilesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22120,12 +22253,12 @@ var ProfilesModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__progressreport_component__ = __webpack_require__(422);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_schema_form__ = __webpack_require__(35);
 /* unused harmony export highchartsFactory */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProgressreportModule; });
@@ -22149,7 +22282,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Function to generate a Factory Method to use a highcharts library
  */
 function highchartsFactory() {
-    return __webpack_require__(297);
+    return __webpack_require__(298);
 }
 var ProgressreportModule = (function () {
     function ProgressreportModule() {
@@ -22178,7 +22311,7 @@ var ProgressreportModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_filterEpic__ = __webpack_require__(690);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_filterRelease__ = __webpack_require__(691);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_filterSprint__ = __webpack_require__(692);
@@ -22233,6 +22366,7 @@ var ProjectModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_component__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RegisterModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -22246,13 +22380,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RegisterModule = (function () {
     function RegisterModule() {
     }
     RegisterModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [__WEBPACK_IMPORTED_MODULE_2__register_component__["a" /* registerComponent */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* BrowserModule */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["d" /* FormsModule */]],
         }), 
         __metadata('design:paramtypes', [])
     ], RegisterModule);
@@ -22268,12 +22403,12 @@ var RegisterModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_highcharts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_highcharts_dist_HighchartsService__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resourcereport_component__ = __webpack_require__(425);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_schema_form__ = __webpack_require__(35);
 /* unused harmony export highchartsFactory */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ResourcereportModule; });
@@ -22297,7 +22432,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Function to generate a Factory Method to use a highcharts library
  */
 function highchartsFactory() {
-    return __webpack_require__(297);
+    return __webpack_require__(298);
 }
 var ResourcereportModule = (function () {
     function ResourcereportModule() {
@@ -22327,7 +22462,7 @@ var ResourcereportModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__roleassignment_component__ = __webpack_require__(426);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RoleassignmentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22368,7 +22503,7 @@ var RoleassignmentModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__roles_component__ = __webpack_require__(427);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RolesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22409,7 +22544,7 @@ var RolesModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracking_component__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_schema_form__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TrackingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22450,7 +22585,7 @@ var TrackingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_component__ = __webpack_require__(429);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_crud_crud_module__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_crud_crud_module__ = __webpack_require__(410);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -22584,7 +22719,7 @@ module.exports = "<!--div class=\"footer\">\n    <div style=\"text-align: center
 /***/ 936:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar-default navbar-static-side\" role=\"navigation\">\n    <div class=\"sidebar-collapse\">\n        <ul class=\"nav metismenu\" id=\"side-menu\">\n            <li class=\"nav-header\">\n                <div class=\"dropdown profile-element\">\n                    <a *ngIf=\"loggedIn\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">\n                        <span class=\"block m-t-xs\"> <strong class=\"font-bold\">Example user</strong> </span>\n                        <span class=\"text-muted text-xs block\">Example <b class=\"caret\"></b> </span>\n                    </a>\n                    <ul *ngIf=\"!loggedIn\" class=\"dropdown-menu animated fadeInRight m-t-xs\">\n                        <li><a href=\"#\">Logout</a></li>\n                    </ul>\n                </div>\n                <div class=\"logo-element\">\n                    <img style=\"max-width: 30px\" src=\"assets/img/logo.svg\" />\n                </div>\n            </li>\n            <li *ngIf=\"_loggedIn\" [ngClass]=\"{active: activeRoute('mainView')}\">\n\n            </li>\n            <li *ngIf=\"_loggedIn\">\n                <a href=\"#\"><i class=\"fa fa-cubes\"></i> <span class=\"nav-label\">Proyectos</span> <span class=\"fa arrow\"></span></a>\n                <ul class=\"nav nav-second-level collapse\">\n                    <li [ngClass]=\"{active: activeRoute('projects')}\">\n                        <a [routerLink]=\"['/projects']\">\n                            <i class=\"fa fa-sitemap\"></i> <span class=\"nav-label\">Gestionar proyecto</span>\n                        </a>\n                    </li>\n                    <li [ngClass]=\"{active: activeRoute('tracking')}\"><a [routerLink]=\"['/tracking']\"><i class=\"fa fa-tasks\"></i>Seguimiento de tareas</a></li>\n                    <li [ngClass]=\"{active: activeRoute('ability')}\"><a [routerLink]=\"['/ability']\"><i class=\"fa fa-star-half-o\"></i>Asignación de Habilidades</a></li>\n                    <li [ngClass]=\"{active: activeRoute('roleassignment')}\"><a [routerLink]=\"['/roleassignment']\"><i class=\"fa fa-drivers-license\"></i>Asignación de roles</a></li>\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-pie-chart\"></i><span class=\"nav-label\">Reportes</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <li [ngClass]=\"{active: activeRoute('costreport')}\"><a [routerLink]=\"['/costreport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de Costos</a></li>\n                            <li [ngClass]=\"{active: activeRoute('progressreport')}\"><a [routerLink]=\"['/progressreport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de avances</a></li>\n                            <li [ngClass]=\"{active: activeRoute('resourcereport')}\"><a [routerLink]=\"['/resourcereport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de recursos</a></li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n            <li *ngIf=\"_loggedIn\" class=\"\">\n                <a href=\"index.html\"><i class=\"fa fa-gears\"></i> <span class=\"nav-label\">Administración</span> <span class=\"fa arrow\"></span></a>\n                <ul class=\"nav nav-second-level collapse in\">\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-gear\"></i><span class=\"nav-label\">Sistema</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <li [ngClass]=\"{active: activeRoute('user')}\"><a [routerLink]=\"['/user']\"><i class=\"fa fa-id-card-o\"></i> <span class=\"nav-label\">Usuarios</span></a></li>\n                            <li [ngClass]=\"{active: activeRoute('profiles')}\"><a [routerLink]=\"['/profiles']\"><i class=\"fa fa-chevron-right\"></i>Perfiles</a></li>\n                            <li [ngClass]=\"{active: activeRoute('permissions')}\"><a [routerLink]=\"['/permissions']\"><i class=\"fa fa-chevron-right\"></i>Permisos</a></li>\n                        </ul>\n                    </li>\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-list\"></i><span class=\"nav-label\">Dominios</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <li [ngClass]=\"{active: activeRoute('habilities')}\"><a [routerLink]=\"['/habilities']\"><i class=\"fa fa-star\"></i> <span class=\"nav-label\">Habilidades</span></a></li>\n                            <li [ngClass]=\"{active: activeRoute('roles')}\"><a [routerLink]=\"['/roles']\"><i class=\"fa fa-drivers-license-o\"></i>Roles</a></li>\n                            <li [ngClass]=\"{active: activeRoute('domains')}\"><a [routerLink]=\"['/domains']\"><i class=\"fa fa-list-alt\"></i>Varios</a></li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n            <li *ngIf=\"!_loggedIn\">\n                <a [routerLink]=\"['/login']\"><i class=\"fa fa-sign-in\"></i> <span class=\"nav-label\">Iniciar sesión</span> </a>\n            </li>\n            <li *ngIf=\"!_loggedIn\">\n                <a [routerLink]=\"['/register']\"><i class=\"fa fa-pencil\"></i> <span class=\"nav-label\">Registrarse</span> </a>\n            </li>\n\n        </ul>\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar-default navbar-static-side\" role=\"navigation\">\n    <div class=\"sidebar-collapse\">\n        <ul class=\"nav metismenu\" id=\"side-menu\">\n            <li class=\"nav-header\">\n                <div class=\"dropdown profile-element\">\n                    <a *ngIf=\"loggedIn\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">\n                        <span class=\"block m-t-xs\"> <strong class=\"font-bold\">Example user</strong> </span>\n                        <span class=\"text-muted text-xs block\">Example <b class=\"caret\"></b> </span>\n                    </a>\n                    <ul *ngIf=\"!loggedIn\" class=\"dropdown-menu animated fadeInRight m-t-xs\">\n                        <li><a href=\"#\">Logout</a></li>\n                    </ul>\n                </div>\n                <div class=\"logo-element\">\n                    <img style=\"max-width: 30px\" src=\"assets/img/logo.svg\" />\n                </div>\n            </li>\n            <li *ngIf=\"_loggedIn\" [ngClass]=\"{active: activeRoute('mainView')}\">\n\n            </li>\n            <li *ngIf=\"_loggedIn\">\n                <a href=\"#\"><i class=\"fa fa-cubes\"></i> <span class=\"nav-label\">Proyectos</span> <span class=\"fa arrow\"></span></a>\n                <ul class=\"nav nav-second-level collapse\">\n                    <li [ngClass]=\"{active: activeRoute('projects')}\">\n                        <a [routerLink]=\"['/projects']\">\n                            <i class=\"fa fa-sitemap\"></i> <span class=\"nav-label\">Gestionar proyecto</span>\n                        </a>\n                    </li>\n                    <li [ngClass]=\"{active: activeRoute('tracking')}\"><a [routerLink]=\"['/tracking']\"><i class=\"fa fa-tasks\"></i>Seguimiento de tareas</a></li>\n                    <li [ngClass]=\"{active: activeRoute('ability')}\"><a [routerLink]=\"['/ability']\"><i class=\"fa fa-star-half-o\"></i>Asignación de Habilidades</a></li>\n                    <!--li [ngClass]=\"{active: activeRoute('roleassignment')}\"><a [routerLink]=\"['/roleassignment']\"><i class=\"fa fa-drivers-license\"></i>Asignación de roles</a></li-->\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-pie-chart\"></i><span class=\"nav-label\">Reportes</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <li [ngClass]=\"{active: activeRoute('costreport')}\"><a [routerLink]=\"['/costreport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de estado de proyectos</a></li>\n                            <li [ngClass]=\"{active: activeRoute('progressreport')}\"><a [routerLink]=\"['/progressreport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de tareas por usuario</a></li>\n                            <li [ngClass]=\"{active: activeRoute('resourcereport')}\"><a [routerLink]=\"['/resourcereport']\"><i class=\"fa fa-chevron-right\"></i>Reporte de recursos</a></li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n            <li *ngIf=\"_loggedIn\" class=\"\">\n                <a href=\"index.html\"><i class=\"fa fa-gears\"></i> <span class=\"nav-label\">Administración</span> <span class=\"fa arrow\"></span></a>\n                <ul class=\"nav nav-second-level collapse in\">\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-gear\"></i><span class=\"nav-label\">Sistema</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <li [ngClass]=\"{active: activeRoute('user')}\"><a [routerLink]=\"['/user']\"><i class=\"fa fa-id-card-o\"></i> <span class=\"nav-label\">Usuarios</span></a></li>\n                            <!--li [ngClass]=\"{active: activeRoute('profiles')}\"><a [routerLink]=\"['/profiles']\"><i class=\"fa fa-chevron-right\"></i>Perfiles</a></li>\n                            <li [ngClass]=\"{active: activeRoute('permissions')}\"><a [routerLink]=\"['/permissions']\"><i class=\"fa fa-chevron-right\"></i>Permisos</a></li-->\n                        </ul>\n                    </li>\n                    <li>\n                        <a href=\"#\"><i class=\"fa fa-list\"></i><span class=\"nav-label\">Dominios</span> <span class=\"fa arrow\"></span></a>\n                        <ul class=\"nav nav-second-level collapse\">\n                            <!--li [ngClass]=\"{active: activeRoute('habilities')}\"><a [routerLink]=\"['/habilities']\"><i class=\"fa fa-star\"></i> <span class=\"nav-label\">Habilidades</span></a></li>\n                            <li [ngClass]=\"{active: activeRoute('roles')}\"><a [routerLink]=\"['/roles']\"><i class=\"fa fa-drivers-license-o\"></i>Roles</a></li-->\n                            <li [ngClass]=\"{active: activeRoute('domains')}\"><a [routerLink]=\"['/domains']\"><i class=\"fa fa-list-alt\"></i>Varios</a></li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n            <li *ngIf=\"!_loggedIn\">\n                <a [routerLink]=\"['/login']\"><i class=\"fa fa-sign-in\"></i> <span class=\"nav-label\">Iniciar sesión</span> </a>\n            </li>\n            <li *ngIf=\"!_loggedIn\">\n                <a [routerLink]=\"['/register']\"><i class=\"fa fa-pencil\"></i> <span class=\"nav-label\">Registrarse</span> </a>\n            </li>\n\n        </ul>\n    </div>\n</nav>"
 
 /***/ },
 
@@ -22619,7 +22754,7 @@ module.exports = "<div class=\"wrapper wrapper-content animated fadeInRight\">\n
 /***/ 941:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"middle-box text-center loginscreen  animated fadeInDown\">\n    <div>\n        <div>\n            <h1 class=\"logo-name\">\n                <div style=\"margin: 10px\">\n                    <img style=\"max-width: 100px\" src=\"assets/img/logo.svg\" />\n                </div>\n            </h1>\n        </div>\n        <h3>Bienvenido a Precise Estimate</h3>\n\n        <form class=\"m-t\" (ngSubmit)=\"login()\" #loginForm=\"ngForm\" role=\"form\">\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" id=\"UserName\" placeholder=\"email\" required [(ngModel)]=\"_loginInfo.user\" name=\"UserName\"\n                    #UserName=\"ngModel\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"password\" class=\"form-control\" id=\"Password\" placeholder=\"contraseña\" required [(ngModel)]=\"_loginInfo.password\"\n                    name=\"Password\" #Password=\"ngModel\">\n            </div>\n            <button type=\"submit\" class=\"btn btn-primary block full-width m-b ladda-button\" [disabled]=\"!loginForm.form.valid\">\n                    Login\n            </button>\n            <a href=\"#\"><small>¿Olvidó su contraseña?</small></a>\n            <p class=\"text-muted text-center\"><small>¿No tiene cuenta?</small></p>\n            <a class=\"btn btn-sm btn-white btn-block\" href=\"#\">Puedes crear una cuenta facil acá!</a>\n        </form>\n        <hr />\n        <div *ngIf=\"loginFailure\" class=\"alert alert-danger alert-dismissable\">\n            <button aria-hidden=\"true\" data-dismiss=\"alert\" class=\"close\" type=\"button\">×</button> Usuario o contraseña incorrecta!\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"middle-box text-center loginscreen  animated fadeInDown\">\n    <div>\n        <div>\n            <h1 class=\"logo-name\">\n                <div style=\"margin: 10px\">\n                    <img style=\"max-width: 100px\" src=\"assets/img/logo.svg\" />\n                </div>\n            </h1>\n        </div>\n        <h3>Bienvenido a Precise Estimate</h3>\n\n        <form class=\"m-t\" (ngSubmit)=\"login()\" #loginForm=\"ngForm\" role=\"form\">\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" id=\"UserName\" placeholder=\"email\" required [(ngModel)]=\"_loginInfo.user\" name=\"UserName\"\n                    #UserName=\"ngModel\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"password\" class=\"form-control\" id=\"Password\" placeholder=\"contraseña\" required [(ngModel)]=\"_loginInfo.password\"\n                    name=\"Password\" #Password=\"ngModel\">\n            </div>\n            <button type=\"submit\" class=\"btn btn-primary block full-width m-b ladda-button\" [disabled]=\"!loginForm.form.valid\">\n                    Login\n            </button>\n            <a href=\"#\"><small>¿Olvidó su contraseña?</small></a>\n            <p class=\"text-muted text-center\"><small>¿No tiene cuenta?</small></p>\n            <a class=\"btn btn-sm btn-white btn-block\" (click)=\"register()\">Puedes crear una cuenta facil acá!</a>\n        </form>\n        <hr />\n        <div *ngIf=\"loginFailure\" class=\"alert alert-danger alert-dismissable\">\n            <button aria-hidden=\"true\" data-dismiss=\"alert\" class=\"close\" type=\"button\">×</button> Usuario o contraseña incorrecta!\n        </div>\n    </div>\n</div>"
 
 /***/ },
 
@@ -22647,14 +22782,14 @@ module.exports = "<div class=\"wrapper wrapper-content animated fadeInRight\">\n
 /***/ 945:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInDown\">\n    <div>\n\n        <h3>Projects</h3>\n        <div class=\"col-lg-12\">\n            <div class=\"ibox float-e-margins\">\n\n                <div class=\"animated fadeInDown\">\n                    <div>\n                        <h1>\n                            Administración de Proyectos - {{user.name}}\n                        </h1>\n                        <div [hidden]=\"showForm\">\n                            <table class=\"table table-striped table-bordered table-hover dataTables-example dataTable\">\n                                <thead>\n                                    <tr>\n                                        <th>Id</th>\n                                        <th>Nombre</th>\n                                        <th>Tipo</th>\n                                        <th></th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr *ngFor=\"let u of projects\">\n                                        <td>{{u.id_project}}</td>\n                                        <td>{{u.name}}</td>\n                                        <td>{{u.type}}</td>\n                                        <td><button (click)=\"editProject(u.id_project)\">Editar</button></td>\n                                    </tr>\n                                </tbody>\n                                <tfoot>\n                                    <tr>\n                                        <td colspan=\"4\"><button (click)=\"createProject()\">Crear Proyecto</button></td>\n                                    </tr>\n                                </tfoot>\n                            </table>\n                        </div>\n\n                        <!-- Project Form -->\n                        <div [hidden]=\"!showForm\" style=\"margin: 10px\">\n                            <div class=\"panel panel-primary\">\n                                <div class=\"panel-heading\">\n                                    Proyecto\n                                </div>\n                                <div class=\"panel-body\">\n                                    <form [formGroup]=\"projectForm\" (ngSubmit)=\"saveProject()\">\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Nombre</label><br>\n                                            <input type=\"text\" formControlName=\"name\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.name.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Tipo</label><br>\n                                            <select formControlName=\"typep\">\n                                                    <option *ngFor=\"let t of types\" [value]=\"t\">{{t}}</option>\n                                                </select>\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.typep.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Fecha de inicio</label><br>\n                                            <input type=\"date\" formControlName=\"date_start\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.date_start.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Fecha de finalización</label><br>\n                                            <input type=\"date\" formControlName=\"date_end\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.date_end.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Costo Total Estimado</label><br>\n                                            <input type=\"text\" formControlName=\"value_estimate_total\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.value_estimate_total.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Tiempo Total Estimado (Horas)</label><br>\n                                            <input type=\"text\" formControlName=\"time_estimate_total\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.time_estimate_total.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Estado</label><br>\n                                            <select formControlName=\"status\">\n                                                    <option *ngFor=\"let st of status\" [value]=\"st.id_status\">{{st.status}}</option>\n                                                </select>\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.status.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-12 margin-10 text-center\">\n                                            <button type=\"submit\" [disabled]=\"!projectForm.valid\">Guardar Proyecto</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <!-- End Project Form -->\n\n                            <!-- Release Planning Form -->\n                            <div class=\"panel panel-primary story-mapping-container\">\n                                <div class=\"panel-heading\">\n                                    Story Mapping\n                                </div>\n                                <div class=\"panel-body scroll-x\">\n                                    <div class=\"col-md-12 col-sm-12 text-left\">\n                                        <a class=\"btn btn-default btn-xs\" (click)=\"showModal('release')\">\n                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i> Agregar release\n                                        </a>\n                                    </div>\n                                    <table class=\"release-planning\">\n                                        <thead>\n                                            <tr>\n                                                <th rowspan=\"2\" class=\"bg-success p-xs b-r-xs\">\n                                                    <div class=\"col-md-6 col-sm-12 text-left\">Epica</div>\n                                                    <div class=\"col-md-6 col-sm-12 text-right\">\n                                                        <a class=\"btn btn-primary btn-xs\" (click)=\"showModal('epic')\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                    </div>\n                                                </th>\n                                                <th rowspan=\"2\" class=\"bg-info p-xs b-r-xs\">\n                                                    Característica\n                                                </th>\n                                                <th rowspan=\"2\" class=\"bg-warning p-xs b-r-xs\">\n                                                    Historias\n                                                </th>\n                                                <th *ngFor=\"let r of release | filterRelease\" [attr.colspan]=\"r.value\">\n                                                    <div class=\"col-md-8 col-sm-12 text-left\">{{r.key}}</div>\n                                                    <div class=\"col-md-4 col-sm-12 text-right\">\n                                                        <a class=\"btn btn-default btn-xs\" (click)=\"showModal('sprint', r.id)\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                    </div>\n                                                </th>\n                                            </tr>\n                                            <tr>\n                                                <th *ngFor=\"let r of release | filterSprint\">\n                                                    {{r.value.sprint}}\n                                                </th>\n                                            </tr>\n                                        </thead>\n                                        <tbody>\n                                            <tr *ngFor=\"let e of epics | filterEpic\">\n                                                <td>\n                                                    <div class=\"col-md-6 col-sm-12 text-left\">{{e.key}}</div>\n                                                    <div class=\"col-md-6 col-sm-12 text-right\">\n                                                        <a class=\"btn btn-info btn-xs\" (click)=\"showModal('feature', e.id)\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                    </div>\n                                                </td>\n                                                <td>\n                                                    <div *ngIf=\"e.value.feature\">\n                                                        <div class=\"col-md-6 col-sm-12 text-left\">{{e.value.feature}}</div>\n                                                        <div class=\"col-md-6 col-sm-12 text-right\">\n                                                            <a class=\"btn btn-warning btn-xs\" (click)=\"showModal('story', e.value.id_feature)\">\n                                                                <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                            </a>\n                                                        </div>\n                                                    </div>\n                                                </td>\n                                                <td>\n                                                    <div *ngFor=\"let s of epics | filterStory:e.value.id_feature:0\" class=\"col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container\">\n                                                        <div class=\"font-bold no-margins overflow-auto\">\n                                                            <div class=\"col-md-8 col-sm-12 text-left\">{{s.key}}</div>\n                                                            <div class=\"col-md-4 col-sm-12 text-right\">\n                                                                <a class=\"btn bg-task btn-xs\" (click)=\"showModal('task', s.value.id_story)\">\n                                                                    <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                                </a>\n                                                            </div>\n                                                        </div>\n                                                        <table class=\"white-bg-task\">\n                                                            <thead class=\"bg-task\">\n                                                                <tr>\n                                                                    <th>Tareas</th>\n                                                                    <th></th>\n                                                                </tr>\n                                                            </thead>\n                                                            <tbody>\n                                                                <tr *ngFor=\"let t of epics | filterTask:e.value.id_feature:0:s.value.id_story\">\n                                                                    <td class=\"margin-10 text-left\">{{t.key}}</td>\n                                                                    <td class=\"margin-10 text-left\">\n                                                                        <button type=\"button\" (click)=\"showModal('detail', t.value.id_task)\" class=\"btn btn-link\">ver</button>\n                                                                    </td>\n                                                                </tr>\n                                                            </tbody>\n                                                        </table>\n                                                        <div class=\"margin-10 text-left\">\n                                                            <label>Sprint:</label>\n                                                            <select (change)=\"changeSprint($event, s.value.id_story)\" style=\"max-width:110px;color:#333;\">\n                                                                <option></option>\n                                                                <option [value]=\"r.value.id_sprint\" *ngFor=\"let r of release | filterSprint\">\n                                                                    {{r.value.sprint}}\n                                                                </option>           \n                                                            </select>\n                                                        </div>\n                                                    </div>\n                                                </td>\n                                                <td *ngFor=\"let r of release | filterSprint\">\n                                                    <div *ngFor=\"let s of epics | filterStory:e.value.id_feature:r.value.id_sprint\" class=\"col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container\">\n\n                                                        <div class=\"font-bold no-margins overflow-auto\">\n                                                            <div class=\"col-md-8 col-sm-12 text-left\">{{s.key}}</div>\n                                                            <div class=\"col-md-4 col-sm-12 text-right\">\n                                                                <a class=\"btn bg-task btn-xs\" (click)=\"showModal('task', s.value.id_story)\">\n                                                                    <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                                </a>\n                                                            </div>\n                                                        </div>\n                                                        <table class=\"white-bg-task\">\n                                                            <thead class=\"bg-task\">\n                                                                <tr>\n                                                                    <th>Tareas</th>\n                                                                    <th></th>\n                                                                </tr>\n                                                            </thead>\n                                                            <tbody>\n                                                                <tr *ngFor=\"let t of epics | filterTask:e.value.id_feature:r.value.id_sprint:s.value.id_story\">\n                                                                    <td class=\"margin-10 text-left\">{{t.key}}</td>\n                                                                    <td class=\"margin-10 text-left\">\n                                                                        <button type=\"button\" (click)=\"showModal('detail', t.value.id_task)\" class=\"btn btn-link\">ver</button>\n                                                                    </td>\n                                                                </tr>\n                                                            </tbody>\n                                                        </table>\n                                                        <div class=\"margin-10 text-left\">\n                                                            <label>Sprint:</label>\n                                                            <select (change)=\"changeSprint($event, s.value.id_story)\" style=\"max-width:110px;color:#333;\">\n                                                                <option></option>\n                                                                <option [value]=\"ss.value.id_sprint\" [attr.selected]=\"r.value.id_sprint == ss.value.id_sprint ? true : null\" *ngFor=\"let ss of release | filterSprint\">\n                                                                    {{ss.value.sprint}}\n                                                                </option>           \n                                                            </select>\n                                                        </div>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n                                    </table>\n                                </div>\n                            </div>\n                            <!-- End Release Planning Form -->\n\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Epic-->\n        <div #epicmodal id=\"epicmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('epic');\">&times;</span>\n                <h2>Crear Épica</h2>\n                <div class=\"margin-10\">\n                    <label>Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"epicName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('epic')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveEpic()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Featue-->\n        <div #featuremodal id=\"featuremodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('feature')\">&times;</span>\n                <h3>Crear Característica</h3>\n                <div class=\"margin-10\">\n                    <label>Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"featureName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('feature')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveFeature()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Story-->\n        <div #storymodal id=\"storymodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('story')\">&times;</span>\n                <h3>Crear Historia de Usuario</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"storyName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('story')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveStory()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Sprint-->\n        <div #sprintmodal id=\"sprintmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('sprint')\">&times;</span>\n                <h3>Crear Sprint</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"sprintName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">inicio</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"sprintStart\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Fin</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"sprintEnd\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('sprint')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveSprint()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Release-->\n        <div #releasemodal id=\"releasemodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('release')\">&times;</span>\n                <h3>Crear Release</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"releaseName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Fecha</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"releaseDue\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('release')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveRelease()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Task-->\n        <div #taskmodal id=\"taskmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('task')\">&times;</span>\n                <h3>Crear Tarea</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"taskName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Descripción</label>\n                    <textarea class=\"form-control\" [(ngModel)]=\"taskDescription\"></textarea>\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Tiempo estimado</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"taskTime\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('task')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveTask()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n    </div>\n</div>"
+module.exports = "<div class=\"animated fadeInDown\">\n    <div>\n\n        <h3>Projects</h3>\n        <div class=\"col-lg-12\">\n            <div class=\"ibox float-e-margins\">\n\n                <div class=\"animated fadeInDown\">\n                    <div>\n                        <h1>\n                            Administración de Proyectos - {{user.name}}\n                        </h1>\n                        <div [hidden]=\"showForm\">\n                            <table class=\"table table-striped table-bordered table-hover dataTables-example dataTable\">\n                                <thead>\n                                    <tr>\n                                        <th>Id</th>\n                                        <th>Nombre</th>\n                                        <th>Tipo</th>\n                                        <th></th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr *ngFor=\"let u of projects\">\n                                        <td>{{u.id_project}}</td>\n                                        <td>{{u.name}}</td>\n                                        <td>{{u.type}}</td>\n                                        <td><button (click)=\"editProject(u.id_project)\">Editar</button></td>\n                                    </tr>\n                                </tbody>\n                                <tfoot>\n                                    <tr>\n                                        <td colspan=\"4\"><button (click)=\"createProject()\">Crear Proyecto</button></td>\n                                    </tr>\n                                </tfoot>\n                            </table>\n                        </div>\n\n                        <!-- Project Form -->\n                        <div [hidden]=\"!showForm\" style=\"margin: 10px\">\n                            <div class=\"panel panel-primary\">\n                                <div class=\"panel-heading\">\n                                    <button class=\"btn btn-info\" [class.active]=\"!planning\" (click)=\"planning = false\">Proyecto</button>\n                                    <button class=\"btn btn-info\" [class.active]=\"planning\" (click)=\"planning = true\">Story Mapping</button>\n                                </div>\n                                <div class=\"panel-body\">\n                                    <form [formGroup]=\"projectForm\" (ngSubmit)=\"saveProject()\" *ngIf=\"!planning\">\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Nombre</label><br>\n                                            <input type=\"text\" formControlName=\"name\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.name.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Tipo</label><br>\n                                            <select formControlName=\"typep\">\n                                                    <option *ngFor=\"let t of types\" [value]=\"t\">{{t}}</option>\n                                                </select>\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.typep.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Fecha de inicio</label><br>\n                                            <input type=\"date\" formControlName=\"date_start\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.date_start.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Fecha de finalización</label><br>\n                                            <input type=\"date\" formControlName=\"date_end\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.date_end.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Costo Total Estimado</label><br>\n                                            <input type=\"text\" formControlName=\"value_estimate_total\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.value_estimate_total.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Tiempo Total Estimado (Horas)</label><br>\n                                            <input type=\"text\" formControlName=\"time_estimate_total\">\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.time_estimate_total.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-4 margin-10\">\n                                            <label>Estado</label><br>\n                                            <select formControlName=\"status\">\n                                                    <option *ngFor=\"let st of status\" [value]=\"st.id_status\">{{st.status}}</option>\n                                                </select>\n                                            <div>\n                                                <small *ngIf=\"!projectForm.controls.status.valid\">Requerido.</small>\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-12 col-md-12 margin-10 text-center\">\n                                            <button type=\"submit\" [disabled]=\"!projectForm.valid\">Guardar Proyecto</button>\n                                        </div>\n                                    </form>\n\n                                    <!-- Release Planning Form -->\n                                    <div *ngIf=\"planning\">\n                                        <div class=\"col-md-12 col-sm-12 text-left\">\n                                            <a class=\"btn btn-default btn-xs\" (click)=\"showModal('release')\">\n                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i> Agregar release\n                                        </a>\n                                        </div>\n                                        <table class=\"release-planning\">\n                                            <thead>\n                                                <tr>\n                                                    <th rowspan=\"2\" class=\"bg-success p-xs b-r-xs\">\n                                                        <div class=\"col-md-6 col-sm-12 text-left\">Epica</div>\n                                                        <div class=\"col-md-6 col-sm-12 text-right\">\n                                                            <a class=\"btn btn-primary btn-xs\" (click)=\"showModal('epic')\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                        </div>\n                                                    </th>\n                                                    <th rowspan=\"2\" class=\"bg-info p-xs b-r-xs\">\n                                                        Característica\n                                                    </th>\n                                                    <th rowspan=\"2\" class=\"bg-warning p-xs b-r-xs\">\n                                                        Historias sin sprint\n                                                    </th>\n                                                    <th *ngFor=\"let r of release | filterRelease\" [attr.colspan]=\"r.value\">\n                                                        <div class=\"col-md-8 col-sm-12 text-left\">{{r.key}}</div>\n                                                        <div class=\"col-md-4 col-sm-12 text-right\">\n                                                            <a class=\"btn btn-default btn-xs\" (click)=\"showModal('sprint', r.id)\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                        </div>\n                                                    </th>\n                                                </tr>\n                                                <tr>\n                                                    <th *ngFor=\"let r of release | filterSprint\">\n                                                        {{r.value.sprint}}\n                                                    </th>\n                                                </tr>\n                                            </thead>\n                                            <tbody>\n                                                <tr *ngFor=\"let e of epics | filterEpic\">\n                                                    <td>\n                                                        <div class=\"col-md-6 col-sm-12 text-left\">{{e.key}}</div>\n                                                        <div class=\"col-md-6 col-sm-12 text-right\">\n                                                            <a class=\"btn btn-info btn-xs\" (click)=\"showModal('feature', e.id)\">\n                                                            <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                        </a>\n                                                        </div>\n                                                    </td>\n                                                    <td>\n                                                        <div *ngIf=\"e.value.feature\">\n                                                            <div class=\"col-md-6 col-sm-12 text-left\">{{e.value.feature}}</div>\n                                                            <div class=\"col-md-6 col-sm-12 text-right\">\n                                                                <a class=\"btn btn-warning btn-xs\" (click)=\"showModal('story', e.value.id_feature)\">\n                                                                <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                            </a>\n                                                            </div>\n                                                        </div>\n                                                    </td>\n                                                    <td>\n                                                        <div *ngFor=\"let s of epics | filterStory:e.value.id_feature:0\" class=\"col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container\">\n                                                            <div class=\"font-bold no-margins overflow-auto\">\n                                                                <div class=\"col-md-8 col-sm-12 text-left\">{{s.key}}</div>\n                                                                <div class=\"col-md-4 col-sm-12 text-right\">\n                                                                    <a class=\"btn bg-task btn-xs\" (click)=\"showModal('task', s.value.id_story)\">\n                                                                    <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                                </a>\n                                                                </div>\n                                                            </div>\n                                                            <!--table class=\"white-bg-task\">\n                                                                <thead class=\"bg-task\">\n                                                                    <tr>\n                                                                        <th>Tareas</th>\n                                                                        <th></th>\n                                                                    </tr>\n                                                                </thead>\n                                                                <tbody>\n                                                                    <tr *ngFor=\"let t of epics | filterTask:e.value.id_feature:0:s.value.id_story\">\n                                                                        <td class=\"margin-10 text-left\">{{t.key}}</td>\n                                                                        <td class=\"margin-10 text-left\">\n                                                                            <button type=\"button\" (click)=\"showTask(t.value.id_task)\" class=\"btn btn-link\">ver</button>\n                                                                        </td>\n                                                                    </tr>\n                                                                </tbody>\n                                                            </table-->\n                                                            <div class=\"margin-10 text-left\">\n                                                                <label>Sprint:</label>\n                                                                <select (change)=\"changeSprint($event, s.value.id_story)\" style=\"max-width:110px;color:#333;\">\n                                                                <option></option>\n                                                                <option [value]=\"r.value.id_sprint\" *ngFor=\"let r of release | filterSprint\">\n                                                                    {{r.value.sprint}}\n                                                                </option>           \n                                                            </select>\n                                                            </div>\n                                                        </div>\n                                                    </td>\n                                                    <td *ngFor=\"let r of release | filterSprint\">\n                                                        <div *ngFor=\"let s of epics | filterStory:e.value.id_feature:r.value.id_sprint\" class=\"col-md-12 col-sm-12 story-mini-card bg-warning text-center story-container\">\n\n                                                            <div class=\"font-bold no-margins overflow-auto\">\n                                                                <div class=\"col-md-8 col-sm-12 text-left\">{{s.key}}</div>\n                                                                <div class=\"col-md-4 col-sm-12 text-right\">\n                                                                    <a class=\"btn bg-task btn-xs\" (click)=\"showModal('task', s.value.id_story)\">\n                                                                    <i style=\"margin:5px 3px 0px 3px;\" class=\"fa fa-plus\"></i>\n                                                                </a>\n                                                                </div>\n                                                            </div>\n                                                            <!--table class=\"white-bg-task\">\n                                                                <thead class=\"bg-task\">\n                                                                    <tr>\n                                                                        <th>Tareas</th>\n                                                                        <th></th>\n                                                                    </tr>\n                                                                </thead>\n                                                                <tbody>\n                                                                    <tr *ngFor=\"let t of epics | filterTask:e.value.id_feature:r.value.id_sprint:s.value.id_story\">\n                                                                        <td class=\"margin-10 text-left\">{{t.key}}</td>\n                                                                        <td class=\"margin-10 text-left\">\n                                                                            <button type=\"button\" (click)=\"showTask(t.value.id_task)\" class=\"btn btn-link\">ver</button>\n                                                                        </td>\n                                                                    </tr>\n                                                                </tbody>\n                                                            </table-->\n                                                            <div class=\"margin-10 text-left\">\n                                                                <label>Sprint:</label>\n                                                                <select (change)=\"changeSprint($event, s.value.id_story)\" style=\"max-width:110px;color:#333;\">\n                                                                <option></option>\n                                                                <option [value]=\"ss.value.id_sprint\" [attr.selected]=\"r.value.id_sprint == ss.value.id_sprint ? true : null\" *ngFor=\"let ss of release | filterSprint\">\n                                                                    {{ss.value.sprint}}\n                                                                </option>           \n                                                            </select>\n                                                            </div>\n                                                        </div>\n                                                    </td>\n                                                </tr>\n                                            </tbody>\n                                        </table>\n                                    </div>\n                                    <!-- End Release Planning Form -->\n                                </div>\n                            </div>\n                            <!-- End Project Form -->\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Epic-->\n        <div #epicmodal id=\"epicmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('epic');\">&times;</span>\n                <h2>Crear Épica</h2>\n                <div class=\"margin-10\">\n                    <label>Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"epicName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('epic')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveEpic()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Featue-->\n        <div #featuremodal id=\"featuremodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('feature')\">&times;</span>\n                <h3>Crear Característica</h3>\n                <div class=\"margin-10\">\n                    <label>Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"featureName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('feature')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveFeature()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Story-->\n        <div #storymodal id=\"storymodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('story')\">&times;</span>\n                <h3>Crear Historia de Usuario</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"storyName\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('story')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveStory()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Sprint-->\n        <div #sprintmodal id=\"sprintmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('sprint')\">&times;</span>\n                <h3>Crear Sprint</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"sprintName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">inicio</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"sprintStart\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Fin</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"sprintEnd\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('sprint')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveSprint()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Release-->\n        <div #releasemodal id=\"releasemodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('release')\">&times;</span>\n                <h3>Crear Release</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"releaseName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Fecha</label>\n                    <input type=\"date\" class=\"form-control\" [(ngModel)]=\"releaseDue\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('release')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveRelease()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n        <!-- The Modal Task-->\n        <div #taskmodal id=\"taskmodal\" class=\"modal\">\n            <!-- Modal content -->\n            <div class=\"modal-content\">\n                <span class=\"close\" (click)=\"hideModal('task')\">&times;</span>\n                <h3>Crear Tarea</h3>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Nombre</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"taskName\">\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Descripción</label>\n                    <textarea class=\"form-control\" [(ngModel)]=\"taskDescription\"></textarea>\n                </div>\n                <div class=\"margin-10\">\n                    <label class=\"control-label\">Tiempo estimado</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"taskTime\">\n                </div>\n                <div class=\"margin-10 text-center\">\n                    <button type=\"button\" (click)=\"hideModal('task')\" class=\"btn btn-w-m btn-danger\">Cancelar</button>\n                    <button type=\"button\" (click)=\"saveTask()\" class=\"btn btn-w-m btn-info\">Guardar</button>\n                </div>\n            </div>\n        </div>\n\n    </div>\n</div>"
 
 /***/ },
 
 /***/ 946:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"middle-box text-center loginscreen animated fadeInDown\">\n    <div>\n        <div>\n            <h1 class=\"logo-name\">IN+</h1>\n        </div>\n        <h3>Register to IN+</h3>\n        <p>Create account to see it in action.</p>\n        <form class=\"m-t\" role=\"form\" action=\"#\">\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" placeholder=\"Name\" required=\"\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"email\" class=\"form-control\" placeholder=\"Email\" required=\"\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"password\" class=\"form-control\" placeholder=\"Password\" required=\"\">\n            </div>\n            <div class=\"form-group\">\n                <div class=\"checkbox i-checks\"><label> <input type=\"checkbox\"><i></i> Agree the terms and policy </label></div>\n            </div>\n            <button type=\"submit\" class=\"btn btn-primary block full-width m-b\">Register</button>\n\n            <p class=\"text-muted text-center\"><small>Already have an account?</small></p>\n            <a class=\"btn btn-sm btn-white btn-block\" href=\"#\">Login</a>\n        </form>\n        <p class=\"m-t\"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>\n    </div>\n</div>"
+module.exports = "<div class=\"middle-box text-center loginscreen animated fadeInDown\">\n    <div>\n        <div>\n            <h1 class=\"logo-name\">IN+</h1>\n        </div>\n        <h3>Registro</h3>\n        <form class=\"m-t\" role=\"form\" (ngSubmit)=\"register()\" #loginForm=\"ngForm\">\n            <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control\" placeholder=\"Nombre\" name=\"name\" required=\"\" [(ngModel)]=\"_registerInfo.name\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"email\" class=\"form-control\" placeholder=\"Email\" name=\"email\" required=\"\" [(ngModel)]=\"_registerInfo.email\">\n            </div>\n            <div class=\"form-group\">\n                <input type=\"password\" class=\"form-control\" placeholder=\"Clave\" name=\"password\" required=\"\" [(ngModel)]=\"_registerInfo.password\">\n            </div>\n            <div class=\"form-group\">\n                <div class=\"checkbox i-checks\"><label> <input type=\"checkbox\" name=\"terms\" [(ngModel)]=\"_registerInfo.terms\"><i></i> Acepto los términos y condiciones </label></div>\n            </div>\n            <button type=\"submit\" [disabled]=\"!_registerInfo.terms\" class=\"btn btn-primary block full-width m-b\">Registrar</button>\n\n            <p class=\"text-muted text-center\"><small>Ya tengo cuenta en Precise!</small></p>\n            <a class=\"btn btn-sm btn-white btn-block\" (click)=\"login()\">Ingresar</a>\n        </form>\n    </div>\n</div>"
 
 /***/ },
 
@@ -22675,7 +22810,7 @@ module.exports = "<div class=\"wrapper wrapper-content animated fadeInRight\">\n
 /***/ 949:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"wrapper wrapper-content animated fadeInRight\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <div class=\"text-center m-t-lg\">\n                <h1>\n                    Seguimiento de Tareas\n                </h1>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"wrapper wrapper-content animated fadeInRight\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <div class=\"text-center m-t-lg\">\n                <h1>\n                    Seguimiento de Tareas\n                </h1>\n            </div>\n            <div class=\"container-fluid container-limited\">\n\n                <div [hidden]=\"showForm\">\n                    <table class=\"table table-striped table-bordered table-hover dataTables-example dataTable\">\n                        <thead>\n                            <tr>\n                                <th>Id</th>\n                                <th>Nombre</th>\n                                <th>Descripción</th>\n                                <th>Inicio</th>\n                                <th>Fin</th>\n                                <th>Estado</th>\n                                <th></th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let u of tasks\" [ngClass]=\"{ 'bg-success' : u.id_status==1, 'bg-warning' : !u.id_status }\">\n                                <td>{{u.id_task}}</td>\n                                <td>{{u.name}}</td>\n                                <td>{{u.description}}</td>\n                                <td>{{u.date_start}}</td>\n                                <td>{{u.date_end}}</td>\n                                <td>{{u.id_status}}</td>\n                                <td>\n                                    <button class=\"btn btn-info\" (click)=\"checkTask(u)\">Ver</button>\n                                    <button *ngIf=\"u.id_status!=2\" class=\"btn btn-info\" (click)=\"closeTask(u.id_task)\">Cerrar</button>\n                                    <select style=\"color:black;\" [(ngModel)]=\"u.id_user\">\n                                        <option></option>\n                                        <option *ngFor=\"let d of users\" [value]=\"d.id_user\">{{d.name}}</option>\n                                    </select>\n                                </td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n                <div [hidden]=\"!showForm\">\n                    <div class=\"panel panel-primary\">\n                        <div class=\"panel-heading\">\n                            <h4>Tarea: {{task.name}}</h4>\n                        </div>\n                        <div class=\"panel-body\">\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Nombre</label><br>\n                                <input type=\"text\" [(ngModel)]=\"task.name\">\n                            </div>\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Descripción</label><br>\n                                <textarea type=\"text\" [(ngModel)]=\"task.description\"></textarea>\n                            </div>\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Fecha de inicio</label><br>\n                                <input type=\"date\" [(ngModel)]=\"task.date_start\">\n                            </div>\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Fecha de finalización</label><br>\n                                <input type=\"date\" [(ngModel)]=\"task.date_end\">\n                            </div>\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Tiempo Estimado (Horas)</label><br>\n                                <input type=\"text\" [(ngModel)]=\"task.time\">\n                            </div>\n                            <div class=\"col-sm-12 col-md-4 margin-10\">\n                                <label>Estado</label><br>\n                                <select [(ngModel)]=\"task.id_status\">\n                                    <option *ngFor=\"let st of status\" [value]=\"st.id_status\">{{st.status}}</option>\n                                </select>\n                            </div>\n                            <div class=\"col-sm-12 col-md-12 margin-10 text-center\">\n                                <button (click)=\"saveTask()\">Guardar</button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ },
 
